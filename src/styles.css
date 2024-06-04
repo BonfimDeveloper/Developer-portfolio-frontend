@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Para evitar scrollbars */
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+::-webkit-scrollbar {
+  @apply w-3 bg-slate-50;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply w-3 bg-slate-200 rounded-md;
+}
+
+/*Essa classe resolve o conflito do tailwind com o material, remove o traço no input causado pelo matlabel*/
+.mdc-notched-outline__notch {
+  border-right: none;
+}

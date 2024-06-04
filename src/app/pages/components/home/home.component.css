@@ -1,0 +1,151 @@
+.con {
+   width: 100%;
+  height: 100%;
+  --color: #FAC921;
+  background: linear-gradient(45deg, var(--color) 25%, transparent 25%) -50px 0,
+        linear-gradient(-45deg, var(--color) 25%, transparent 25%) -50px 0,
+        linear-gradient(45deg, transparent 75%, var(--color) 75%) -50px 0,
+        linear-gradient(-45deg, transparent 75%, var(--color) 75%) -50px 0;
+  background-color: #ffffff;
+  background-size: 10px 40px;
+}
+
+.con2 {
+  width: 100%;
+  height: 100%;
+  --s: 140px; /* control the size */
+  --c1: #ab3e5b;
+  --c2: #ffbe40;
+
+  --_g: #0000 25%, #0008 47%, var(--c1) 53% 147%, var(--c2) 153% 247%,
+    var(--c1) 253% 347%, var(--c2) 353% 447%, var(--c1) 453% 547%, #0008 553%,
+    #0000 575%;
+  --_s: calc(25% / 3) calc(25% / 4) at 50%;
+  background: radial-gradient(var(--_s) 100%, var(--_g)),
+    radial-gradient(var(--_s) 100%, var(--_g)) calc(var(--s) / 2)
+      calc(3 * var(--s) / 4),
+    radial-gradient(var(--_s) 0, var(--_g)) calc(var(--s) / 2) 0,
+    radial-gradient(var(--_s) 0, var(--_g)) 0 calc(3 * var(--s) / 4),
+    repeating-linear-gradient(
+      90deg,
+      #accec0 calc(25% / -6) calc(25% / 6),
+      #61a6ab 0 calc(25% / 2)
+    );
+  background-size: var(--s) calc(3 * var(--s) / 2);
+}
+
+.con3 {
+  width: 100%;
+  height: 100%;
+  --s: 100px; /* control the size */
+  --c1: #131212;
+  --c2: #000000;
+
+  --_g: var(--c2) 6% 14%, var(--c1) 16% 24%, var(--c2) 26% 34%,
+    var(--c1) 36% 44%, var(--c2) 46% 54%, var(--c1) 56% 64%, var(--c2) 66% 74%,
+    var(--c1) 76% 84%, var(--c2) 86% 94%;
+  background: radial-gradient(
+      100% 100% at 100% 0,
+      var(--c1) 4%,
+      var(--_g),
+      #0008 96%,
+      #0000
+    ),
+    radial-gradient(
+        100% 100% at 0 100%,
+        #0000,
+        #0008 4%,
+        var(--_g),
+        var(--c1) 96%
+      )
+      var(--c1);
+  background-size: var(--s) var(--s);
+}
+
+.con4 {
+  width: 100%;
+  height: 100%;
+  --s: 100px; /* control the size */
+  --c1: #ffffff;
+  --c2: rgb(241 245 249);
+
+  --_g: var(--c2) 6% 14%, var(--c1) 16% 24%, var(--c2) 26% 34%,
+    var(--c1) 36% 44%, var(--c2) 46% 54%, var(--c1) 56% 64%, var(--c2) 66% 74%,
+    var(--c1) 76% 84%, var(--c2) 86% 94%;
+  background: radial-gradient(
+      100% 100% at 100% 0,
+      var(--c1) 4%,
+      var(--_g),
+      rgb(241 245 249),
+      #f3f3f300
+    ),
+    radial-gradient(
+        100% 100% at 0 100%,
+        #eeeaea00,
+        rgb(241 245 249),
+        var(--_g),
+        var(--c1) 96%
+      )
+      var(--c1);
+  background-size: var(--s) var(--s);
+}
+
+
+/* ==========special========== */
+
+.mail1 {
+  width: 20px;
+  position: fixed;
+  bottom: 1px;
+  left: auto;
+  right: 60px;
+  z-index: 30;
+  @apply hidden xl:flex;
+}
+
+.mail {
+  @apply hidden  xl:flex;
+
+  flex-direction: row;
+  -webkit-box-align: center;
+  align-items: center;
+
+  position: relative;
+  -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+}
+
+.spacing{
+  letter-spacing: 0.3em;
+}
+.spacing2{
+  letter-spacing: -1px;
+}
+
+.mail a {
+  font-family: 'Montserrat', sans-serif;
+
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+}
+
+a {
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+  color: inherit;
+  position: relative;
+  transition: .5s;
+}
+
+.mail:hover a, .mail:focus a {
+  color: #FAC921;
+}
+::-webkit-scrollbar{
+ width: 10px !important;
+
+}
+::-webkit-scrollbar-thumb{
+  width: 5px;
+  color: #000000;
+}
+

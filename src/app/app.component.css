@@ -1,0 +1,13 @@
+.head {
+  font-family: 'Montserrat', sans-serif;
+
+  @apply flex flex-row p-7   items-center text-slate-700 dark:text-white bg-transparent  ;
+}
+/* .example-spacer {
+  flex: 1 1 auto;
+} */
+
+
+
+
+/* border botton animated */
