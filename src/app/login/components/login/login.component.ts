@@ -1,6 +1,5 @@
-import { Component, HostBinding } from '@angular/core';
-
-import { DarkModeService } from 'src/app/core/services/dark-mode.service';
+import { Component } from '@angular/core';
+import { AuthService } from 'src/app/services/auth-service.service';
 
 @Component({
   selector: 'app-login',
@@ -8,16 +7,17 @@ import { DarkModeService } from 'src/app/core/services/dark-mode.service';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
-  @HostBinding('class.dark') get isDarkMode() {
-    return this.darkModeService.isDarkMode;
-  }
-
   hide = true;
-
-  constructor(private darkModeService: DarkModeService) {}
-
-  toggleDarkMode() {
-    this.darkModeService.toggleDarkMode();
+  constructor(private authService: AuthService) {}
+  login(email: string, password: string): void {
+    this.authService.login().subscribe(
+      () => {
+        // Redirecionar para a página de dashboard ou outra página após o login bem-sucedido
+      },
+      (error) => {
+        // Tratar erro de login, como exibir uma mensagem de erro para o usuário
+      }
+    );
   }
 
   toggleVisibility(): void {
