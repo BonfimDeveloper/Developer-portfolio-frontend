@@ -8,10 +8,11 @@ import { Router } from '@angular/router';
 })
 export class PageNotFoundComponent implements OnInit {
   public emote: string = '';
-  public sad: boolean = true;
   public notFoundIcon: string = '';
   public notFoundTitle: string = '';
   imgPageNotFound: string = 'assets/images/nottfound.png';
+
+  public sad: boolean = true;
 
   constructor(private router: Router) {}
 

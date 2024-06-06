@@ -1,16 +1,32 @@
 import { ConfirmationDialogComponent } from './../../../shared/components/confirmation-dialog/confirmation-dialog.component';
-import { Component } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { DarkModeService } from 'src/app/core/services/dark-mode.service';
 
 @Component({
   selector: 'app-apresentation',
   templateUrl: './apresentation.component.html',
   styleUrls: ['./apresentation.component.css'],
 })
-export class ApresentationComponent {
+export class ApresentationComponent implements OnInit {
   imgFrontEnd: string = 'assets/images/frontt.webp';
+  @HostBinding('class.dark') get isDarkMode() {
+    return this.darkModeService.isDarkMode;
+  }
 
-  constructor(public dialog: MatDialog) {}
+  constructor(
+    public dialog: MatDialog,
+    private darkModeService: DarkModeService
+  ) {}
+  ngOnInit(): void {
+    setTimeout(() => {
+      document.querySelector('.show-slowly')?.classList.add('show'); // Adiciona a classe 'show'
+    }, 500);
+  }
+
+  toggleDarkMode() {
+    this.darkModeService.toggleDarkMode();
+  }
 
   openModal(): void {
     const content = `This is the content to be displayed in the modal.

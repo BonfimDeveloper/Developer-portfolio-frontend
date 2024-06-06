@@ -6,6 +6,14 @@
   @apply flex flex-col md:flex-row items-center border-b-4 border-b-green-200 p-4 gap-4;
 
 }
+.btn-back{
+  transition: all 0.25s ease-out;
+}
+.btn-back:hover{
+  transform: translateY(-3px);
+}
+
+/*
 /*
 
 .rotating-div {

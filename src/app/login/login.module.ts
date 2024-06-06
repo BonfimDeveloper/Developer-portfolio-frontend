@@ -11,6 +11,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatInputModule } from '@angular/material/input';
 import { SharedModule } from '../shared/shared.module';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { SharedModule } from '../shared/shared.module';
     MatIconModule,
     MatTooltipModule,
     MatInputModule,
+    MatToolbarModule,
+    MatMenuModule,
   ],
 })
 export class LoginModule {}

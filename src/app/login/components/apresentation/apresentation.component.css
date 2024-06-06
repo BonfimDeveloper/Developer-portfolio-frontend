@@ -1,0 +1,15 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.mat-toolbar {
+  @apply p-10;
+}
+
+.wt {
+  @apply  bg-white text-black;
+}
+
+.dk {
+  @apply bg-black text-white;
+}
