@@ -21,7 +21,22 @@ body {
   @apply w-3 bg-slate-200 rounded-md;
 }
 
-/*Essa classe resolve o conflito do tailwind com o material, remove o traço no input causado pelo matlabel*/
+/*Essa classe resolve o conflito do tailwind com o material, remove o traço no input causado pelo matlabel =>*/
 .mdc-notched-outline__notch {
   border-right: none;
+}
+
+/* Renderiza componentes lentamente ==> */
+.show-slowly {
+  opacity: 0; /* Começa com opacidade 0 */
+  transition: opacity 3s ease; /* Adiciona uma transição de opacidade */
+}
+
+.show-slowly.show {
+  opacity: 1; /* Quando a classe 'show' é adicionada, a opacidade é 1 */
+}
+
+.show-slowly.hide {
+  opacity: 0;
+  transition: opacity 3s ease;
 }

@@ -1,1 +1,18 @@
-<p>page-not-found works!</p>
+<div
+  class="w-full h-full flex flex-col justify-center border-4 border-slate-200 items-center p-10 show-slowly"
+>
+  <div class="flex justify-center items-center">
+    <img [src]="imgPageNotFound" alt="Logo MyPort" />
+  </div>
+<div class="flex w-full justify-center mt-40">
+  <button
+  class="pt-2 pb-2 pr-4 pl-4  bg-slate-800 hover:bg-black transition-all text-white rounded text-xs sm:text-xl sm:font-medium"
+  (click)="returnToHome()"
+>
+  RETURN TO HOME PAGE
+</button>
+</div>
+
+</div>
+
+<!-- rotating-div => Classe usada para girar elementos -->
