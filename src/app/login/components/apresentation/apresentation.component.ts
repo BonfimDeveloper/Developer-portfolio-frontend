@@ -21,6 +21,9 @@ export class ApresentationComponent implements OnInit {
   ngOnInit(): void {
     setTimeout(() => {
       document.querySelector('.show-slowly')?.classList.add('show'); // Adiciona a classe 'show'
+      document.querySelector('.dk')?.classList.add('show');
+      document.querySelector('.wt')?.classList.add('show'); // Adiciona a classe 'show'
+      // Adiciona a classe 'show'
     }, 500);
   }
 

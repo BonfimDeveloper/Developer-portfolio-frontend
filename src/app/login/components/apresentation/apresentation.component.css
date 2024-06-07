@@ -3,13 +3,16 @@
 }
 
 .mat-toolbar {
-  @apply p-10;
+  @apply p-10 bg-white text-slate-800 dark:bg-black dark:text-slate-300;
+  transition: all 0.7s ease-in-out;
 }
 
 .wt {
-  @apply  bg-white text-black;
+  @apply bg-white text-slate-800;
+  transition: all 0.7s ease-in-out;
 }
 
 .dk {
-  @apply bg-black text-white;
+  @apply bg-black text-slate-300;
+  transition: all 0.7s ease-in-out;
 }
