@@ -1,41 +1,35 @@
-<div  >
-  <!-- <div class="head">
-     <app-logo></app-logo>
-    <div class="absolute right-4 bg-transparent">
-      <button
-        class="flex items-center justify-center transition-transform hover:scale-110 mat-elevation-z2 rounded-full p-[0.1rem] bg-slate-500 hover:bg-slate-600 dark:bg-slate-200 hover:dark:bg-white"
-        (click)="toggleDarkMode()"
-        [matTooltip]="isDarkMode ? 'Light' : 'Dark'"
-        matTooltipPosition="left"
-      >
-        <span *ngIf="!isDarkMode" class="material-symbols-outlined text-white">
-          dark_mode
-        </span>
-        <span *ngIf="isDarkMode" class="material-symbols-outlined text-black">
-          light_mode
-        </span>
-      </button>
-    </div>
-  </div> -->
-
-  <div class="w-full h-full flex flex-row justify-center items-center p-12 gap-5 ">
-    <div class="w-full h-full flex flex-col bg-white p-5 ">
-      works
+<div>
+  <div
+    class="w-full h-full flex flex-row justify-center items-center p-12 gap-5"
+  >
+    <div class="w-full h-full flex justify-center items-center">
+      <img class=" w-full h-full" [src]="developer" alt="Developer Senior" />
     </div>
     <div class="w-full h-full flex flex-col bg-white p-5">
-      <!-- <label >Senha</label> -->
-      <mat-form-field  class="mt-6" appearance="outline" >
+      <mat-form-field class="mt-6" appearance="outline">
+        <mat-label>Email</mat-label>
+        <input
+          [type]="hide ? 'password' : 'text'"
+          matInput
+          placeholder="Digite"
+        />
+        <mat-icon (click)="toggleVisibility()" matSuffix>{{
+          hide ? "visibility_off" : "visibility" 
+        }}</mat-icon>
+        <!-- <mat-hint>Hint</mat-hint> -->
+      </mat-form-field>
+      <mat-form-field class="mt-6" appearance="outline">
         <mat-label>Senha</mat-label>
-            <input [type]="hide ? 'password' : 'text'" matInput placeholder="Digite" />
-            <mat-icon  (click)="toggleVisibility()" matSuffix
-              >{{ hide ? 'visibility' : 'visibility_off' }}</mat-icon
-            >
-            <!-- <mat-hint>Hint</mat-hint> -->
-          </mat-form-field>
+        <input
+          [type]="hide ? 'password' : 'text'"
+          matInput
+          placeholder="Digite"
+        />
+        <mat-icon (click)="toggleVisibility()" matSuffix>{{
+          hide ? "visibility_off" : "visibility"
+        }}</mat-icon>
+        <!-- <mat-hint>Hint</mat-hint> -->
+      </mat-form-field>
     </div>
-
   </div>
-
-
-
 </div>

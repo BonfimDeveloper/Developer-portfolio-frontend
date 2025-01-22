@@ -25,18 +25,18 @@ export class PageNotFoundComponent implements OnInit {
     }, 500);
   }
 
-  public returnToHome(): void {
+  /*public returnToHome(): void {
     this.notFoundIcon = 'info';
     this.notFoundTitle = 'Por favor aguarde, iremos te redirecionar.';
     this.emote = 'sentiment_very_satisfied';
     this.sad = false;
     this.goHome();
-  }
+  }*/
 
   public goHome(): void {
     document.querySelector('.show-slowly')?.classList.add('hide'); // Adiciona a classe 'hide'
     setTimeout(() => {
       this.router.navigate(['']);
-    }, 1000);
+    }, 900);
   }
 }

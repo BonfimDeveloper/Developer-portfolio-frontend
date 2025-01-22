@@ -8,6 +8,7 @@ import { AuthService } from 'src/app/services/auth-service.service';
 })
 export class LoginComponent {
   hide = true;
+  public developer: string = 'assets/images/dev_2-removebg.png';
   constructor(private authService: AuthService) {}
   login(email: string, password: string): void {
     this.authService.login().subscribe(
