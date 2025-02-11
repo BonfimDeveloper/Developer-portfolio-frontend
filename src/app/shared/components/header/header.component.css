@@ -37,3 +37,11 @@
     -webkit-text-fill-color: #4d4d4d; /* Texto visível após a animação */
   }
 }
+
+/* Estilo para o botão ativo com borda em gradiente */
+.active-link {
+  border-bottom: 8px solid transparent; /* Necessário para aplicar o border-image */
+  border-image: linear-gradient(to right, #c084fc , #84eafc ) 1; /* Gradiente da borda */
+   /* Raio da borda inferior direita */
+}
+

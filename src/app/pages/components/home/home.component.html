@@ -1,15 +1,68 @@
-<div @slideUp class="mx-40 p-4 font-poppins home-effect text-gray-600">
+<div
+  @slideUpp
+  class="px-40 p-4 font-poppins home-effect text-gray-600 bg-slate-100"
+>
   <div class="flex flex-row mt-60 justify-between items-center">
-    <div class=" flex flex-col">
+    <div class="flex flex-col">
       <p class="text-6xl font-bold">Diego Bonfim</p>
       <div class="flex flex-row gap-2">
-        <p class="text-4xl txt">Desenvolvedor Frontend Angular</p>
+        <p class="text-4xl text-gradient">Desenvolvedor Frontend Angular</p>
+      </div>
+      <div class="max-w-[60rem] ">
+        <p class="text-lg txt">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+          placerat, nunc sed volutpat tincidunt, turpis massa fringilla lacus,
+          eget posuere felis justo sed erat. Cras eget suscipit velit.
+          Pellentesque porta justo gravida, porttitor sapien sit amet, ultrices
+          risus. Curabitur euismod diam leo, ac mattis libero rhoncus at.
+          Vivamus tempus interdum lectus, non dignissim nulla ullamcorper id.
+          Mauris sit amet consectetur nunc. Morbi sed enim nisi.
+        </p>
+      </div>
+      <div class="mt-4 max-w-[60rem] flex flex-row gap-6">
+
+        <button
+          class="bg-gray-600 hover:bg-black px-6 py-2 text-white rounded-lg  font-semibold text-lg btn-cv-download-slide"
+        >
+         <span class="hover:text-transparent hover:bg-gradient-to-r hover:from-purple-400 hover:to-blue-300 bg-clip-border hover:bg-clip-text  transition-all duration-300">Download CV</span>
+        </button>
+
+        <Button
+          class="bg-white text-gray-700 rounded-md p-2 font-semibold text-lg btn-git-slide"
+        >
+          <a href="https://github.com/seu-usuario" target="_blank">
+            <fa-icon
+              [icon]="faGithub"
+              class="text-3xl hover:text-purple-800"
+            ></fa-icon> </a
+        ></Button>
+        <Button
+          class="bg-white text-gray-700 rounded-md p-2 font-semibold text-lg btn-linkedin-slide"
+        >
+          <a href="https://www.linkedin.com/in/seu-perfil" target="_blank">
+            <fa-icon
+              [icon]="faLinkedin"
+              class="text-3xl hover:text-blue-600"
+            ></fa-icon> </a
+        ></Button>
+        <Button
+          class="bg-white text-gray-700 rounded-md p-2 font-semibold text-lg btn-zap-slide"
+        >
+          <a href="https://wa.me/seunumerodetelefone" target="_blank">
+            <fa-icon
+              [icon]="faWhatsapp"
+              class="text-3xl hover:text-green-500"
+            ></fa-icon> </a
+        ></Button>
       </div>
     </div>
 
     <div>
-      <img class="rounded-full max-h-80" [src]="imagemPerfil" alt="Minha foto de perfil">
+      <img
+        class="rounded-full max-h-80"
+        [src]="imagemPerfil"
+        alt="Minha foto de perfil"
+      />
     </div>
   </div>
-
 </div>

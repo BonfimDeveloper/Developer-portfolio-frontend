@@ -1,7 +1,57 @@
-.home-effect{
+
+
+.txt {
+  position: relative;
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: linear-gradient(90deg, #fff 10%, rgb(160, 160, 194) 20%);
+  background-repeat: no-repeat;
+  background-size: 200%;
+  background-position: -100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: txtAnimate 6s linear forwards;
+}
+
+@keyframes txtAnimate {
+  0% {
+    background-position: -200%;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  }
+  100% {
+    background-position: 200%;
+    -webkit-text-fill-color: #4d4d4d;
+  }
+}
+
+
+.text-gradient {
+  font-weight: bold;
+  font-size: 2rem;
+  background-image: linear-gradient(90deg, #c084fc, #84eafc);
+
+  background-size: 200%;
+  background-position: -100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate 2s ease-in-out forwards;
+}
+
+@keyframes animate {
+  0% {
+    background-position: -200%;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  }
+  100% {
+    background-position: 200%;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.btn-cv-download-slide{
   opacity: 0;
   transform: translateY(50px);
-  animation: slideUp 2s ease-out forwards;
+  animation: slideUp 1.2s ease-out forwards;
 }
 
 @keyframes slideUp {
@@ -15,25 +65,53 @@
   }
 }
 
-.txt {
-  position: relative;
-  letter-spacing: 4px;
-  overflow: hidden;
-  background: linear-gradient(90deg, #fff 10%, rgb(160, 160, 194) 20%);
-  background-repeat: no-repeat;
-  background-size: 200%; /* Garantir que o gradiente se mova */
-  animation: animate 6s linear forwards;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(255, 255, 255, 0); /* Inicialmente transparente */
+.btn-git-slide{
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideUp2 1.4s ease-out forwards;
 }
 
-@keyframes animate {
-  0% {
-    background-position: -200%; /* Início do gradiente fora do texto, à esquerda */
-    -webkit-text-fill-color: rgba(255, 255, 255, 0); /* Texto ainda invisível */
+@keyframes slideUp2 {
+  from {
+    opacity: 0;
+    transform: translateY(5000px);
   }
-  100% {
-    background-position: 200%; /* Gradiente se move para a direita */
-    -webkit-text-fill-color: #4d4d4d; /* Texto visível após a animação */
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn-linkedin-slide{
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideUp3 1.6s ease-out forwards;
+}
+
+@keyframes slideUp3 {
+  from {
+    opacity: 0;
+    transform: translateY(5000px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn-zap-slide{
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideUp4 1.8s ease-out forwards;
+}
+
+@keyframes slideUp4 {
+  from {
+    opacity: 0;
+    transform: translateY(5000px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

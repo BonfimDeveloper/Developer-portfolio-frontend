@@ -14,6 +14,9 @@ module.exports = {
         'sad-xs': '10rem', // Adiciona um tamanho de fonte personalizado
          // Adiciona um tamanho de fonte personalizado
       },
+      colors: {
+        purpleCustom: 'rgb(214, 178, 255)',
+      },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
       },
