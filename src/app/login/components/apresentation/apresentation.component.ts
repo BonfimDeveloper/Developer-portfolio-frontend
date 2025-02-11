@@ -33,23 +33,16 @@ export class ApresentationComponent implements OnInit {
 
   openModal(): void {
     const content = `This is the content to be displayed in the modal.
-This is the content to be displayed in the modal.
-This is the content to be displayed in the modal.
-This is the content to be displayed in the modal.
-This is the content to be displayed in the modal.
-This is the content to be displayed in the modal.
-This is the content to be displayed in the modal.
-This is the content to be displayed in the modal.
-This is the content to be displayed in the modal.
-This is the content to be displayed in the modal.
-This is the content to be displayed in the modal.
-This is the content to be displayed in the modal.
-This is the content to be displayed in the modal.
-This is the content to be displayed in the modal.
-This is the content to be displayed in the modal.
-This is the content to be displayed in the modal.
-This is the content to be displayed in the modal.
-This is the content to be displayed in the modal.`;
+    This is the content to be displayed in the modal.
+    This is the content to be displayed in the modal.
+    This is the content to be displayed in the modal.
+    This is the content to be displayed in the modal.
+    This is the content to be displayed in the modal.
+    This is the content to be displayed in the modal.
+    This is the content to be displayed in the modal.
+    This is the content to be displayed in the modal.
+    This is the content to be displayed in the modal.
+    This is the content to be displayed in the modal.`;
     const dialogRef = this.dialog.open(ConfirmationDialogComponent, {
       data: {
         title: 'Custom Title',

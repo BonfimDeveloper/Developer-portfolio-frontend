@@ -1,7 +1,5 @@
-
-
-<span [ngClass]="{ dk: isDarkMode, wt: !isDarkMode }" class="show-slowly ">
-  <mat-toolbar   >
+<span [ngClass]="{ dk: isDarkMode, wt: !isDarkMode }" class="show-slowly">
+  <mat-toolbar>
     <div class="flex md:hidden">
       <button
         mat-icon-button
@@ -27,11 +25,11 @@
     </div>
     <div class="hidden md:flex flex-row w-auto h-auto gap-20">
       <div>
-        <span>MyApp</span>
+        <span>Diego.</span>
       </div>
       <div class="flex flex-row w-auto h-auto gap-20">
         <button>Home</button>
-         <button>About</button>
+        <button>About</button>
         <button>Contact</button>
         <button>Resources</button>
         <button>Team</button>
@@ -40,7 +38,7 @@
 
     <span class="example-spacer"></span>
 
-    <div >
+    <div>
       <button
         class="flex w-auto h-auto justify-center items-center"
         (click)="toggleDarkMode()"
@@ -49,9 +47,7 @@
           *ngIf="isDarkMode"
           class="material-symbols-outlined text-4xl text-white"
         >
-        <span class="material-symbols-outlined  text-4xl">
-          brightness_5
-          </span>
+          <span class="material-symbols-outlined text-4xl"> brightness_5 </span>
         </span>
         <span *ngIf="!isDarkMode" class="material-symbols-outlined text-4xl">
           dark_mode
@@ -59,7 +55,7 @@
       </button>
     </div>
   </mat-toolbar>
-  <div  [ngClass]="{ dk: isDarkMode, wt: !isDarkMode }" class="w-full h-full ">
+  <div [ngClass]="{ dk: isDarkMode, wt: !isDarkMode }" class="w-full h-full">
     <!-- <span [ngClass]="{ dk: isDarkMode, wt: !isDarkMode }">
       <div class="flex h-full w-full justify-center items-center">
         <button class="bg-black text-white p-2 rounded" (click)="openModal()">
@@ -67,14 +63,8 @@
         </button>
       </div>
     </span> -->
-
   </div>
-
 </span>
-
-
-
-
 
 <!-- <div class="w-full h-full" >
         <img  [src]="imgFrontEnd" alt="Logo MyPort" />

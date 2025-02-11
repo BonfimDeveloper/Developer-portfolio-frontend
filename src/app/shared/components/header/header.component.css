@@ -1,17 +1,17 @@
-.home-effect{
+.header-effect{
   opacity: 0;
   transform: translateY(50px);
-  animation: slideUp 2s ease-out forwards;
+  animation: slideDown 1s ease-out forwards;
 }
 
-@keyframes slideUp {
+@keyframes slideDown {
   from {
+    transform: translateY(-100%);
     opacity: 0;
-    transform: translateY(5000px);
   }
   to {
-    opacity: 1;
     transform: translateY(0);
+    opacity: 1;
   }
 }
 

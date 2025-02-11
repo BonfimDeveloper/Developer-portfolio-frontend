@@ -7,6 +7,7 @@ import { MusicComponent } from './components/music/music.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
 import { Nl2brPipe } from '../pipes/nl2br.pipe';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { Nl2brPipe } from '../pipes/nl2br.pipe';
     PageNotFoundComponent,
     ConfirmationDialogComponent,
     Nl2brPipe,
+    HeaderComponent,
   ],
   imports: [CommonModule, MatDialogModule],
   exports: [
@@ -22,6 +24,7 @@ import { Nl2brPipe } from '../pipes/nl2br.pipe';
     MusicComponent,
     PageNotFoundComponent,
     ConfirmationDialogComponent,
+    HeaderComponent,
   ],
 })
 export class SharedModule {}
