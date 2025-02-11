@@ -1,4 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  OnInit,
+  ViewChild,
+  AfterViewInit,
+  ChangeDetectorRef,
+  HostBinding,
+} from '@angular/core';
 import { DarkModeService } from 'src/app/core/services/dark-mode.service';
 import { trigger, transition, style, animate } from '@angular/animations';
 import {
@@ -23,7 +31,7 @@ import {
     ]),
   ],
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit, AfterViewInit {
   isDarkMode?: boolean;
   email: string = 'bonfins360@gmail.com';
   imagemPerfil: string = 'assets/images/dev_1.jpg';
@@ -32,11 +40,34 @@ export class HomeComponent {
   faLinkedin = faLinkedin;
   faWhatsapp = faWhatsapp;
 
-  constructor(private darkModeService: DarkModeService) {}
+  text: string = 'Desenvolvedor Frontend Angular';
+  index: number = 0;
 
-  ngOnInit() {
+  @ViewChild('typingEffect', { static: false }) textElement?: ElementRef;
+
+  constructor(
+    private darkModeService: DarkModeService,
+    private cdr: ChangeDetectorRef
+  ) {}
+
+  ngOnInit(): void {
     this.darkModeService.darkMode$.subscribe((darkMode) => {
       this.isDarkMode = darkMode;
     });
+  }
+
+  ngAfterViewInit(): void {
+    this.cdr.detectChanges(); // Força a atualização do Angular antes de acessar a ViewChild
+    setTimeout(() => this.typeText(), 500);
+  }
+
+  typeText(): void {
+    if (!this.textElement) return;
+
+    if (this.index < this.text.length) {
+      this.textElement.nativeElement.innerHTML += this.text.charAt(this.index);
+      this.index++;
+      setTimeout(() => this.typeText(), 100);
+    }
   }
 }

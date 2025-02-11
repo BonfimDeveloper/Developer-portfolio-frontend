@@ -48,10 +48,42 @@
   }
 }
 
+.slide-in-left {
+  animation: slideInLeft 1s ease-out forwards;
+  opacity: 0; /* Inicialmente invisível */
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%); /* Inicia fora da tela à esquerda */
+    opacity: 0; /* Inicialmente invisível */
+  }
+  100% {
+    transform: translateX(0); /* Move-se para a posição original */
+    opacity: 1; /* Torna-se visível */
+  }
+}
+
+.slide-in-right {
+  animation: slideInRight 1s ease-out forwards;
+  opacity: 0; /* Inicialmente invisível */
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%); /* Inicia fora da tela à direita */
+    opacity: 0; /* Inicialmente invisível */
+  }
+  100% {
+    transform: translateX(0); /* Move-se para a posição original */
+    opacity: 1; /* Torna-se visível */
+  }
+}
+
 .btn-cv-download-slide{
   opacity: 0;
   transform: translateY(50px);
-  animation: slideUp 1.2s ease-out forwards;
+  animation: slideUp 2.4s ease-out forwards;
 }
 
 @keyframes slideUp {
@@ -68,7 +100,7 @@
 .btn-git-slide{
   opacity: 0;
   transform: translateY(50px);
-  animation: slideUp2 1.4s ease-out forwards;
+  animation: slideUp2 2.6s ease-out forwards;
 }
 
 @keyframes slideUp2 {
@@ -85,7 +117,7 @@
 .btn-linkedin-slide{
   opacity: 0;
   transform: translateY(50px);
-  animation: slideUp3 1.6s ease-out forwards;
+  animation: slideUp3 2.8s ease-out forwards;
 }
 
 @keyframes slideUp3 {
@@ -102,7 +134,7 @@
 .btn-zap-slide{
   opacity: 0;
   transform: translateY(50px);
-  animation: slideUp4 1.8s ease-out forwards;
+  animation: slideUp4 3s ease-out forwards;
 }
 
 @keyframes slideUp4 {

@@ -29,13 +29,21 @@ export class AppComponent {
   //     window.localStorage.setItem('darkMode', JSON.stringify(this.darkMode()));
   //   });
   // }
-  @HostBinding('class.dark') get isDarkMode() {
-    return this.darkModeService.isDarkMode;
-  }
+  // @HostBinding('class.dark') get isDarkMode() {
+  //   return this.darkModeService.isDarkMode;
+  // }
+
+  // constructor(private darkModeService: DarkModeService) {}
+
+  // toggleDarkMode() {
+  //   this.darkModeService.toggleDarkMode();
+  // }
 
   constructor(private darkModeService: DarkModeService) {}
 
-  toggleDarkMode() {
-    this.darkModeService.toggleDarkMode();
+  ngOnInit() {
+    if (this.darkModeService.isDarkMode) {
+      document.body.classList.add('dark');
+    }
   }
 }

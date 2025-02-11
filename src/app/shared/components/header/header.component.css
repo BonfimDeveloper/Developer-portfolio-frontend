@@ -1,6 +1,6 @@
 .header-effect{
   opacity: 0;
-  transform: translateY(50px);
+  transform: translateY(500px);
   animation: slideDown 1s ease-out forwards;
 }
 
@@ -45,3 +45,12 @@
    /* Raio da borda inferior direita */
 }
 
+.wt {
+  @apply bg-white text-slate-800;
+  transition: all 0.7s ease-in-out;
+}
+
+.dk {
+  @apply bg-black text-slate-300;
+  transition: all 0.7s ease-in-out;
+}

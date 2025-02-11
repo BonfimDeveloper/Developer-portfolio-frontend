@@ -1,22 +1,56 @@
 <header
-
-  class="font-poppins fixed top-0 w-full p-6 translate-y-[-100%] animate-[slideDown_0.5s_ease-out_forwards] header-effect text-gray-700 bg-slate-100"
+  class="font-poppins fixed top-0 w-full p-6 translate-y-[-100%] animate-[slideDown_0.5s_ease-out_forwards] header-effect text-gray-700 bg-white dark:bg-black"
 >
-  <nav class="mx-40 flex items-center justify-between">
+  <nav class="mx-20 flex items-center">
     <!-- Nome à esquerda -->
-    <div class="text-3xl ">
-      <button (click)="navigateTo('/pages/home')" class="transition-transform duration-300 hover:scale-110 flex items-center gap-1 ">
-        <p class="text-lg font-semibold">{{ chave1 }}</p> <p class="text-5xl font-extrabold hover:text-transparent hover:bg-gradient-to-r hover:from-purpleCustom hover:to-blue-300 bg-clip-border hover:bg-clip-text  transition-all duration-300">DB</p> <p class="text-lg font-semibold">{{ chave2 }}</p>
+    <div class="flex text-3xl  justify-start">
+      <button
+        (click)="navigateTo('/pages/home')"
+        class="transition-transform duration-300 hover:scale-110 flex items-center gap-1"
+      >
+        <p class="text-lg font-semibold">{{ chave1 }}</p>
+        <p
+          class="text-5xl font-extrabold hover:text-transparent hover:bg-gradient-to-r hover:from-purpleCustom hover:to-blue-300 bg-clip-border hover:bg-clip-text transition-all duration-300"
+        >
+          DB
+        </p>
+        <p class="text-lg font-semibold">{{ chave2 }}</p>
       </button>
     </div>
 
-    <!-- Itens do menu à direita -->
-    <ul class="flex gap-8 text-gray-700 text-lg font-semibold">
-      <li [ngClass]="{'active-link': currentRoute === '/' || currentRoute === '/pages/home'}" class=" cursor-pointer"><button (click)="navigateTo('/pages/home')"  class="hover:text-transparent hover:bg-gradient-to-r hover:from-purple-400 hover:to-blue-300 bg-clip-border hover:bg-clip-text  transition-all duration-300">Início</button></li>
-      <li [ngClass]="{'active-link': currentRoute === '/pages/about'}" class="cursor-pointer"><button (click)="navigateTo('/pages/about')" class="hover:text-transparent hover:bg-gradient-to-r hover:from-purple-400 hover:to-blue-300 bg-clip-border hover:bg-clip-text  transition-all duration-300">Sobre</button></li>
-      <li [ngClass]="{'active-link': currentRoute === '/pages/projects'}"  class=" cursor-pointer"><button (click)="navigateTo('/pages/projects')" class="hover:text-transparent hover:bg-gradient-to-r hover:from-purple-400 hover:to-blue-300 bg-clip-border hover:bg-clip-text  transition-all duration-300">Projetos</button></li>
-      <li [ngClass]="{'active-link': currentRoute === '/pages/services'}"  class=" cursor-pointer"><button (click)="navigateTo('/pages/services')" class="hover:text-transparent hover:bg-gradient-to-r hover:from-purple-400 hover:to-blue-300 bg-clip-border hover:bg-clip-text  transition-all duration-300">Serviços</button></li>
-      <li [ngClass]="{'active-link': currentRoute === '/pages/contact'}"  class=" cursor-pointer"><button (click)="navigateTo('/pages/contact')" class="hover:text-transparent hover:bg-gradient-to-r hover:from-purple-400 hover:to-blue-300 bg-clip-border hover:bg-clip-text  transition-all duration-300">Contato</button></li>
-    </ul>
+    <div class="flex flex-row justify-center w-full">
+      <!-- Menu de Navegação -->
+      <ul
+        class="flex gap-6 md:gap-32 text-gray-700 dark:text-white text-sm md:text-lg font-semibold"
+      >
+        <li
+          *ngFor="let link of menuLinks"
+          [ngClass]="{ 'active-link': isActive(link.routes) }"
+          class="cursor-pointer"
+        >
+          <button
+            (click)="navigateTo(link.routes[0])"
+            class="hover:text-transparent hover:bg-gradient-to-r hover:from-purple-400 hover:to-blue-300 bg-clip-border hover:bg-clip-text transition-all duration-300"
+          >
+            {{ link.label }}
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="flex justify-end">
+      <!-- Botão Modo Escuro/Claro -->
+      <button class="items-center w-10 h-10" (click)="toggleDarkMode()">
+        <span
+          *ngIf="isDarkMode"
+          class="material-symbols-outlined text-4xl text-white"
+        >
+          brightness_5
+        </span>
+        <span *ngIf="!isDarkMode" class="material-symbols-outlined text-4xl">
+          dark_mode
+        </span>
+      </button>
+    </div>
   </nav>
 </header>

@@ -1,6 +1,6 @@
-import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { DarkModeService } from 'src/app/core/services/dark-mode.service';
 
 @Component({
   selector: 'app-header',
@@ -11,18 +11,40 @@ export class HeaderComponent implements OnInit {
   public chave1: string = '<';
   public chave2: string = '>';
   currentRoute: string = '';
+  isDarkMode: boolean = false;
 
-  constructor(private router: Router) {}
+  menuLinks = [
+    { label: 'Início', routes: ['/pages/home', '/'] },
+    { label: 'Sobre', routes: ['/pages/about'] },
+    { label: 'Projetos', routes: ['/pages/projects'] },
+    { label: 'Serviços', routes: ['/pages/services'] },
+    { label: 'Contato', routes: ['/pages/contact'] },
+  ];
+
+  constructor(
+    private router: Router,
+    private darkModeService: DarkModeService
+  ) {}
 
   ngOnInit(): void {
-    console.log('AQUI=>', this.router.url);
+    this.currentRoute = this.router.url;
 
-    this.currentRoute = this.router.url; // Atribui a URL atual à currentRoute
+    // Observa mudanças no modo escuro
+    this.darkModeService.darkMode$.subscribe((mode) => {
+      this.isDarkMode = mode;
+    });
   }
 
   navigateTo(route: string): void {
     this.router.navigate([route]);
     this.currentRoute = route;
-    console.log('AQUI=>', this.currentRoute);
+  }
+
+  toggleDarkMode() {
+    this.darkModeService.toggleDarkMode();
+  }
+
+  isActive(routes: string[]): boolean {
+    return routes.includes(this.currentRoute);
   }
 }

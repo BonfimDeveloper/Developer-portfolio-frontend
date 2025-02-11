@@ -9,9 +9,17 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SobreComponent } from './components/sobre/sobre.component';
 import { ProjetosComponent } from './components/projetos/projetos.component';
 import { ServicosComponent } from './components/servicos/servicos.component';
+import { TypingEffectDirective } from '../core/directives/typing-effect.directive.ts.directive';
 
 @NgModule({
-  declarations: [HomeComponent, ContatoComponent, SobreComponent, ProjetosComponent, ServicosComponent],
+  declarations: [
+    HomeComponent,
+    ContatoComponent,
+    SobreComponent,
+    ProjetosComponent,
+    ServicosComponent,
+    TypingEffectDirective,
+  ],
   imports: [
     CommonModule,
     PagesRoutingModule,
