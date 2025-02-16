@@ -1,7 +1,9 @@
+
+
 <header
-  class="font-poppins fixed top-0 w-full p-6 translate-y-[-100%] animate-[slideDown_0.5s_ease-out_forwards] header-effect text-gray-700 bg-white dark:bg-black"
+  class="font-poppins fixed top-0 w-full p-6   text-gray-700 bg-white dark:bg-black transition-colors duration-700 ease-in-out"
 >
-  <nav class="mx-20 flex items-center">
+  <nav class="mx-20 flex items-center header-effect">
     <!-- Nome à esquerda -->
     <div class="flex text-3xl  justify-start">
       <button
@@ -45,11 +47,12 @@
           *ngIf="isDarkMode"
           class="material-symbols-outlined text-4xl text-white"
         >
-          brightness_5
+        light_mode
         </span>
         <span *ngIf="!isDarkMode" class="material-symbols-outlined text-4xl">
           dark_mode
         </span>
+
       </button>
     </div>
   </nav>

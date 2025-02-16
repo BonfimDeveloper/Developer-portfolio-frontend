@@ -2,8 +2,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 html,
 body {
@@ -11,16 +10,39 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden; /* Para evitar scrollbars */
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+  @apply bg-white dark:bg-black;
 }
 
-::-webkit-scrollbar {
-  @apply w-3 bg-slate-50;
+
+
+/* ::-webkit-scrollbar {
+  @apply w-3 ;
+  background-color: linear-gradient(90deg, #c084fc, #84eafc);
 }
 
 ::-webkit-scrollbar-thumb {
   @apply w-3 bg-slate-200 rounded-md;
+} */
+ /* Estiliza a área do scroll (trilho) */
+::-webkit-scrollbar {
+  width: 10px; /* Define a largura */
+}
+
+::-webkit-scrollbar-track {
+  background: #dee1e6; /* Gradiente no trilho */
+  border-radius: 12px;
+}
+
+/* Estiliza a "barra" de rolagem */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #c084fc, #84eafc); /* Cor do thumb */
+  border-radius: 10px;
+}
+
+/* Quando passa o mouse por cima */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #a56bf2, #6dd6f7);/* Escurece um pouco */
 }
 
 /*Essa classe resolve o conflito do tailwind com o material, remove o traço no input causado pelo matlabel =>*/
@@ -28,29 +50,6 @@ body {
   border-right: none;
 }
 
-/* Renderiza componentes lentamente ==> */
-.show-slowly {
-  opacity: 0; /* Começa com opacidade 0 */
-  transition: opacity 3s ease; /* Adiciona uma transição de opacidade */
-}
-
-.show-slowly.show {
-  opacity: 1; /* Quando a classe 'show' é adicionada, a opacidade é 1 */
-}
-
-.show-slowly.hide {
-  opacity: 0;
-  transition: opacity 3s ease;
-}
-
-
-
 main {
-
   @apply mt-20;
-
-
 }
-
-
-

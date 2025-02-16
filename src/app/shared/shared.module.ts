@@ -8,6 +8,8 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
 import { Nl2brPipe } from '../pipes/nl2br.pipe';
 import { HeaderComponent } from './components/header/header.component';
+import { HighlightBadgeComponent } from './components/highlight-badge/highlight-badge.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -17,14 +19,16 @@ import { HeaderComponent } from './components/header/header.component';
     ConfirmationDialogComponent,
     Nl2brPipe,
     HeaderComponent,
+    HighlightBadgeComponent,
   ],
-  imports: [CommonModule, MatDialogModule],
+  imports: [CommonModule, MatDialogModule, FontAwesomeModule],
   exports: [
     LogoComponent,
     MusicComponent,
     PageNotFoundComponent,
     ConfirmationDialogComponent,
     HeaderComponent,
+    HighlightBadgeComponent,
   ],
 })
 export class SharedModule {}

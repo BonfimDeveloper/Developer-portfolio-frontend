@@ -5,45 +5,36 @@ import {
   ViewChild,
   AfterViewInit,
   ChangeDetectorRef,
-  HostBinding,
 } from '@angular/core';
 import { DarkModeService } from 'src/app/core/services/dark-mode.service';
-import { trigger, transition, style, animate } from '@angular/animations';
 import {
   faGithub,
   faLinkedin,
   faWhatsapp,
 } from '@fortawesome/free-brands-svg-icons';
+import { gsap } from 'gsap';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
-  animations: [
-    trigger('slideUpp', [
-      transition(':enter', [
-        style({ opacity: 0, transform: 'translateY(900px)' }),
-        animate(
-          '2s ease-out',
-          style({ opacity: 1, transform: 'translateY(0)' })
-        ),
-      ]),
-    ]),
-  ],
 })
 export class HomeComponent implements OnInit, AfterViewInit {
-  isDarkMode?: boolean;
-  email: string = 'bonfins360@gmail.com';
-  imagemPerfil: string = 'assets/images/dev_1.jpg';
+  @ViewChild('elementoAnimado', { static: false }) elementoAnimado!: ElementRef;
+  @ViewChild('btnGit', { static: false }) btnGit!: ElementRef;
+  @ViewChild('btnLinkedin', { static: false }) btnLinkedin!: ElementRef;
+  @ViewChild('btnWhatsApp', { static: false }) btnWhatsApp!: ElementRef;
 
+  isDarkMode?: boolean;
   faGithub = faGithub;
   faLinkedin = faLinkedin;
   faWhatsapp = faWhatsapp;
-
   text: string = 'Desenvolvedor Frontend Angular';
   index: number = 0;
-
-  @ViewChild('typingEffect', { static: false }) textElement?: ElementRef;
+  email: string = 'bonfins360@gmail.com';
+  imagemPerfil: string = 'assets/images/dev_1.jpg';
+  public chave3: string = '{';
+  public chave4: string = '}';
 
   constructor(
     private darkModeService: DarkModeService,
@@ -57,17 +48,35 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this.cdr.detectChanges(); // Força a atualização do Angular antes de acessar a ViewChild
-    setTimeout(() => this.typeText(), 500);
-  }
+    this.cdr.detectChanges();
 
-  typeText(): void {
-    if (!this.textElement) return;
+    const tl = gsap.timeline();
 
-    if (this.index < this.text.length) {
-      this.textElement.nativeElement.innerHTML += this.text.charAt(this.index);
-      this.index++;
-      setTimeout(() => this.typeText(), 100);
-    }
+    tl.fromTo(
+      this.elementoAnimado.nativeElement,
+      { opacity: 0, y: 900 }, // Estado inicial
+      { opacity: 1, y: 0, duration: 2, ease: 'power2.out' } // Estado final
+    )
+      .to(this.btnGit.nativeElement, {
+        rotation: '+=360', // Gira 360°
+        duration: 1, // Tempo de rotação
+        ease: 'linear',
+        repeat: -1, // Loop infinito
+        repeatDelay: 10, // Pausa de 10 segundos entre cada rotação
+      })
+      .to(this.btnLinkedin.nativeElement, {
+        rotation: '+=360', // Gira 360°
+        duration: 1, // Tempo de rotação
+        ease: 'linear',
+        repeat: -1, // Loop infinito
+        repeatDelay: 10, // Pausa de 10 segundos entre cada rotação
+      })
+      .to(this.btnWhatsApp.nativeElement, {
+        rotation: '+=360', // Gira 360°
+        duration: 1, // Tempo de rotação
+        ease: 'linear',
+        repeat: -1, // Loop infinito
+        repeatDelay: 10, // Pausa de 10 segundos entre cada rotação
+      });
   }
 }

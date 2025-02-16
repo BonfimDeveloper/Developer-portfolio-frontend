@@ -10,6 +10,7 @@ import { SobreComponent } from './components/sobre/sobre.component';
 import { ProjetosComponent } from './components/projetos/projetos.component';
 import { ServicosComponent } from './components/servicos/servicos.component';
 import { TypingEffectDirective } from '../core/directives/typing-effect.directive.ts.directive';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { TypingEffectDirective } from '../core/directives/typing-effect.directiv
     PagesRoutingModule,
     MatDividerModule,
     FontAwesomeModule,
+    SharedModule,
   ],
 })
 export class PagesModule {}

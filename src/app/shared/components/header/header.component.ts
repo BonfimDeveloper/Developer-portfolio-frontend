@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 import { DarkModeService } from 'src/app/core/services/dark-mode.service';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-header',
@@ -10,6 +11,7 @@ import { DarkModeService } from 'src/app/core/services/dark-mode.service';
 export class HeaderComponent implements OnInit {
   public chave1: string = '<';
   public chave2: string = '>';
+
   currentRoute: string = '';
   isDarkMode: boolean = false;
 
@@ -27,12 +29,20 @@ export class HeaderComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.currentRoute = this.router.url;
+    // this.currentRoute = this.router.url;
 
     // Observa mudanças no modo escuro
     this.darkModeService.darkMode$.subscribe((mode) => {
       this.isDarkMode = mode;
     });
+    this.router.events
+      .pipe(filter((event) => event instanceof NavigationEnd))
+      .subscribe(() => {
+        this.currentRoute = this.router.url;
+      });
+
+    // Define o active corretamente ao carregar a página
+    this.currentRoute = this.router.url;
   }
 
   navigateTo(route: string): void {
