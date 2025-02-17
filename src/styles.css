@@ -12,6 +12,7 @@ body {
   padding: 0;
   font-family: "Poppins", sans-serif;
   @apply bg-white dark:bg-black;
+
 }
 
 

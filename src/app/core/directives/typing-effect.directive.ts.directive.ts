@@ -1,14 +1,15 @@
-import { Directive, ElementRef, Input, AfterViewInit } from '@angular/core';
+import { Directive, ElementRef, Input } from '@angular/core';
 
 @Directive({
   selector: '[appTypingEffect]',
 })
-export class TypingEffectDirective implements AfterViewInit {
+export class TypingEffectDirective {
   @Input('appTypingEffect') text: string = '';
 
   constructor(private el: ElementRef) {}
 
-  ngAfterViewInit(): void {
+  /** Método para iniciar o efeito manualmente */
+  startTypingEffect(): void {
     if (!this.text) {
       this.text = this.el.nativeElement.innerText;
     }
@@ -19,7 +20,7 @@ export class TypingEffectDirective implements AfterViewInit {
   private typeText(text: string, index: number): void {
     if (index < text.length) {
       this.el.nativeElement.innerText += text[index];
-      setTimeout(() => this.typeText(text, index + 1), 2); // Velocidade do efeito
+      setTimeout(() => this.typeText(text, index + 1), 20); // Velocidade do efeito
     }
   }
 }
