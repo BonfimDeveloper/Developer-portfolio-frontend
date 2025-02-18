@@ -148,17 +148,17 @@ export class HomeComponent implements OnInit, AfterViewInit {
       .fromTo(
         this.angularToRight.nativeElement,
         { x: '100%', opacity: 0 }, // Começa fora da tela à direita
-        { x: '0%', opacity: 1, duration: 0.2, ease: 'power2.out' } // Move para a posição original
+        { x: '0%', opacity: 1, duration: 0.3, ease: 'power2.out' } // Move para a posição original
       )
       .fromTo(
         this.typeToRight.nativeElement,
         { x: '100%', opacity: 0 }, // Começa fora da tela à direita
-        { x: '0%', opacity: 1, duration: 0.2, ease: 'power2.out' } // Move para a posição original
+        { x: '0%', opacity: 1, duration: 0.3, ease: 'power2.out' } // Move para a posição original
       )
       .fromTo(
         this.jsToRight.nativeElement,
         { x: '100%', opacity: 0 }, // Começa fora da tela à direita
-        { x: '0%', opacity: 1, duration: 0.2, ease: 'power2.out' } // Move para a posição original
+        { x: '0%', opacity: 1, duration: 0.3, ease: 'power2.out' } // Move para a posição original
       )
       .fromTo(
         this.typpingText.nativeElement,
@@ -171,12 +171,12 @@ export class HomeComponent implements OnInit, AfterViewInit {
             'Desenvolvedor Frontend Angular Desenvolvedor Frontend AngularDesenvolvedor Frontend AngularDesenvolvedor Frontend AngularDesenvolvedor Frontend AngularDesenvolvedor Frontend AngularDesenvolvedor Frontend AngularDesenvolvedor Frontend AngularDesenvolvedor Frontend AngularDesenvolvedor Frontend AngularDesenvolvedor Frontend Angular', // Texto a ser digitado
           delimiter: '', // Faz com que cada caractere apareça individualmente
         },
-        duration: 3,
+        duration: 1,
         ease: 'none',
       })
       .fromTo(
         this.buttonsToTop.nativeElement,
-        { opacity: 0, y: 900 }, // Estado inicial
+        { opacity: 0, y: 100 }, // Estado inicial
         { opacity: 1, y: 0, duration: 1, ease: 'power2.out' } // Estado final
       )
       .to(this.btnGit.nativeElement, {

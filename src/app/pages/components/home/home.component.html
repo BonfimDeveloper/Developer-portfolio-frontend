@@ -1,7 +1,7 @@
 <div
-  class="px-40 pt-[-10rem] pb-40 relative w-full min-h-screen max-w-screen overflow-x-hidden font-poppins text-gray-600 dark:text-white bg-white dark:bg-black transition-colors duration-1000 ease-in-out"
+  class="hidden lg:block px-40 pt-[-10rem] relative w-full min-h-screen max-w-screen overflow-x-hidden overflow-y-hidden font-poppins text-gray-600 dark:text-white bg-white dark:bg-black transition-colors duration-1000 ease-in-out"
 >
-  <div class="flex flex-row pt-60 justify-between items-center">
+  <div class="hidden lg:flex flex-row pt-32 justify-between items-center">
     <div class="flex flex-col relative w-full">
       <div
         #t1
@@ -199,68 +199,80 @@
         [src]="javascript"
         alt="Minha foto de perfil"
       />
-      <div class="hidden">
 
-
-      <div #t44
+      <div
+        #t44
         class="absolute top-[8rem] left-[70rem] w-[calc(100%-70rem)] max-w-full h-[1px] bg-gradient-to-r from-purple-500 to-blue-400"
       ></div>
-      <div #t45
+      <div
+        #t45
         class="absolute top-[9rem] left-[72rem] w-[calc(100%-72rem)] max-w-full h-[1px] bg-gradient-to-r from-purple-500 to-blue-400"
       ></div>
-      <div #t46
+      <div
+        #t46
         class="absolute top-[10rem] left-[74rem] w-[calc(100%-74rem)] max-w-full h-[1px] bg-gradient-to-r from-purple-500 to-blue-400"
       ></div>
-      <div #t47
+      <div
+        #t47
         class="absolute top-[11rem] left-[76rem] w-[calc(100%-76rem)] max-w-full h-[1px] bg-gradient-to-r from-purple-500 to-blue-400"
       ></div>
-      <div #t48
+      <div
+        #t48
         class="absolute top-[12rem] left-[78rem] w-[calc(100%-78rem)] max-w-full h-[1px] bg-gradient-to-r from-purple-500 to-blue-400"
       ></div>
-      <div #t49
+      <div
+        #t49
         class="absolute top-[13rem] left-[80rem] w-[calc(100%-80rem)] max-w-full h-[1px] bg-gradient-to-r from-purple-500 to-blue-400"
       ></div>
-      <div #t50
+      <div
+        #t50
         class="absolute top-[14rem] left-[82rem] w-[calc(100%-82rem)] max-w-full h-[1px] bg-gradient-to-r from-purple-500 to-blue-400"
       ></div>
-      <div #t51
+      <div
+        #t51
         class="absolute top-[15rem] left-[84rem] w-[calc(100%-84rem)] max-w-full h-[1px] bg-gradient-to-r from-purple-500 to-blue-400"
       ></div>
-      <div #t52
+      <div
+        #t52
         class="absolute top-[16rem] left-[86rem] w-[calc(100%-86rem)] max-w-full h-[1px] bg-gradient-to-r from-purple-500 to-blue-400"
       ></div>
-      <div #t53
+      <div
+        #t53
         class="absolute top-[17rem] left-[88rem] w-[calc(100%-88rem)] max-w-full h-[1px] bg-gradient-to-r from-purple-500 to-blue-400"
       ></div>
-      <div #t54
+      <div
+        #t54
         class="absolute top-[18rem] left-[90rem] w-[calc(100%-90rem)] max-w-full h-[1px] bg-gradient-to-r from-purple-500 to-blue-400"
       ></div>
-      <div #t55
+      <div
+        #t55
         class="absolute top-[19rem] left-[92rem] w-[calc(100%-92rem)] max-w-full h-[1px] bg-gradient-to-r from-purple-500 to-blue-400"
       ></div>
-      </div>
 
-
-      <div class="hidden">
-      <div #t56
+      <div
+        #t56
         class="absolute top-[37rem] left-[92rem] w-[calc(100%-92rem)] max-w-full h-[1px] bg-gradient-to-r from-purple-500 to-blue-400"
       ></div>
-      <div #t57
+      <div
+        #t57
         class="absolute top-[38rem] left-[90rem] w-[calc(100%-90rem)] max-w-full h-[1px] bg-gradient-to-r from-purple-500 to-blue-400"
       ></div>
-      <div #t58
+      <div
+        #t58
         class="absolute top-[39rem] left-[88rem] w-[calc(100%-88rem)] max-w-full h-[1px] bg-gradient-to-r from-purple-500 to-blue-400"
       ></div>
-      <div #t59
+      <div
+        #t59
         class="absolute top-[40rem] left-[86rem] w-[calc(100%-86rem)] max-w-full h-[1px] bg-gradient-to-r from-purple-500 to-blue-400"
       ></div>
-      <div #t60
+      <div
+        #t60
         class="absolute top-[41rem] left-[84rem] w-[calc(100%-84rem)] max-w-full h-[1px] bg-gradient-to-r from-purple-500 to-blue-400"
       ></div>
-      <div #t61
+      <div
+        #t61
         class="absolute top-[42rem] left-[82rem] w-[calc(100%-82rem)] max-w-full h-[1px] bg-gradient-to-r from-purple-500 to-blue-400"
       ></div>
-    </div>
 
       <!-- <div class="absolute top-10 left-[-20px] h-24 w-1 bg-gradient-to-b from-purple-500 to-blue-400"></div> -->
       <div class="relative mb-10">
@@ -336,6 +348,28 @@
   </div>
 </div>
 
-<div class="flex md:hidden">
-OLA
+<!-- #MOBILE -->
+<div
+  class="flex flex-col font-poppins w-full justify-center items-center md:hidden pt-20 px-20"
+>
+  <div class="flex mb-4">
+    <img
+      class="relative rounded-full max-h-32 max-w-32 bg-gradient-to-r from-purple-500 to-blue-400 p-1"
+      [src]="me"
+      alt="Minha foto de perfil"
+    />
+  </div>
+  <div class="flex">
+    <p class="text-3xl font-bold">Diego Bonfim</p>
+  </div>
+  <div class="flex flex-row items-center">
+    <p class="text-xl">Desenvolvedor Frontend</p>
+  </div>
+
+  <div class="flex w-32 justify-center break-words ">
+    <p>
+      coacnocnaocaocnoacnaocnaocnaocnoacnaoncaocnaocnaocnaonaocn
+    </p>
+  </div>
+
 </div>

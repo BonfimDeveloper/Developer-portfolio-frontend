@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { DarkModeService } from 'src/app/core/services/dark-mode.service';
 import { filter } from 'rxjs/operators';
@@ -22,16 +22,13 @@ export class HeaderComponent implements OnInit {
     { label: 'Serviços', routes: ['/pages/services'] },
     { label: 'Contato', routes: ['/pages/contact'] },
   ];
-
+  private scrollListener!: () => void;
   constructor(
     private router: Router,
     private darkModeService: DarkModeService
   ) {}
 
   ngOnInit(): void {
-    // this.currentRoute = this.router.url;
-
-    // Observa mudanças no modo escuro
     this.darkModeService.darkMode$.subscribe((mode) => {
       this.isDarkMode = mode;
     });
@@ -43,6 +40,9 @@ export class HeaderComponent implements OnInit {
 
     // Define o active corretamente ao carregar a página
     this.currentRoute = this.router.url;
+
+    const contentWrapper = document.getElementById('content-wrapper');
+    if (!contentWrapper) return;
   }
 
   navigateTo(route: string): void {
