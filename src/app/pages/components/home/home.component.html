@@ -296,7 +296,7 @@
         ></p>
       </div>
       <div #buttonsToTop class="mt-10 max-w-[54rem] flex flex-row gap-6 mb-20">
-        <button
+        <button (click)="downloadCV()"
           class="bg-gray-600 dark:bg-slate-800 px-6 py-4 text-white rounded-lg font-semibold text-lg btn-cv-download-slide"
         >
           <span
@@ -333,15 +333,14 @@
         </div>
 
         <div #btnWhatsApp>
-          <Button
+          <Button (click)="openWhatsApp()"
             class="bg-slate-300 dark:bg-white text-gray-700 rounded-md px-4 py-3 font-semibold text-lg btn-zap-slide"
           >
-            <a href="https://wa.me/seunumerodetelefone" target="_blank">
               <fa-icon
                 [icon]="faWhatsapp"
                 class="text-3xl hover:text-green-500"
-              ></fa-icon> </a
-          ></Button>
+              ></fa-icon>
+          </Button>
         </div>
       </div>
     </div>
@@ -362,13 +361,14 @@
   <div class="flex">
     <p class="text-3xl font-bold">Diego Bonfim</p>
   </div>
-  <div class="flex flex-row items-center">
-    <p class="text-xl">Desenvolvedor Frontend</p>
+  <div class="flex flex-row items-center ">
+    <p class="text-xl text-gradient">Desenvolvedor Frontend</p>
   </div>
 
   <div class="flex w-32 justify-center break-words ">
     <p>
-      coacnocnaocaocnoacnaocnaocnaocnoacnaoncaocnaocnaocnaonaocn
+      coacnocnaocaocnoacnaocnaocna
+      ocnoacnaoncaocnaocnaocnaonaocn
     </p>
   </div>
 

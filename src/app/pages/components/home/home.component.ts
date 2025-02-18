@@ -168,7 +168,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
       .to(this.typpingText.nativeElement, {
         text: {
           value:
-            'Desenvolvedor Frontend Angular Desenvolvedor Frontend AngularDesenvolvedor Frontend AngularDesenvolvedor Frontend AngularDesenvolvedor Frontend AngularDesenvolvedor Frontend AngularDesenvolvedor Frontend AngularDesenvolvedor Frontend AngularDesenvolvedor Frontend AngularDesenvolvedor Frontend AngularDesenvolvedor Frontend Angular', // Texto a ser digitado
+            'Olá! Sou Diego Bonfim, desenvolvedor frontend com foco em transformar ideias em interfaces intuitivas e responsivas. Sou fã do framework Angular, mas também utilizo React, preferindo TypeScript para a lógica. Gosto muito de trabalhar com Tailwind e GSAP, que permitem criar efeitos e animações incríveis!', // Texto a ser digitado
           delimiter: '', // Faz com que cada caractere apareça individualmente
         },
         duration: 1,
@@ -511,5 +511,14 @@ export class HomeComponent implements OnInit, AfterViewInit {
         // Remove o overflow hidden após a animação inicial
         this.renderer.removeStyle(document.body, 'overflow');
       });
+  }
+
+  public openWhatsApp(): void {
+    window.open('https://wa.me/71997361553', '_blank');
+  }
+
+  public downloadCV(): void {
+    const url = 'assets/pdf/diegoCV.pdf'; // Caminho dentro da pasta assets
+    window.open(url, '_blank'); // Abre o PDF em uma nova aba
   }
 }
