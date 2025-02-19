@@ -1,9 +1,10 @@
+<!-- hidden lg:block -->
 <div
-  class="hidden lg:block px-40 pt-[-10rem] relative w-full min-h-screen max-w-screen overflow-x-hidden overflow-y-hidden font-poppins text-gray-600 dark:text-white bg-white dark:bg-black transition-colors duration-1000 ease-in-out"
+  class=" px-40 pt-[-10rem] relative w-full min-h-screen max-w-screen overflow-x-hidden overflow-y-hidden font-poppins text-gray-600 dark:text-white bg-white dark:bg-black transition-colors duration-1000 ease-in-out"
 >
-  <div class="hidden lg:flex flex-row pt-32 justify-between items-center">
+  <div class="flex flex-row pt-32 justify-between items-center">
     <div class="flex flex-col relative w-full">
-      <div
+      <!-- <div
         #t1
         class="absolute top-0 left-[14rem] w-[calc(100%-14rem)] max-w-full h-[1px] bg-gradient-to-r from-purple-500 to-blue-400"
       ></div>
@@ -179,26 +180,9 @@
         #t43
         #wave
         class="absolute top-[42rem] left-[38rem] w-[calc(100%-60rem)] max-w-full h-[1px] bg-gradient-to-r from-purple-500 to-blue-400"
-      ></div>
+      ></div> -->
 
-      <img
-        #angularToRight
-        class="absolute top-[17rem] left-[26rem] max-h-11 max-w-11"
-        [src]="angular"
-        alt="Minha foto de perfil"
-      />
-      <img
-        #typeToRight
-        class="absolute top-[17.3rem] left-[29rem] max-h-8 max-w-8"
-        [src]="typeScript"
-        alt="Minha foto de perfil"
-      />
-      <img
-        #jsToRight
-        class="absolute top-[17.3rem] left-[32rem] max-h-8 max-w-8"
-        [src]="javascript"
-        alt="Minha foto de perfil"
-      />
+<!--
 
       <div
         #t44
@@ -272,7 +256,7 @@
       <div
         #t61
         class="absolute top-[42rem] left-[82rem] w-[calc(100%-82rem)] max-w-full h-[1px] bg-gradient-to-r from-purple-500 to-blue-400"
-      ></div>
+      ></div> -->
 
       <!-- <div class="absolute top-10 left-[-20px] h-24 w-1 bg-gradient-to-b from-purple-500 to-blue-400"></div> -->
       <div class="relative mb-10">
@@ -288,6 +272,24 @@
         <p #nameToRight class="text-4xl text-gradient">
           Desenvolvedor Frontend
         </p>
+        <img
+        #angularToRight
+        class=" max-h-11 max-w-11"
+        [src]="angular"
+        alt="Minha foto de perfil"
+      />
+      <img
+        #typeToRight
+        class=" max-h-8 max-w-8"
+        [src]="typeScript"
+        alt="Minha foto de perfil"
+      />
+      <img
+        #jsToRight
+        class=" max-h-8 max-w-8"
+        [src]="javascript"
+        alt="Minha foto de perfil"
+      />
       </div>
       <div class="max-w-[54rem] mt-10 relative">
         <p
