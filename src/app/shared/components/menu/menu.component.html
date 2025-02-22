@@ -1,0 +1,42 @@
+
+<button
+  (click)="toggleMenu()"
+  class="fixed  font-poppins text-md sm:text-lg md:text-2xl top-20 left-24 text-black dark:text-white px-4 py-2 font-semibold uppercase gap-4  z-50 flex items-center"
+>
+<code class="text-4xl p-2 rounded-full font-extrabold bg-gradient-to-b from-blue-300 to-purple-400">DB</code> <code> | </code> <code class="font-extralight tracking-widest">{{ !isOpen ? "Menu" : "Close" }}</code>
+</button>
+
+<button class="fixed font-poppins text-xs sm:text-lg md:text-2xl top-[5.6rem] right-24 text-white px-4 py-2  z-50" (click)="toggleDarkMode()">
+  <span
+
+    class="material-symbols-outlined text-4xl text-black dark:text-white"
+  >
+  {{isDarkMode ? 'light_mode' : 'dark_mode'}}
+  </span> </button>
+
+
+
+<div
+  [ngClass]="{
+    'translate-y-0 opacity-100 visible': isOpen,
+    '-translate-y-full opacity-0 invisible': !isOpen
+  }"
+  class="fixed font-poppins mx-10 my-10 inset-0 bg-slate-200 transition-all duration-700 ease-in-out z-40"
+>
+  <div class="p-20">
+    <ul class="mt-8 space-y-4 text-3xl font-bold">
+      <li
+      *ngFor="let link of menuLinks"
+      [ngClass]="{ 'active-link': isActive(link.routes) }"
+      class="cursor-pointer"
+    >
+      <button
+        (click)="navigateTo(link.routes[0])"
+        class="hover:text-transparent hover:bg-gradient-to-r hover:from-purple-400 hover:to-blue-300 bg-clip-border hover:bg-clip-text transition-all duration-300"
+      >
+        {{ link.label }}
+      </button>
+    </li>
+    </ul>
+  </div>
+</div>

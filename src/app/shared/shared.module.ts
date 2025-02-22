@@ -10,6 +10,7 @@ import { Nl2brPipe } from '../pipes/nl2br.pipe';
 import { HeaderComponent } from './components/header/header.component';
 import { HighlightBadgeComponent } from './components/highlight-badge/highlight-badge.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     Nl2brPipe,
     HeaderComponent,
     HighlightBadgeComponent,
+    MenuComponent,
   ],
   imports: [CommonModule, MatDialogModule, FontAwesomeModule],
   exports: [
@@ -29,6 +31,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ConfirmationDialogComponent,
     HeaderComponent,
     HighlightBadgeComponent,
+    MenuComponent,
   ],
 })
 export class SharedModule {}
