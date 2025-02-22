@@ -2,6 +2,11 @@ import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
 import { DarkModeService } from 'src/app/core/services/dark-mode.service';
+import {
+  faGithub,
+  faLinkedin,
+  faWhatsapp,
+} from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-menu',
@@ -11,6 +16,9 @@ import { DarkModeService } from 'src/app/core/services/dark-mode.service';
 export class MenuComponent implements OnInit {
   isDarkMode: boolean = false;
   isOpen: boolean = false;
+  faGithub = faGithub;
+  faLinkedin = faLinkedin;
+  faWhatsapp = faWhatsapp;
 
   currentRoute: string = '';
   menuLinks = [
@@ -76,5 +84,14 @@ export class MenuComponent implements OnInit {
 
   isActive(routes: string[]): boolean {
     return routes.includes(this.currentRoute);
+  }
+
+  public openWhatsApp(): void {
+    window.open('https://wa.me/71997361553', '_blank');
+  }
+
+  public downloadCV(): void {
+    const url = 'assets/pdf/diegoCV.pdf'; // Caminho dentro da pasta assets
+    window.open(url, '_blank'); // Abre o PDF em uma nova aba
   }
 }

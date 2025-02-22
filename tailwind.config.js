@@ -23,7 +23,7 @@ module.exports = {
       },
       colors: {
         purpleCustom: 'rgb(214, 178, 255)',
-        lightTheme: "#fffce1",
+        lightTheme: "#fbfefa",
         darkTheme: "#1E1E1E",
       },
       fontFamily: {

@@ -33,24 +33,64 @@
   }"
   class="fixed font-poppins mx-10 my-10 inset-0 bg-lightTheme transition-all duration-700 ease-in-out z-40"
 >
+  <div class="mt-40 pl-10 pr-10 flex flex-row gap-4 items-center">
+    <div class="w-20 h-1 bg-gradient-to-b from-blue-300 to-purple-400 "></div>
+    <div >
+      <Button
+        class=" text-gray-600 rounded-md  font-semibold text-lg "
+      >
+        <a href="https://github.com/BonfimDeveloper" target="_blank">
+          <fa-icon
+            [icon]="faGithub"
+            class="text-3xl hover:text-purple-800"
+          ></fa-icon> </a
+      ></Button>
+    </div>
+
+    <div >
+      <Button
+        class=" text-gray-600 rounded-md  font-semibold text-lg "
+      >
+        <a
+          href="https://www.linkedin.com/in/diego-bonfim-8b24a421a/"
+          target="_blank"
+        >
+          <fa-icon
+            [icon]="faLinkedin"
+            class="text-3xl hover:text-blue-600"
+          ></fa-icon> </a
+      ></Button>
+    </div>
+
+    <div >
+      <Button
+        (click)="openWhatsApp()"
+        class=" text-gray-600 rounded-md   font-semibold text-lg "
+      >
+        <fa-icon
+          [icon]="faWhatsapp"
+          class="text-3xl hover:text-green-500"
+        ></fa-icon>
+      </Button>
+    </div>
+  </div>
   <div class="p-10 md:p-20 font-poppins">
     <ul
-      class="mt-28 md:mt-36 space-y-10 md:space-y-14 text-lg md:text-6xl font-extrabold"
+      class="mt-2 md:mt-4 space-y-10 md:space-y-14 text-lg md:text-6xl font-extrabold"
     >
       <li
         *ngFor="let link of menuLinks"
         [ngClass]="{ 'active-link': isActive(link.routes) }"
         class="cursor-pointer font-poppins gap-10 flex flex-row items-end"
       >
-      <div class="w-auto lg:w-80">
-        <button
-          (click)="navigateTo(link.routes[0])"
-          class="text-gray-600 hover:text-transparent hover:bg-gradient-to-r hover:from-purple-400 hover:to-blue-300 bg-clip-border hover:bg-clip-text transition-all duration-300 font-bitter tracking-widest"
-        >
-          {{ link.label }}
-        </button>
-      </div>
-
+        <div class="w-auto lg:w-80">
+          <button
+            (click)="navigateTo(link.routes[0])"
+            class="text-3xl md:text-7xl text-gray-500 hover:text-transparent hover:bg-gradient-to-r hover:from-purple-400 hover:to-blue-300 bg-clip-border hover:bg-clip-text transition-all duration-300 font-bitter font-extrabold tracking-widest"
+          >
+            {{ link.label }}
+          </button>
+        </div>
 
         <button
           class="hidden pl-44 lg:flex text-xl text-gray-500 font-bitter font-light"
