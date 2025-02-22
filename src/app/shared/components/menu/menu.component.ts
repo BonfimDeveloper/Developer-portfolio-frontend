@@ -14,11 +14,31 @@ export class MenuComponent implements OnInit {
 
   currentRoute: string = '';
   menuLinks = [
-    { label: 'Início', routes: ['/pages/home', '/'] },
-    { label: 'Sobre', routes: ['/pages/about'] },
-    { label: 'Projetos', routes: ['/pages/projects'] },
-    { label: 'Serviços', routes: ['/pages/services'] },
-    { label: 'Contato', routes: ['/pages/contact'] },
+    {
+      label: 'Home',
+      description: 'Back to the home page.',
+      routes: ['/pages/home', '/'],
+    },
+    {
+      label: 'About',
+      description: 'A little about me and my background.',
+      routes: ['/pages/about'],
+    },
+    {
+      label: 'Projects',
+      description: 'My approach to development.',
+      routes: ['/pages/projects'],
+    },
+    {
+      label: 'Service',
+      description: 'nownocndokncvodvnodk',
+      routes: ['/pages/services'],
+    },
+    {
+      label: 'Contact',
+      description: 'Talk to me.',
+      routes: ['/pages/contact'],
+    },
   ];
   constructor(
     private router: Router,

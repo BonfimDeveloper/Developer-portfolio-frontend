@@ -1,42 +1,63 @@
-
 <button
   (click)="toggleMenu()"
-  class="fixed  font-poppins text-md sm:text-lg md:text-2xl top-20 left-24 text-black dark:text-white px-4 py-2 font-semibold uppercase gap-4  z-50 flex items-center"
+  class="fixed font-poppins text-md sm:text-lg md:text-2xl top-20 left-14 md:left-24 text-gray-600 dark:text-white px-4 py-2 font-semibold uppercase gap-1 sm:gap-2 md:gap-4 z-50 flex items-center"
 >
-<code class="text-4xl p-2 rounded-full font-extrabold bg-gradient-to-b from-blue-300 to-purple-400">DB</code> <code> | </code> <code class="font-extralight tracking-widest">{{ !isOpen ? "Menu" : "Close" }}</code>
+  <code
+    class="text-sm sm:text-2xl md:text-4xl p-2 md:p-4 rounded-full font-extrabold bg-gradient-to-b from-blue-300 to-purple-400"
+    >DB</code
+  >
+  <code> | </code>
+  <code class="font-extralight tracking-widest">{{
+    !isOpen ? "Menu" : "Close"
+  }}</code>
 </button>
 
-<button class="fixed font-poppins text-xs sm:text-lg md:text-2xl top-[5.6rem] right-24 text-white px-4 py-2  z-50" (click)="toggleDarkMode()">
+<button
+  class="fixed font-poppins text-xs sm:text-lg md:text-2xl top-[5.3rem] md:top-[5.6rem] right-14 md:right-24 text-white px-4 py-2 z-50 flex items-center gap-1"
+  (click)="toggleDarkMode()"
+>
+  <span class="text-gray-600 dark:text-white text-md md:text-xl font-light">{{
+    isDarkMode ? "Light" : "Dark"
+  }}</span>
   <span
-
-    class="material-symbols-outlined text-4xl text-black dark:text-white"
+    class="material-symbols-outlined text-2xl md:text-4xl text-gray-600 dark:text-white"
   >
-  {{isDarkMode ? 'light_mode' : 'dark_mode'}}
-  </span> </button>
-
-
+    {{ isDarkMode ? "light_mode" : "dark_mode" }}
+  </span>
+</button>
 
 <div
   [ngClass]="{
     'translate-y-0 opacity-100 visible': isOpen,
     '-translate-y-full opacity-0 invisible': !isOpen
   }"
-  class="fixed font-poppins mx-10 my-10 inset-0 bg-slate-200 transition-all duration-700 ease-in-out z-40"
+  class="fixed font-poppins mx-10 my-10 inset-0 bg-lightTheme transition-all duration-700 ease-in-out z-40"
 >
-  <div class="p-20">
-    <ul class="mt-8 space-y-4 text-3xl font-bold">
-      <li
-      *ngFor="let link of menuLinks"
-      [ngClass]="{ 'active-link': isActive(link.routes) }"
-      class="cursor-pointer"
+  <div class="p-10 md:p-20 font-poppins">
+    <ul
+      class="mt-28 md:mt-36 space-y-10 md:space-y-14 text-lg md:text-6xl font-extrabold"
     >
-      <button
-        (click)="navigateTo(link.routes[0])"
-        class="hover:text-transparent hover:bg-gradient-to-r hover:from-purple-400 hover:to-blue-300 bg-clip-border hover:bg-clip-text transition-all duration-300"
+      <li
+        *ngFor="let link of menuLinks"
+        [ngClass]="{ 'active-link': isActive(link.routes) }"
+        class="cursor-pointer font-poppins gap-10 flex flex-row items-end"
       >
-        {{ link.label }}
-      </button>
-    </li>
+      <div class="w-auto lg:w-80">
+        <button
+          (click)="navigateTo(link.routes[0])"
+          class="text-gray-600 hover:text-transparent hover:bg-gradient-to-r hover:from-purple-400 hover:to-blue-300 bg-clip-border hover:bg-clip-text transition-all duration-300 font-bitter tracking-widest"
+        >
+          {{ link.label }}
+        </button>
+      </div>
+
+
+        <button
+          class="hidden pl-44 lg:flex text-xl text-gray-500 font-bitter font-light"
+        >
+          {{ link.description }}
+        </button>
+      </li>
     </ul>
   </div>
 </div>

@@ -28,6 +28,8 @@ module.exports = {
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
+        bitter: [ "Bitter", "serif" ],
+
       },
     },
   },
