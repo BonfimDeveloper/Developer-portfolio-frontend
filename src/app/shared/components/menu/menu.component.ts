@@ -1,4 +1,12 @@
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import {
+  AfterViewInit,
+  ChangeDetectorRef,
+  Component,
+  ElementRef,
+  OnInit,
+  Renderer2,
+  ViewChild,
+} from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
 import { DarkModeService } from 'src/app/core/services/dark-mode.service';
@@ -7,13 +15,19 @@ import {
   faLinkedin,
   faWhatsapp,
 } from '@fortawesome/free-brands-svg-icons';
+import { gsap } from 'gsap';
 
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.css'],
 })
-export class MenuComponent implements OnInit {
+export class MenuComponent implements OnInit, AfterViewInit {
+  @ViewChild('divToRight', { static: false }) divToRight!: ElementRef;
+  @ViewChild('icon1ToRight', { static: false }) icon1ToRight!: ElementRef;
+  @ViewChild('icon2ToRight', { static: false }) icon2ToRight!: ElementRef;
+  @ViewChild('icon3ToRight', { static: false }) icon3ToRight!: ElementRef;
+
   isDarkMode: boolean = false;
   isOpen: boolean = false;
   faGithub = faGithub;
@@ -50,7 +64,9 @@ export class MenuComponent implements OnInit {
   ];
   constructor(
     private router: Router,
-    private darkModeService: DarkModeService
+    private darkModeService: DarkModeService,
+    private cdr: ChangeDetectorRef,
+    private renderer: Renderer2
   ) {}
 
   ngOnInit(): void {
@@ -63,9 +79,11 @@ export class MenuComponent implements OnInit {
       .subscribe(() => {
         this.currentRoute = this.router.url;
       });
-
     // Define o active corretamente ao carregar a página
     this.currentRoute = this.router.url;
+  }
+  ngAfterViewInit(): void {
+    this.cdr.detectChanges();
   }
 
   toggleDarkMode() {
@@ -74,6 +92,28 @@ export class MenuComponent implements OnInit {
 
   toggleMenu() {
     this.isOpen = !this.isOpen;
+    const tl = gsap.timeline();
+
+    tl.fromTo(
+      this.divToRight.nativeElement,
+      { x: '500%', opacity: 0 }, // Começa fora da tela à direita
+      { x: '0%', opacity: 1, duration: 0.5, ease: 'power2.out' } // Move para a posição original
+    )
+      .fromTo(
+        this.icon1ToRight.nativeElement,
+        { x: '500%', opacity: 0 }, // Começa fora da tela à direita
+        { x: '0%', opacity: 1, duration: 0.2, ease: 'power2.out' } // Move para a posição original
+      )
+      .fromTo(
+        this.icon2ToRight.nativeElement,
+        { x: '500%', opacity: 0 }, // Começa fora da tela à direita
+        { x: '0%', opacity: 1, duration: 0.2, ease: 'power2.out' } // Move para a posição original
+      )
+      .fromTo(
+        this.icon3ToRight.nativeElement,
+        { x: '500%', opacity: 0 }, // Começa fora da tela à direita
+        { x: '0%', opacity: 1, duration: 0.2, ease: 'power2.out' } // Move para a posição original
+      );
   }
 
   navigateTo(route: string): void {

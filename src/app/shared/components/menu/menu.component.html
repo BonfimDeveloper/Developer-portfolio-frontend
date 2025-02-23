@@ -31,12 +31,12 @@
     'translate-y-0 opacity-100 visible': isOpen,
     '-translate-y-full opacity-0 invisible': !isOpen
   }"
-  class="fixed font-poppins mx-10 my-10 inset-0 bg-zinc-300 transition-all duration-700 ease-in-out z-40"
+  class="fixed font-poppins mx-10 my-10 inset-0 bg-slate-400 transition-all duration-700 ease-in-out z-40"
 >
   <div class="mt-52 pl-10 md:pl-20 pr-10 md:pr-20 flex flex-row gap-5 sm:gap-9 md:gap-14 items-center">
-    <div class="w-20 h-1 bg-gradient-to-b from-blue-300 to-purple-400"></div>
-    <div>
-      <Button class="text-gray-600 rounded-md font-semibold text-lg">
+    <div #divToRight class="w-20 h-1 bg-gradient-to-b from-blue-300 to-purple-400"></div>
+    <div >
+      <Button #icon1ToRight class="text-gray-600 rounded-md font-semibold text-lg">
         <a href="https://github.com/BonfimDeveloper" target="_blank">
           <fa-icon
             [icon]="faGithub"
@@ -45,8 +45,8 @@
       ></Button>
     </div>
 
-    <div>
-      <Button class="text-gray-600 rounded-md font-semibold text-lg">
+    <div >
+      <Button #icon2ToRight class="text-gray-600 rounded-md font-semibold text-lg">
         <a
           href="https://www.linkedin.com/in/diego-bonfim-8b24a421a/"
           target="_blank"
@@ -58,8 +58,8 @@
       ></Button>
     </div>
 
-    <div>
-      <Button
+    <div >
+      <Button #icon3ToRight
         (click)="openWhatsApp()"
         class="text-gray-600 rounded-md font-semibold text-lg"
       >
