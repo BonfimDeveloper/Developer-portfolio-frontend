@@ -94,11 +94,18 @@ export class MenuComponent implements OnInit, AfterViewInit {
     this.isOpen = !this.isOpen;
     const tl = gsap.timeline();
 
-    tl.fromTo(
-      this.divToRight.nativeElement,
-      { x: '500%', opacity: 0 }, // Começa fora da tela à direita
-      { x: '0%', opacity: 1, duration: 0.5, ease: 'power2.out' } // Move para a posição original
-    )
+    tl.to({}, { duration: 0.5 }) // Aguarda meio segundo antes de iniciar as animações
+      .fromTo(
+        this.divToRight.nativeElement,
+        { x: '500%', opacity: 1, width: '500px' }, // Começa fora da tela à direita
+        {
+          x: '0%',
+          opacity: 1,
+          width: '112px',
+          duration: 0.5,
+          ease: 'power2.out',
+        } // Move para a posição original
+      )
       .fromTo(
         this.icon1ToRight.nativeElement,
         { x: '500%', opacity: 0 }, // Começa fora da tela à direita

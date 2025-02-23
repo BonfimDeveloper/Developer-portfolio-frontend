@@ -13,7 +13,7 @@
 </button>
 
 <button
-  class="fixed font-poppins text-xs sm:text-lg md:text-2xl top-[5.3rem] md:top-[5.6rem] right-14 md:right-24 text-white px-4 py-2 z-50 flex items-center gap-1"
+  class="fixed font-poppins text-xs sm:text-lg md:text-2xl top-[5.1rem] sm:top-[5.6rem] md:top-[5.9rem] right-14 md:right-24 text-white px-4 py-2 z-50 flex items-center gap-1"
   (click)="toggleDarkMode()"
 >
   <span class="text-gray-600 dark:text-white text-md md:text-xl font-light">{{
@@ -31,10 +31,10 @@
     'translate-y-0 opacity-100 visible': isOpen,
     '-translate-y-full opacity-0 invisible': !isOpen
   }"
-  class="fixed font-poppins mx-10 my-10 inset-0 bg-slate-400 transition-all duration-700 ease-in-out z-40"
+  class="fixed font-poppins mx-10 my-10 inset-0 bg-slate-100 dark:bg-slate-400 transition-all duration-700 ease-in-out z-40"
 >
   <div class="mt-52 pl-10 md:pl-20 pr-10 md:pr-20 flex flex-row gap-5 sm:gap-9 md:gap-14 items-center">
-    <div #divToRight class="w-20 h-1 bg-gradient-to-b from-blue-300 to-purple-400"></div>
+    <div #divToRight class="w-20 md:w-28 h-1 bg-gradient-to-b from-blue-300 to-purple-400"></div>
     <div >
       <Button #icon1ToRight class="text-gray-600 rounded-md font-semibold text-lg">
         <a href="https://github.com/BonfimDeveloper" target="_blank">
