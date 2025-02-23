@@ -1,4 +1,4 @@
-
+/*
 
 .txt {
   position: relative;
@@ -50,33 +50,33 @@
 
 .slide-in-left {
   animation: slideInLeft 1s ease-out forwards;
-  opacity: 0; /* Inicialmente invisível */
+  opacity: 0;
 }
 
 @keyframes slideInLeft {
   0% {
-    transform: translateX(-100%); /* Inicia fora da tela à esquerda */
-    opacity: 0; /* Inicialmente invisível */
+    transform: translateX(-100%);
+    opacity: 0;
   }
   100% {
-    transform: translateX(0); /* Move-se para a posição original */
-    opacity: 1; /* Torna-se visível */
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 
 .slide-in-right {
   animation: slideInRight 1s ease-out forwards;
-  opacity: 0; /* Inicialmente invisível */
+  opacity: 0;
 }
 
 @keyframes slideInRight {
   0% {
-    transform: translateX(100%); /* Inicia fora da tela à direita */
-    opacity: 0; /* Inicialmente invisível */
+    transform: translateX(100%);
+    opacity: 0;
   }
   100% {
-    transform: translateX(0); /* Move-se para a posição original */
-    opacity: 1; /* Torna-se visível */
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 
@@ -147,7 +147,7 @@
     transform: translateY(0);
   }
 }
-/*
+
  #animatedIcon  {
   background-image: linear-gradient(90deg, #c084fc, #84eafc);
   color: white;
