@@ -3,7 +3,7 @@
   class="fixed font-poppins text-md sm:text-lg md:text-2xl top-20 left-14 md:left-24 text-gray-600 dark:text-white px-4 py-2 font-semibold uppercase gap-1 sm:gap-2 md:gap-4 z-50 flex items-center"
 >
   <code (click)="navigateTo('/pages/home')"
-    class="text-sm sm:text-2xl md:text-4xl p-2 md:p-4 rounded-full font-extrabold bg-gradient-to-b from-blue-300 to-purple-400"
+    class="text-sm sm:text-2xl md:text-4xl p-2 md:p-4 rounded-full font-extrabold bg-gradient-to-b from-blue-300 via-pink-100 to-purple-400 "
     >DB</code
   >
   <code> | </code>
@@ -31,12 +31,12 @@
     'translate-y-0 opacity-100 visible': isOpen,
     '-translate-y-full opacity-0 invisible': !isOpen
   }"
-  class="fixed font-poppins mx-10 my-10 inset-0 bg-slate-100 dark:bg-slate-400 transition-all duration-700 ease-in-out z-40"
+  class="fixed font-poppins mx-10 my-10 inset-0 bg-purple-50 dark:bg-black transition-all duration-700 ease-in-out z-40 overflow-x-hidden overflow-y-auto"
 >
   <div class="mt-52 pl-10 md:pl-20 pr-10 md:pr-20 flex flex-row gap-5 sm:gap-9 md:gap-14 items-center">
     <div #divToRight class="w-20 md:w-28 h-1 bg-gradient-to-b from-blue-300 to-purple-400"></div>
     <div >
-      <Button #icon1ToRight class="text-gray-600 rounded-md font-semibold text-lg">
+      <Button #icon1ToRight class="text-gray-500 dark:text-gray-400 rounded-md font-semibold text-lg">
         <a href="https://github.com/BonfimDeveloper" target="_blank">
           <fa-icon
             [icon]="faGithub"
@@ -46,7 +46,7 @@
     </div>
 
     <div >
-      <Button #icon2ToRight class="text-gray-600 rounded-md font-semibold text-lg">
+      <Button #icon2ToRight class="text-gray-500 dark:text-gray-400 rounded-md font-semibold text-lg">
         <a
           href="https://www.linkedin.com/in/diego-bonfim-8b24a421a/"
           target="_blank"
@@ -61,7 +61,7 @@
     <div >
       <Button #icon3ToRight
         (click)="openWhatsApp()"
-        class="text-gray-600 rounded-md font-semibold text-lg"
+        class="text-gray-500 dark:text-gray-400 rounded-md font-semibold text-lg"
       >
         <fa-icon
           [icon]="faWhatsapp"
@@ -79,17 +79,17 @@
         [ngClass]="{ 'active-link': isActive(link.routes) }"
         class="cursor-pointer font-poppins gap-10 flex flex-row items-end"
       >
-        <div class="w-auto lg:w-80">
+        <div #labels class="w-auto lg:w-80">
           <button
             (click)="navigateTo(link.routes[0])"
-            class="text-3xl md:text-7xl text-gray-500 hover:text-transparent hover:bg-gradient-to-r hover:from-purple-400 hover:to-blue-300 bg-clip-border hover:bg-clip-text transition-all duration-300 font-bitter font-extrabold tracking-widest"
+            class="text-3xl md:text-7xl text-gray-500 dark:text-gray-400 hover:text-transparent hover:bg-gradient-to-r hover:from-purple-400 hover:to-blue-300 bg-clip-border hover:bg-clip-text transition-all duration-300 font-bitter font-extrabold tracking-widest"
           >
             {{ link.label }}
           </button>
         </div>
 
-        <button
-          class="hidden pl-44 lg:flex text-xl text-gray-500 font-bitter font-light"
+        <button #descriptions
+          class="hidden pl-44 lg:flex text-xl text-gray-500 dark:text-gray-400 font-bitter font-light"
         >
           {{ link.description }}
         </button>

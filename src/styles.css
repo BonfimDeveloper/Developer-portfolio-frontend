@@ -11,6 +11,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Bitter", serif;
+  overflow: auto;
   @apply bg-white dark:bg-black;
 }
 
@@ -55,3 +56,5 @@ body {
 main {
   @apply mt-20;
 }
+
+

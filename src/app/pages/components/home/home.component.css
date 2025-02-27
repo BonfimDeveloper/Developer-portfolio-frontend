@@ -157,3 +157,12 @@
   justify-content: center;
   border-radius: 50%;
 } */
+.wt {
+  @apply bg-white text-slate-800;
+  transition: all 0.7s ease-in-out;
+}
+
+.dk {
+  @apply bg-black text-slate-300;
+  transition: all 0.7s ease-in-out;
+}

@@ -4,8 +4,10 @@ import {
   Component,
   ElementRef,
   OnInit,
+  QueryList,
   Renderer2,
   ViewChild,
+  ViewChildren,
 } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
@@ -27,6 +29,8 @@ export class MenuComponent implements OnInit, AfterViewInit {
   @ViewChild('icon1ToRight', { static: false }) icon1ToRight!: ElementRef;
   @ViewChild('icon2ToRight', { static: false }) icon2ToRight!: ElementRef;
   @ViewChild('icon3ToRight', { static: false }) icon3ToRight!: ElementRef;
+  @ViewChildren('labels') labels!: QueryList<ElementRef>;
+  @ViewChildren('descriptions') descriptions!: QueryList<ElementRef>;
 
   isDarkMode: boolean = false;
   isOpen: boolean = false;
@@ -121,6 +125,34 @@ export class MenuComponent implements OnInit, AfterViewInit {
         { x: '500%', opacity: 0 }, // Começa fora da tela à direita
         { x: '0%', opacity: 1, duration: 0.2, ease: 'power2.out' } // Move para a posição original
       );
+
+    this.labels.forEach((label, index) => {
+      tl.fromTo(
+        label.nativeElement,
+        { y: '100%', opacity: 0 },
+        {
+          y: '0%',
+          opacity: 1,
+          duration: 0.1,
+          ease: 'power2.out',
+          //delay: index * 0.1,
+        } // Pequeno delay para efeito cascata
+      );
+    });
+
+    this.descriptions.forEach((desc, index) => {
+      tl.fromTo(
+        desc.nativeElement,
+        { x: '100%', opacity: 0 },
+        {
+          x: '0%',
+          opacity: 1,
+          duration: 0.1,
+          ease: 'power2.out',
+          //delay: index * 0.1,
+        } // Pequeno delay para efeito cascata
+      );
+    });
   }
 
   navigateTo(route: string): void {
