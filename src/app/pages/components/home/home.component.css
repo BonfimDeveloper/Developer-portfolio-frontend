@@ -166,3 +166,15 @@
   @apply bg-black text-slate-300;
   transition: all 0.7s ease-in-out;
 }
+
+/* .mask-image-radial {
+    mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
+  } */
+
+.text-stroke-white-mode {
+  text-stroke: 4px white;
+  -webkit-text-stroke: 6px black;
+}
+
+

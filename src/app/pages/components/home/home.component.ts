@@ -44,6 +44,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
   email: string = 'bonfins360@gmail.com';
   imagemPerfil: string = 'assets/images/dev_1.jpg';
   me: string = 'assets/images/me.jpg';
+  me1: string = 'assets/images/me1.png';
+
   angular: string = 'assets/images/angular.png';
   typeScript: string = 'assets/images/type.png';
   javascript: string = 'assets/images/js.png';

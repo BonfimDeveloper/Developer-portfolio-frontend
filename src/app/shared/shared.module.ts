@@ -11,6 +11,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { HighlightBadgeComponent } from './components/highlight-badge/highlight-badge.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MenuComponent } from './components/menu/menu.component';
+import { RotaAtivaComponent } from './components/rota-ativa/rota-ativa.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { MenuComponent } from './components/menu/menu.component';
     HeaderComponent,
     HighlightBadgeComponent,
     MenuComponent,
+    RotaAtivaComponent,
   ],
   imports: [CommonModule, MatDialogModule, FontAwesomeModule],
   exports: [

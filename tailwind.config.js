@@ -6,6 +6,14 @@ module.exports = {
   ],
   theme: {
     extend: {
+      textStrokeWidth: {
+        1: '1px',
+        2: '2px',
+        3: '3px',
+      },
+      textStrokeColor: {
+        red: 'red',
+      },
       screens: {
         sm: "500px", // Alterado para 500px
         md: "800px", // Alterado para 800px
