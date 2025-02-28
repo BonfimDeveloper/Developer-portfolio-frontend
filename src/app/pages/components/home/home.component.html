@@ -123,22 +123,59 @@
 </div> -->
 
 <div
-  class="fixed mx-10 my-10 inset-0 bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-100 transition-all duration-700 overflow-auto "
+  class="fixed mx-10 my-10 inset-0 bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-100 transition-all duration-700 overflow-auto"
 >
-  <div class="flex flex-row">
+  <div class="hidden md:flex flex-row">
     <div
-      class="ml-[20rem] mt-60 w-auto max-w-[30rem] rounded-md h-auto max-h-[40rem] bg-[repeating-linear-gradient(45deg,_#525252_0px,_#525252_3px,_transparent_3px,_transparent_15px)]"
+      class="ml-[20rem] mt-60 w-auto max-w-[30rem] rounded-md h-auto max-h-[40rem] bg-[repeating-linear-gradient(45deg,_#525252_0px,_#525252_3px,_transparent_3px,_transparent_15px)] dark:bg-[repeating-linear-gradient(45deg,_#ffffff_0px,_#ffffff_3px,_transparent_3px,_transparent_15px)]"
     >
       <img
-        class="rounded-lg w-[40rem] mask-image-radial ml-[6rem] pt-24 mb-10 "
+        class="rounded-lg w-[40rem] mask-image-radial ml-[6rem] pt-24 mb-10"
         [src]="me1"
         alt="Minha foto de perfil"
       />
     </div>
 
-    <div class="font-bitter  flex flex-col mt-72"> <p class="text-9xl">Hi, my ​</p>
-       <p class="text-9xl">name is <code class="text-stroke-white-mode  file:font-bold text-transparent" >Diego</code> </p>
-       <p class="text-xl">I'm a <code class="font-bold"> creative developer</code>  from Salvador, Bahia, Brazil.</p>
+    <div class="font-bitter flex flex-col mt-72 ml-32">
+      <p class="text-9xl">Hi, my ​</p>
+      <p class="text-9xl">name is <code class="file:font-bold">Diego</code></p>
+      <p class="text-2xl">
+        I'm an
+        <code class="font-extrabold">independent creative developer</code> from
+      </p>
+      <p class="text-2xl">Salvador, Bahia, Brazil.</p>
+    </div>
 
+
+  </div>
+
+  <!--###  MOBILE  ###-->
+  <div class="flex md:hidden flex-col">
+    <div
+      class="flex justify-center mx-5 mt-32 sm:mt-40 w-auto max-w-40 rounded-md h-auto max-h-[30rem] relative grad-img"
+    >
+      <img
+        class="rounded-full w-[14rem] mask-image-radial pt-1"
+        [src]="me1mobile"
+        alt="Minha foto de perfil"
+      />
+    </div>
+
+    <div class="font-bitter flex flex-col mt-10 mx-5">
+      <p class="text-6xl">Hi, my ​</p>
+      <p class="text-6xl">
+        name is <code class="file:font-bold">Diego</code>
+      </p>
+      <p class="text-xl">
+        I'm an
+        <code
+          class="font-extrabold bg-gradient-to-l from-blue-300 via-pink-100 to-purple-400 bg-clip-text text-transparent"
+        >
+          independent creative developer
+        </code>
+        from
+      </p>
+      <p class="text-xl">Salvador, Bahia, Brazil.</p>
+    </div>
   </div>
 </div>
