@@ -12,6 +12,7 @@ import { HighlightBadgeComponent } from './components/highlight-badge/highlight-
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MenuComponent } from './components/menu/menu.component';
 import { RotaAtivaComponent } from './components/rota-ativa/rota-ativa.component';
+import { AssinaturaComponent } from './components/assinatura/assinatura.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { RotaAtivaComponent } from './components/rota-ativa/rota-ativa.component
     HighlightBadgeComponent,
     MenuComponent,
     RotaAtivaComponent,
+    AssinaturaComponent,
   ],
   imports: [CommonModule, MatDialogModule, FontAwesomeModule],
   exports: [
@@ -34,6 +36,7 @@ import { RotaAtivaComponent } from './components/rota-ativa/rota-ativa.component
     HeaderComponent,
     HighlightBadgeComponent,
     MenuComponent,
+    AssinaturaComponent,
   ],
 })
 export class SharedModule {}

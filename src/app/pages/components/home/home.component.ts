@@ -47,7 +47,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
   me1: string = 'assets/images/me1.png';
   me1mobile: string = 'assets/images/me1mobile.png';
 
-
   angular: string = 'assets/images/angular.png';
   typeScript: string = 'assets/images/type.png';
   javascript: string = 'assets/images/js.png';
@@ -70,7 +69,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     this.cdr.detectChanges();
-    const tl = gsap.timeline();
+    /* const tl = gsap.timeline();
 
     tl.fromTo(
       this.imageToTop.nativeElement,
@@ -146,7 +145,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
       .add(() => {
         // Remove o overflow hidden após a animação inicial
         this.renderer.removeStyle(document.body, 'overflow');
-      });
+      });*/
   }
 
   public openWhatsApp(): void {

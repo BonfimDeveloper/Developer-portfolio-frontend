@@ -188,3 +188,10 @@
     );
   background-blend-mode: multiply;
 }
+
+.icon-btn {
+  transition: transform 0.3s ease;
+}
+.icon-btn:hover {
+  transform: scale(1.2); /* Aumenta 20% no hover */
+}
