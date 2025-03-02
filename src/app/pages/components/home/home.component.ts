@@ -24,13 +24,8 @@ gsap.registerPlugin(TextPlugin); // Registrando o plugin
 })
 export class HomeComponent implements OnInit, AfterViewInit {
   @ViewChild('imageToTop', { static: false }) imageToTop!: ElementRef;
-  @ViewChild('nameToLeft', { static: false }) nameToLeft!: ElementRef;
   @ViewChild('nameToRight', { static: false }) nameToRight!: ElementRef;
-  @ViewChild('angularToRight', { static: false }) angularToRight!: ElementRef;
-  @ViewChild('typeToRight', { static: false }) typeToRight!: ElementRef;
-  @ViewChild('jsToRight', { static: false }) jsToRight!: ElementRef;
-  @ViewChild('typpingText', { static: false }) typpingText!: ElementRef;
-  @ViewChild('buttonsToTop', { static: false }) buttonsToTop!: ElementRef;
+  @ViewChild('backFlip', { static: false }) backFlip!: ElementRef;
   @ViewChild('btnGit', { static: false }) btnGit!: ElementRef;
   @ViewChild('btnLinkedin', { static: false }) btnLinkedin!: ElementRef;
   @ViewChild('btnWhatsApp', { static: false }) btnWhatsApp!: ElementRef;
@@ -73,7 +68,11 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     this.cdr.detectChanges();
-    /* const tl = gsap.timeline();
+    const tl = gsap.timeline();
+
+    if (this.backFlip) {
+      console.log('Está presente = > ', this.backFlip);
+    }
 
     tl.fromTo(
       this.imageToTop.nativeElement,
@@ -81,48 +80,9 @@ export class HomeComponent implements OnInit, AfterViewInit {
       { opacity: 1, y: 0, duration: 1, ease: 'power2.out' } // Estado final
     )
       .fromTo(
-        this.nameToLeft.nativeElement,
-        { x: '-100%', opacity: 0 }, // Estado inicial igual ao CSS
-        { x: '0%', opacity: 1, duration: 1, ease: 'power2.out' } // Estado final
-      )
-      .fromTo(
         this.nameToRight.nativeElement,
         { x: '100%', opacity: 0 }, // Começa fora da tela à direita
         { x: '0%', opacity: 1, duration: 1, ease: 'power2.out' } // Move para a posição original
-      )
-      .fromTo(
-        this.angularToRight.nativeElement,
-        { x: '100%', opacity: 0 }, // Começa fora da tela à direita
-        { x: '0%', opacity: 1, duration: 0.3, ease: 'power2.out' } // Move para a posição original
-      )
-      .fromTo(
-        this.typeToRight.nativeElement,
-        { x: '100%', opacity: 0 }, // Começa fora da tela à direita
-        { x: '0%', opacity: 1, duration: 0.3, ease: 'power2.out' } // Move para a posição original
-      )
-      .fromTo(
-        this.jsToRight.nativeElement,
-        { x: '100%', opacity: 0 }, // Começa fora da tela à direita
-        { x: '0%', opacity: 1, duration: 0.3, ease: 'power2.out' } // Move para a posição original
-      )
-      .fromTo(
-        this.typpingText.nativeElement,
-        { opacity: 0 }, // Inicialmente invisível
-        { opacity: 1, duration: 0.2 } // Torna visível rapidamente
-      )
-      .to(this.typpingText.nativeElement, {
-        text: {
-          value:
-            'Olá! Sou Diego Bonfim, desenvolvedor frontend com foco em transformar ideias em interfaces intuitivas e responsivas. Sou fã do framework Angular, mas também utilizo React, preferindo TypeScript para a lógica. Gosto muito de trabalhar com Tailwind e GSAP, que permitem criar efeitos e animações incríveis!', // Texto a ser digitado
-          delimiter: '', // Faz com que cada caractere apareça individualmente
-        },
-        duration: 1,
-        ease: 'none',
-      })
-      .fromTo(
-        this.buttonsToTop.nativeElement,
-        { opacity: 0, y: 100 }, // Estado inicial
-        { opacity: 1, y: 0, duration: 1, ease: 'power2.out' } // Estado final
       )
       .to(this.btnGit.nativeElement, {
         rotation: '+=360', // Gira 360°
@@ -145,11 +105,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
         repeat: -1, // Loop infinito
         repeatDelay: 10, // Pausa de 10 segundos entre cada rotação
       })
-
       .add(() => {
         // Remove o overflow hidden após a animação inicial
         this.renderer.removeStyle(document.body, 'overflow');
-      });*/
+      });
   }
 
   public openWhatsApp(): void {

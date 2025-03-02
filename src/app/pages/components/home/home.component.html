@@ -127,29 +127,35 @@
 >
   <div class="hidden md:flex flex-row justify-center px-36">
     <div
-      class="mt-60  w-auto max-w-[30rem] rounded-md h-auto max-h-[40rem] bg-[repeating-linear-gradient(45deg,_#525252_0px,_#525252_3px,_transparent_3px,_transparent_15px)] dark:bg-[repeating-linear-gradient(45deg,_#ffffff_0px,_#ffffff_3px,_transparent_3px,_transparent_15px)]"
+      #imageToTop
+      class="mt-60 w-auto max-w-[30rem] rounded-md h-auto max-h-[40rem] bg-[repeating-linear-gradient(45deg,_#525252_0px,_#525252_3px,_transparent_3px,_transparent_15px)] dark:bg-[repeating-linear-gradient(45deg,_#ffffff_0px,_#ffffff_3px,_transparent_3px,_transparent_15px)]"
     >
-    <img
-    class="rounded-lg w-[40rem] mask-image-radial ml-[6rem] pt-24 mb-10 transition-opacity duration-500 ease-in-out"
-    [src]="!isHovered ? me1 : me2"
-    alt="Minha foto de perfil"
-    (mouseenter)="isHovered = true"
-    (mouseleave)="isHovered = false"
-  />
+      <img
+        class="rounded-lg w-[40rem] mask-image-radial ml-[6rem] pt-24 mb-10 transition-opacity duration-500 ease-in-out"
+        [src]="!isHovered ? me1 : me2"
+        alt="Minha foto de perfil"
+        (mouseenter)="isHovered = true"
+        (mouseleave)="isHovered = false"
+      />
     </div>
 
-    <div class="font-bitter flex flex-col mt-72 ml-32">
-      <p class="text-9xl">Hi, my ​</p>
-      <p class="text-9xl">name is <code class="file:font-bold">Diego</code></p>
-      <p class="text-2xl pt-5">
-        I'm an
-        <code
-          class="font-extrabold bg-gradient-to-l from-blue-300 via-pink-100 to-purple-400 bg-clip-text text-transparent"
-          >independent creative developer</code
-        >
-        from
-      </p>
-      <p class="text-2xl">Salvador, Bahia, Brazil.</p>
+    <div #nameToRight class="font-bitter flex flex-col mt-72 ml-32">
+      <div>
+        <p class="text-9xl">Hi, my ​</p>
+        <p  class="text-9xl">
+          name is Diego
+        </p>
+        <p class="text-2xl pt-5">
+          I'm an
+          <code
+            class="font-extrabold bg-gradient-to-l from-blue-300 via-pink-100 to-purple-400 bg-clip-text text-transparent"
+            >independent creative developer</code
+          >
+          from
+        </p>
+        <p class="text-2xl">Salvador, Bahia, Brazil.</p>
+      </div>
+
       <div
         class="h-[1px] mt-10 w-full max-w-4xl bg-neutral-800 dark:bg-neutral-100"
       ></div>
@@ -157,6 +163,7 @@
       <div class="flex flex-row mt-10 items-center">
         <button
           class="icon-btn justify-start px-3 py-3 text-lg font-poppins font-bold rounded-md bg-neutral-600 dark:bg-neutral-100"
+          (click)="downloadCV()"
         >
           <span
             class="bg-gradient-to-l from-blue-300 via-purple-300 to-purple-500 bg-clip-text text-transparent"
