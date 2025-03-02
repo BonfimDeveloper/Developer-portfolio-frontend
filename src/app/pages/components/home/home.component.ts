@@ -45,6 +45,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
   imagemPerfil: string = 'assets/images/dev_1.jpg';
   me: string = 'assets/images/me.jpg';
   me1: string = 'assets/images/me1.png';
+  me2: string = 'assets/images/me2.png';
+
   me1mobile: string = 'assets/images/me1mobile.png';
 
   angular: string = 'assets/images/angular.png';
@@ -53,6 +55,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   public chave3: string = '{';
   public chave4: string = '}';
+
+  public isHovered: boolean = false;
 
   constructor(
     private darkModeService: DarkModeService,
