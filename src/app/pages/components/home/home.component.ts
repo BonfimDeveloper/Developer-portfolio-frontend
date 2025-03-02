@@ -6,6 +6,7 @@ import {
   AfterViewInit,
   ChangeDetectorRef,
   Renderer2,
+  HostListener,
 } from '@angular/core';
 import { DarkModeService } from 'src/app/core/services/dark-mode.service';
 import {
@@ -29,6 +30,20 @@ export class HomeComponent implements OnInit, AfterViewInit {
   @ViewChild('btnGit', { static: false }) btnGit!: ElementRef;
   @ViewChild('btnLinkedin', { static: false }) btnLinkedin!: ElementRef;
   @ViewChild('btnWhatsApp', { static: false }) btnWhatsApp!: ElementRef;
+  @ViewChild('smokeCanvas', { static: false })
+  smokeCanvas!: ElementRef<HTMLCanvasElement>;
+
+  private ctx!: CanvasRenderingContext2D;
+  private particles: any[] = [];
+  private animationFrameId!: number;
+  private colors = ['#93c5fd', '#fbcfe8', '#c084fc']; // Azul, Rosa, Roxo
+  // Converte HEX para RGBA
+  private hexToRGBA(hex: string, alpha: number): string {
+    const r = parseInt(hex.slice(1, 3), 16);
+    const g = parseInt(hex.slice(3, 5), 16);
+    const b = parseInt(hex.slice(5, 7), 16);
+    return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+  }
 
   isDarkMode?: boolean;
   faGithub = faGithub;
@@ -68,6 +83,9 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     this.cdr.detectChanges();
+    this.ctx = this.smokeCanvas.nativeElement.getContext('2d')!;
+    this.resizeCanvas();
+    this.startAnimation();
     const tl = gsap.timeline();
 
     if (this.backFlip) {
@@ -118,5 +136,69 @@ export class HomeComponent implements OnInit, AfterViewInit {
   public downloadCV(): void {
     const url = 'assets/pdf/diegoCV.pdf'; // Caminho dentro da pasta assets
     window.open(url, '_blank'); // Abre o PDF em uma nova aba
+  }
+
+  @HostListener('window:resize')
+  resizeCanvas() {
+    this.smokeCanvas.nativeElement.width = window.innerWidth;
+    this.smokeCanvas.nativeElement.height = window.innerHeight;
+  }
+
+  @HostListener('mousemove', ['$event'])
+  createSmoke(event: MouseEvent) {
+    const x = event.clientX;
+    const y = event.clientY;
+
+    for (let i = 0; i < 5; i++) {
+      this.particles.push({
+        x,
+        y,
+        size: Math.random() * 2 + 1,
+        alpha: 1,
+        velocityX: (Math.random() - 0.5) * 2,
+        velocityY: (Math.random() - 0.5) * 2,
+      });
+    }
+  }
+
+  startAnimation() {
+    const animate = () => {
+      this.ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+
+      this.particles.forEach((particle, index) => {
+        particle.x += particle.velocityX;
+        particle.y += particle.velocityY;
+        particle.alpha -= 0.02; // Faz a fumaça desaparecer
+
+        // this.ctx.beginPath();
+        // this.ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 4);
+        // this.ctx.fillStyle = `rgba(200, 200, 200, ${particle.alpha})`; // Cor da fumaça
+        // this.ctx.fill();
+        // Alterna as cores suavemente
+        const colorIndex = Math.floor(
+          (index / this.particles.length) * this.colors.length
+        );
+        this.ctx.fillStyle = this.hexToRGBA(
+          this.colors[colorIndex],
+          particle.alpha
+        );
+
+        this.ctx.beginPath();
+        this.ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        this.ctx.fill();
+
+        if (particle.alpha <= 0) {
+          this.particles.splice(index, 1); // Remove partículas invisíveis
+        }
+      });
+
+      this.animationFrameId = requestAnimationFrame(animate);
+    };
+
+    this.animationFrameId = requestAnimationFrame(animate);
+  }
+
+  ngOnDestroy(): void {
+    cancelAnimationFrame(this.animationFrameId);
   }
 }
