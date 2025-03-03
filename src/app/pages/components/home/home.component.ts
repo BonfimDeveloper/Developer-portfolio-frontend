@@ -36,7 +36,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   private ctx!: CanvasRenderingContext2D;
   private particles: any[] = [];
   private animationFrameId!: number;
-  private colors = ['#93c5fd', '#fbcfe8', '#c084fc']; // Azul, Rosa, Roxo
+  private colors = ['#bfdbfe', '#cbd5e1', '#e9d5ff ']; // Azul, Rosa, Roxo
   // Converte HEX para RGBA
   private hexToRGBA(hex: string, alpha: number): string {
     const r = parseInt(hex.slice(1, 3), 16);
@@ -149,14 +149,14 @@ export class HomeComponent implements OnInit, AfterViewInit {
     const x = event.clientX;
     const y = event.clientY;
 
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 25; i++) {
       this.particles.push({
         x,
         y,
-        size: Math.random() * 2 + 1,
+        size: Math.random() * 1 + 1,
         alpha: 1,
-        velocityX: (Math.random() - 0.5) * 2,
-        velocityY: (Math.random() - 0.5) * 2,
+        velocityX: (Math.random() - 0.5) * 3,
+        velocityY: (Math.random() - 0.5) * 3,
       });
     }
   }
@@ -168,7 +168,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
       this.particles.forEach((particle, index) => {
         particle.x += particle.velocityX;
         particle.y += particle.velocityY;
-        particle.alpha -= 0.02; // Faz a fumaça desaparecer
+        particle.alpha -= 0.015; // Faz a fumaça desaparecer
 
         // this.ctx.beginPath();
         // this.ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 4);
@@ -184,7 +184,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
         );
 
         this.ctx.beginPath();
-        this.ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        this.ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 10);
         this.ctx.fill();
 
         if (particle.alpha <= 0) {
