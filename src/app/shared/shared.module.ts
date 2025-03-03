@@ -37,6 +37,7 @@ import { AssinaturaComponent } from './components/assinatura/assinatura.componen
     HighlightBadgeComponent,
     MenuComponent,
     AssinaturaComponent,
+    RotaAtivaComponent,
   ],
 })
 export class SharedModule {}
