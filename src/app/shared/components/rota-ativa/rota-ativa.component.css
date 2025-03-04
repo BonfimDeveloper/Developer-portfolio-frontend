@@ -1,3 +1,15 @@
-.signature{
-  writing-mode: vertical-rl; transform: rotate(180deg); font-size: 14px; color: #7a7a7a;
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.arrow {
+  width: 150px;
+  height: 50px;
+  background:  linear-gradient(to left, #93c5fd, #c084fc, #7c3aed);
+  clip-path: polygon(0% 0%, 80% 0%, 100% 50%, 80% 100%, 0% 100%);
 }
