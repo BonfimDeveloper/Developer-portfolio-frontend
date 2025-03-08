@@ -14,6 +14,7 @@ export class ContatoComponent {
   contactForm!: FormGroup;
   toastMessage = '';
   maxlength: number = 1000;
+  myEmail: string = 'diego.bonfim.dev@gmail.com';
   constructor(public dialog: MatDialog) {}
 
   ngOnInit(): void {
@@ -54,5 +55,16 @@ export class ContatoComponent {
     } else {
       console.log('Formulário inválido');
     }
+  }
+
+  copyEmail() {
+    navigator.clipboard
+      .writeText(this.myEmail)
+      .then(() => {
+        console.log('E-mail copiado para a área de transferência!'); // Mensagem de feedback
+      })
+      .catch((err) => {
+        console.error('Erro ao copiar e-mail:', err);
+      });
   }
 }
