@@ -1,10 +1,51 @@
-<div class=" mx-10 my-10 flex justify-center items-center text-gray-700 dark:text-white bg-yellow-300 dark:bg-black transition-colors duration-1000 ease-in-out">
-<p>CONTACT WORKS</p>
- <span >
-      <div class="flex h-full w-full justify-center items-center">
-        <button class="bg-black text-white p-2 rounded" (click)="openModal()">
-          Open Modal
-        </button>
-      </div>
-    </span>
+<div
+  class="fixed mx-10 my-10 inset-0 font-poppins bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-100 transition-all duration-700 overflow-auto"
+>
+
+  <div class="flex flex-col justify-center items-center w-full max-w-full ">
+    <h2 class="text-2xl  pt-40 mb-4 text-neutral-800 dark:text-neutral-100">hire me!</h2>
+    <form [formGroup]="contactForm" class="flex flex-col gap-2  w-full max-w-4xl mx-auto bg-blue-50 rounded-md lg:rounded-full p-4 lg:p-52">
+      <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="from_name" />
+        <mat-error *ngIf="contactForm.get('from_name')?.hasError('required')">
+          Name is required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="from_email" />
+        <mat-error *ngIf="contactForm.get('from_email')?.hasError('required')">
+          Email is required
+        </mat-error>
+        <mat-error *ngIf="contactForm.get('from_email')?.hasError('email')">
+          Invalid email format
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Enterprise (Optional)</mat-label>
+        <input matInput formControlName="from_enterprise" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Message</mat-label>
+        <textarea matInput formControlName="message" [maxlength]="maxlength" class="h-96"></textarea>
+        <mat-error *ngIf="contactForm.get('message')?.hasError('required')">
+          Message is required
+        </mat-error>
+      </mat-form-field>
+
+      <button
+        type="submit"
+        [disabled]="contactForm.invalid"
+        (click)="sendEmail($event)"
+        class="p-4 bg-black text-white"
+      >
+        Send message
+      </button>
+    </form>
+
+  </div>
 </div>

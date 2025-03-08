@@ -11,6 +11,10 @@ import { ProjetosComponent } from './components/projetos/projetos.component';
 import { ServicosComponent } from './components/servicos/servicos.component';
 import { TypingEffectDirective } from '../core/directives/typing-effect.directive.ts.directive';
 import { SharedModule } from '../shared/shared.module';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatInputModule } from '@angular/material/input';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,6 +31,10 @@ import { SharedModule } from '../shared/shared.module';
     MatDividerModule,
     FontAwesomeModule,
     SharedModule,
+    MatFormFieldModule,
+    MatTooltipModule,
+    MatInputModule,
+    ReactiveFormsModule,
   ],
 })
 export class PagesModule {}

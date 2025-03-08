@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ConfirmationDialogComponent } from 'src/app/shared/components/confirmation-dialog/confirmation-dialog.component';
+import emailjs from '@emailjs/browser';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ContactFormModel } from 'src/model/contact-form.model';
 
 @Component({
   selector: 'app-contato',
@@ -8,48 +11,48 @@ import { ConfirmationDialogComponent } from 'src/app/shared/components/confirmat
   styleUrls: ['./contato.component.css'],
 })
 export class ContatoComponent {
+  contactForm!: FormGroup;
+  toastMessage = '';
+  maxlength: number = 1000;
   constructor(public dialog: MatDialog) {}
 
-  openModal(): void {
-    const content = `This is the content to be displayed in the modal.
-This is the content to be displayed in the modal.
-This is the content to be displayed in the modal.
-This is the content to be displayed in the modal.
-This is the content to be displayed in the modal.
-This is the content to be displayed in the modal.
-This is the content to be displayed in the modal.
-This is the content to be displayed in the modal.
-This is the content to be displayed in the modal.
-This is the content to be displayed in the modal.
-This is the content to be displayed in the modal.
-This is the content to be displayed in the modal.
-This is the content to be displayed in the modal.
-This is the content to be displayed in the modal.
-This is the content to be displayed in the modal.
-This is the content to be displayed in the modal.
-This is the content to be displayed in the modal.
-This is the content to be displayed in the modal.`;
-    const dialogRef = this.dialog.open(ConfirmationDialogComponent, {
-      data: {
-        title: 'Custom Title',
-        content: content,
-      },
-    });
-
-    dialogRef.afterClosed().subscribe((result) => {
-      if (result?.event === 'cancel') {
-        this.onCancel();
-      } else if (result?.event === 'confirm') {
-        this.onConfirm();
-      }
+  ngOnInit(): void {
+    // Inicializando o formulário
+    this.contactForm = new FormGroup({
+      from_name: new FormControl('', [Validators.required]), // Nome obrigatório
+      from_email: new FormControl('', [Validators.required, Validators.email]), // Email obrigatório e deve ser válido
+      from_enterprise: new FormControl(''), // Empresa opcional
+      message: new FormControl('', [Validators.required]), // Mensagem obrigatória
     });
   }
 
-  onCancel(): void {
-    console.log('Modal cancelled');
-  }
+  sendEmail(event: Event) {
+    if (this.contactForm.valid) {
+      event.preventDefault(); // Evita recarregar a página
 
-  onConfirm(): void {
-    console.log('Modal confirmed');
+      const serviceID = 'service_vz5qwp6';
+      const templateID = 'template_k6pglsq';
+      const userID = 'm1jHgsXZMEbr8_qlw';
+
+      let contactData: Record<string, unknown> = {
+        from_name: this.contactForm.get('from_name')?.value,
+        from_email: this.contactForm.get('from_email')?.value,
+        from_enterprise: this.contactForm.get('from_enterprise')?.value,
+        message: this.contactForm.get('message')?.value,
+      };
+
+      emailjs
+        .send(serviceID, templateID, contactData, userID)
+        .then(() => {
+          this.toastMessage = 'E-mail enviado com sucesso!';
+          this.contactForm.reset(); // Limpa o formulário
+        })
+        .catch((error) => {
+          this.toastMessage = 'Erro ao enviar o e-mail. Tente novamente.';
+          console.error('Erro:', error);
+        });
+    } else {
+      console.log('Formulário inválido');
+    }
   }
 }
