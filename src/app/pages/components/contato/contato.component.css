@@ -1,3 +1,16 @@
-.my-container p {
-  margin: 0 !important;
+
+
+
+.triangleUp {
+  width: 700px;  /* Define a largura da área da div */
+  height: 100px; /* Define a altura da área da div */
+  background-color: white; /* Cor do triângulo */
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%); /* Formato do triângulo */
+}
+
+.triangleDown {
+  width: 700px;  /* Define a largura */
+  height: 100px; /* Define a altura */
+  background-color: white; /* Cor do triângulo */
+  clip-path: polygon(0% 0%, 100% 0%, 50% 100%); /* Formato do triângulo invertido */
 }
