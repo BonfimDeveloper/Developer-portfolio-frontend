@@ -15,11 +15,11 @@ module.exports = {
         red: 'red',
       },
       screens: {
-        sm: "500px", // Alterado para 500px
-        md: "800px", // Alterado para 800px
-        lg: "1750px", // Alterado para 1024px
-        xl: "1280px",
-        "2xl": "1536px",
+        sm: "640px",
+        md: "768px",
+        lg: "1300px",
+        xl: "1600px",
+        "2xl": "2000px",
       },
       fontSize: {
         'sad-xl': '35rem',
