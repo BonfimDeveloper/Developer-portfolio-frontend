@@ -2,11 +2,11 @@
   class="fixed mx-10 my-10 inset-0 font-poppins bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-100 transition-all duration-700 overflow-auto"
 >
   <div
-    class="flex flex-col lg:flex-row justify-center items-center w-full max-w-full px-5 lg:px-32 xl:px-40 mt-20 mb-4 lg:mb-20"
-  >
+    class="flex flex-col lg:flex-row justify-center items-center w-full max-w-full h-full px-5 lg:px-32 xl:px-40 "
+   >
     <div
       class="flex flex-col w-full justify-center items-center lg:items-start"
-    >
+     >
       <p class="text-3xl md:text-8xl xl:text-9xl font-extrabold">Let's chat.</p>
       <p class="text-xl md:text-5xl xl:text-6xl font-bold">
         Tell me about your project.
@@ -45,18 +45,21 @@
     </div>
 
     <div
-      class="w-full max-w-full pt-4   flex flex-col justify-center items-center"
+      class="w-full max-w-full pt-4 flex flex-col justify-center items-center"
     >
       <div
-        class="hidden lg:flex triangleUp w-60 xl:w-[500px] h-10 xl:h-20 bg-white"
+        class="hidden lg:flex triangleUp w-60 lg:w-[500px] h-10 xl:h-20 bg-white"
       ></div>
       <form
         [formGroup]="contactForm"
-        class="flex flex-col gap-2 w-full min-w-fit max-w-lg mx-auto pt-6 pb-6  pl-4 pr-4 md:pt-20 md:pb-20 md:pl-10 md:pr-10 bg-white rounded-md"
+        class="flex flex-col m-0 w-full min-w-fit max-w-lg 2xl:max-w-4xl mx-auto pl-2 pr-2 pt2 pb-2 lg:pl-4 lg:pr-4 bg-white rounded-md"
       >
-        <p class="text-xl md:text-3xl mb-4 text-neutral-800 font-extrabold">
-          Send me a message!
-        </p>
+        <div class="flex justify-center items-center">
+          <p class="text-lg mb-4 text-neutral-800 font-extrabold">
+            Send me a message!
+          </p>
+        </div>
+
         <mat-form-field>
           <mat-label>Name</mat-label>
           <input matInput formControlName="from_name" />
@@ -95,20 +98,21 @@
             Message is required
           </mat-error>
         </mat-form-field>
-
-        <button
-          matTooltip="Send a message to me."
-          matTooltipPosition="above"
-          type="submit"
-          [disabled]="contactForm.invalid"
-          (click)="sendEmail($event)"
-          class="p-4 bg-black text-white max-w-md"
-        >
-          Send message
-        </button>
+        <div class="flex justify-center items-center w-auto">
+          <button
+            matTooltip="Send a message to me."
+            matTooltipPosition="above"
+            type="submit"
+            [disabled]="contactForm.invalid"
+            (click)="sendEmail($event)"
+            class="p-4 bg-black text-white max-w-sm"
+          >
+            Send message
+          </button>
+        </div>
       </form>
       <div
-        class="hidden lg:flex triangleDown w-60 xl:w-[500px] h-10 xl:h-20 bg-white"
+        class="hidden lg:flex triangleDown w-60 lg:w-[500px] h-10 xl:h-20 bg-white"
       ></div>
     </div>
   </div>
