@@ -13,6 +13,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MenuComponent } from './components/menu/menu.component';
 import { RotaAtivaComponent } from './components/rota-ativa/rota-ativa.component';
 import { AssinaturaComponent } from './components/assinatura/assinatura.component';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { AssinaturaComponent } from './components/assinatura/assinatura.componen
     RotaAtivaComponent,
     AssinaturaComponent,
   ],
-  imports: [CommonModule, MatDialogModule, FontAwesomeModule],
+  imports: [CommonModule, MatDialogModule, FontAwesomeModule, MatTooltipModule],
   exports: [
     LogoComponent,
     MusicComponent,

@@ -13,12 +13,10 @@
 </button>
 
 <button
-  class="fixed font-poppins text-xs sm:text-lg md:text-2xl top-[5.1rem] sm:top-[5.6rem] md:top-[5.9rem] right-14 md:right-24 text-white px-4 py-2 z-50 flex items-center gap-1"
+  class="fixed font-poppins text-xs sm:text-lg md:text-2xl top-[5.1rem] sm:top-[5.6rem] md:top-[5.9rem] right-14 md:right-24 text-white px-4 py-2 z-30 flex items-center gap-1"
   (click)="toggleDarkMode()"
->
-  <!-- <span class="text-gray-600 dark:text-white text-md md:text-xl font-light">{{
-    isDarkMode ? "Light" : "Dark"
-  }}</span> -->
+  [matTooltip]="isDarkMode ? 'Light mode' : 'Dark mode'"
+  >
   <span
     class="material-symbols-outlined text-2xl md:text-4xl text-gray-600 dark:text-white"
   >
@@ -33,7 +31,7 @@
   }"
   class="fixed font-poppins mx-10 my-10 inset-0 bg-purple-50 dark:bg-black transition-all duration-700 ease-in-out z-40 overflow-x-hidden overflow-y-auto"
 >
-  <div class="mt-52 pl-10 md:pl-20 pr-10 md:pr-20 flex flex-row gap-5 sm:gap-9 md:gap-14 items-center">
+  <div class="mt-40 pl-10 pr-10 md:pl-20 md:pr-20  lg:pl-40 lg:pr-40 flex flex-row gap-5 sm:gap-9 md:gap-14 items-center">
     <div #divToRight class="w-20 md:w-28 h-1 bg-gradient-to-b from-blue-300 to-purple-400"></div>
     <div >
       <Button #icon1ToRight class="text-gray-500 dark:text-gray-400 rounded-md font-semibold text-lg">
@@ -70,9 +68,9 @@
       </Button>
     </div>
   </div>
-  <div class="p-10 md:p-20 font-poppins">
+  <div class=" pt-10  pl-10 pr-10 md:pl-20 md:pr-20  lg:pl-40 lg:pr-40 font-poppins">
     <ul
-      class="mt-2 md:mt-4 space-y-10 md:space-y-14 text-lg md:text-6xl font-extrabold"
+      class=" space-y-5 2xl:space-y-14  text-lg md:text-6xl font-extrabold"
     >
       <li
         *ngFor="let link of menuLinks"

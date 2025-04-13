@@ -1,16 +1,18 @@
 <div
-  class="fixed right-12 bottom-12 z-50 hidden lg:flex flex-row    justify-center items-center "
+  class="fixed right-12 bottom-12 z-30 hidden lg:flex flex-row justify-center items-center"
 >
-
-<div class="arrow bg-neutral-600 dark:bg-neutral-100 flex ">
-  <div class="flex flex-row items-center ml-4 gap-2">
-    <span class="material-symbols-outlined font-bold text-md  text-black dark:text-white tracking-widest ">
-      {{iconClass}}
+  <div class="arrow bg-neutral-600 dark:bg-neutral-100 flex">
+    <div class="flex flex-row items-center ml-2 gap-2">
+      <span
+        class="material-symbols-outlined font-bold text-md text-black dark:text-white tracking-widest"
+      >
+        {{ iconClass }}
       </span>
-    <span class="font-bold text-md  text-black dark:text-white tracking-widest ">
-      {{ actualRoute }}
-    </span>
+      <span
+        class="font-bold text-md text-black dark:text-white tracking-widest"
+      >
+        {{ actualRoute }}
+      </span>
+    </div>
   </div>
-</div>
-
 </div>
