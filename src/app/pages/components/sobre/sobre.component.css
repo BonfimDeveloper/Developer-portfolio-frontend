@@ -1,0 +1,25 @@
+.wave-letter {
+  display: inline-block;
+  animation: wave 1.5s infinite ease-in-out;
+  color: #3b82f6;
+  font-weight: 600;
+}
+
+@keyframes wave {
+  0%, 100% {
+    transform: translateY(0);
+    color: #3b82f6; /* azul */
+  }
+  25% {
+    transform: translateY(-8px);
+    color: #f59e0b; /* laranja */
+  }
+  50% {
+    transform: translateY(0);
+    color: #10b981; /* verde */
+  }
+  75% {
+    transform: translateY(6px);
+    color: #ec4899; /* rosa */
+  }
+}

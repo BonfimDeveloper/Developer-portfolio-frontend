@@ -1,28 +1,110 @@
 <div
-  class="fixed mx-10 my-10 inset-0 bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-100 transition-all duration-700 overflow-auto font-bitter"
+  class="fixed mx-10 my-10 inset-0 bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-100 transition-all duration-700 overflow-auto font-bitter pt-52"
 >
-  <section
-    class="flex flex-row justify-center items-center px-36 gap-20 2xl:gap-60 mt-60"
-  >
-    <div class="flex justify-center">
-      <img
-        [src]="me1mobile"
-        alt="Foto de Diego Bonfim"
-        class="rounded-full shadow-lg max-w-80 max-h-80 object-cover"
-      />
+  <section class="px-60">
+    <div class="flex flex-row justify-center items-center gap-20 2xl:gap-60">
+      <div class="flex justify-center">
+        <img
+          [src]="me1mobile"
+          alt="Foto de Diego Bonfim"
+          class="rounded-full shadow-lg max-w-[350px] max-h-[350px] object-cover"
+        />
+      </div>
+      <div>
+        <p class="text-3xl font-bold mb-4">Olá, eu sou Diego Bonfim 👋</p>
+        <p class="text-lg mb-2">
+          Tenho 32 anos e sou natural de <strong>Salvador, Bahia</strong>, uma
+          das cidades mais bonitas do Brasil 🌞🌊.
+        </p>
+        <p class="text-lg mb-2">
+          Sou graduado em
+          <strong>Análise e Desenvolvimento de Sistemas</strong> pela
+          <strong>Faculdade Descomplica</strong> e atualmente curso uma
+          pós-graduação em <strong>Engenharia de Software</strong> na mesma
+          instituição.
+        </p>
+        <p class="text-md lg:text-lg mb-4">
+          Desenvolvedor full-stack com mais de 3 anos de experiência em projetos
+          voltados para o setor público e privado.
+        </p>
+      </div>
     </div>
-    <div>
-      <p class="text-4xl font-bold mb-4">Olá, eu sou Diego Bonfim 👋</p>
-      <p class="text-lg mb-2">
-        Tenho 32 anos e sou natural de <strong>Salvador, Bahia</strong>, uma das cidades mais bonitas do Brasil 🌞🌊.
+
+    <div class="flex flex-col justify-center items-center w-full">
+      <p class="scroll-wave text-lg font-extralight flex gap-1 justify-center">
+        <span class="wave-letter" style="animation-delay: 0s">S</span>
+        <span class="wave-letter" style="animation-delay: 0.1s">C</span>
+        <span class="wave-letter" style="animation-delay: 0.2s">R</span>
+        <span class="wave-letter" style="animation-delay: 0.3s">O</span>
+        <span class="wave-letter" style="animation-delay: 0.4s">L</span>
+        <span class="wave-letter" style="animation-delay: 0.5s">L</span>
       </p>
-      <p class="text-lg mb-2">
-        Sou graduado em <strong>Análise e Desenvolvimento de Sistemas</strong> pela <strong>Faculdade Descomplica</strong> e atualmente curso uma pós-graduação em <strong>Engenharia de Software</strong> na mesma instituição.
-      </p>
-      <p class="text-md lg:text-lg mb-4">
-        Desenvolvedor full-stack com mais de 3 anos de experiência em projetos
-        voltados para o setor público e privado.
-      </p>
+      <div
+        class="h-[400px] w-[1px] max-w-4xl bg-neutral-800 dark:bg-neutral-100"
+      ></div>
     </div>
   </section>
+  <section
+    class="flex flex-col justify-center items-center px-60   mt-20 "
+  >
+    <div class="flex w-full flex-row justify-start items-center gap-4 mb-5">
+      <span class="material-symbols-outlined text-4xl"> work_history </span>
+
+      <span class="text-3xl font-bold">Experiência Profissional</span>
+    </div>
+
+    <div class="flex flex-col border-2 border-cyan-50 px-5 py-5 rounded-md">
+      <div class="flex justify-end">
+        <img
+          [src]="serpro"
+          alt="Foto da logo do serpro"
+          class="shadow-lg max-w-[100px] max-h-[100px] object-cover"
+        />
+      </div>
+      <div class="flex flex-row justify-between items-center mb-2">
+        <p class="text-xl font-semibold">
+          Estagiário em Desenvolvimento de Software
+        </p>
+        <span class="text-sm">Serpro · Abril 2023 – Abril 2025</span>
+      </div>
+      <p class="text-lg">
+        O Serpro foi minha primeira experiência formal, onde pude atuar com
+        tecnologias como Angular, Java, Spring, Docker, Node, Oracle, Mongo, Git, Copilot, etc. Os testes
+        unitários no frontend eram desenvolvidos em Jasmine e karma e no backend
+        em JUnit além de análise de qualidade com SonarQube.
+      </p>
+      <p class="text-lg">
+        Participação em projetos de grande escala com metodologias ágeis, daily, plannings, etc.
+      </p>
+      <p class="text-lg">
+        Basicamente, atuei com a manutenção de sistemas legados e criação de
+        novas funcionalidades. Com certeza foi um privilégio ser selecionado
+        para a vaga de estágio, tive contato com profissionais excelentes e
+        aprendi muito.
+      </p>
+      <span
+        class="mt-4 text-sm text-gray-500"
+      >
+        Obrigado Serpro!
+      </span>
+    </div>
+  </section>
+
+  <section
+    class="flex flex-col justify-center items-center px-60   mt-20 "
+  >
+
+  <div class="flex w-full flex-row justify-start items-center gap-4 mb-5">
+    <span class="material-symbols-outlined text-4xl"> self_improvement </span>
+
+    <span class="text-3xl font-bold">Soft Skills</span>
+  </div>
+
+  <ul class="list-disc list-inside space-y-2 text-lg ">
+    <li><span class="font-medium ">Comunicação clara:</span> habilidade para transmitir ideias de forma objetiva em equipes técnicas e multidisciplinares.</li>
+    <li><span class="font-medium ">Trabalho em equipe:</span> facilidade em colaborar, ouvir e contribuir para o sucesso coletivo.</li>
+    <li><span class="font-medium ">Organização e foco:</span> comprometimento com prazos, entregas e planejamento de atividades.</li>
+    <li><span class="font-medium ">Aprendizado contínuo:</span> disposição para aprender novas tecnologias e se adaptar rapidamente a novos contextos.</li>
+    <li><span class="font-medium ">Pensamento crítico:</span> análise de problemas com foco em soluções práticas e eficientes.</li>
+  </ul></section>
 </div>

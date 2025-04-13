@@ -6,6 +6,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        wave: {
+          "0%, 100%": { transform: "translateY(0)", color: "#3b82f6" }, // azul
+          "50%": { transform: "translateY(-6px)", color: "#f59e0b" },   // laranja
+        },
+      },
+      animation: {
+        wave: "wave 1.2s ease-in-out infinite",
+      },
       textStrokeWidth: {
         1: '1px',
         2: '2px',
