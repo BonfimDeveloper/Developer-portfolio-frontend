@@ -3,17 +3,18 @@
   class="mt-10 w-full bg-transparent hidden lg:flex flex-row justify-center items-center z-30"
 >
   <div class="arrow  flex flex-row items-center gap-10 justify-center z-30">
-      <span (click)="backPage()" class="material-symbols-outlined">
+      <span
+      matTooltip="Página anterior" (click)="backPage()" class="material-symbols-outlined text-gray-600 text-3xl cursor-pointer">
         skip_previous
         </span>
 
       <span
-        class="font-ligth font-poppins text-lg text-black dark:text-white tracking-widest z-30"
+        class="font-ligth font-poppins text-lg text-gray-600 tracking-widest z-30"
       >
         {{ actualRoute }}
       </span>
 
-        <span (click)="nextPage()" class="material-symbols-outlined">
+        <span matTooltip="Próxima página"  (click)="nextPage()" class="material-symbols-outlined text-gray-600 text-3xl cursor-pointer">
           skip_next
           </span>
   </div>

@@ -1,3 +1,9 @@
+
+<app-rota-ativa
+[actualRoute]="rotaAtual"
+[backPage]="voltarPagina.bind(this)"
+  [nextPage]="avancarPagina.bind(this)"
+></app-rota-ativa>
 <div
   class="fixed mx-10 my-10 inset-0 bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-100 transition-all duration-700 overflow-auto"
 >
@@ -17,15 +23,15 @@
 
     <div #nameToRight class="font-bitter flex flex-col mt-40 2xl:mt-60 ">
       <div>
-        <p class="text-9xl">Hi, my ​</p>
-        <p class="text-9xl">name is Diego</p>
+        <p class="text-9xl">Olá, meu ​</p>
+        <p class="text-9xl">nome é Diego</p>
         <p class="text-2xl pt-5">
-          I'm an
+          Eu sou um
           <code
             class="font-extrabold bg-gradient-to-l from-blue-300 via-pink-100 to-purple-400 bg-clip-text text-transparent"
-            >independent creative developer</code
+            >independente e criativo Desenvolvedor,</code
           >
-          from
+          localizado em
         </p>
         <p class="text-2xl">Salvador, Bahia, Brazil.</p>
       </div>

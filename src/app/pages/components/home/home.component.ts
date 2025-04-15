@@ -16,6 +16,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { gsap } from 'gsap';
 import { TextPlugin } from 'gsap/TextPlugin';
+import { Router } from '@angular/router';
 
 gsap.registerPlugin(TextPlugin); // Registrando o plugin
 @Component({
@@ -67,11 +68,13 @@ export class HomeComponent implements OnInit, AfterViewInit {
   public chave4: string = '}';
 
   public isHovered: boolean = false;
+  rotaAtual: string = 'H O M E';
 
   constructor(
     private darkModeService: DarkModeService,
     private cdr: ChangeDetectorRef,
-    private renderer: Renderer2
+    private renderer: Renderer2,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -196,6 +199,14 @@ export class HomeComponent implements OnInit, AfterViewInit {
     };
 
     this.animationFrameId = requestAnimationFrame(animate);
+  }
+
+  voltarPagina() {
+    this.router.navigate(['/pages/home']);
+  }
+
+  avancarPagina() {
+    this.router.navigate(['/pages/about']);
   }
 
   ngOnDestroy(): void {
