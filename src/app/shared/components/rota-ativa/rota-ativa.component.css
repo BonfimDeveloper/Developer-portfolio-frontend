@@ -8,8 +8,11 @@
 }
 
 .arrow {
-  width: 120px;
-  height: 40px;
+  width: 300px;
+  height: 80px;
   background:  linear-gradient(to left, #93c5fd, #c084fc, #7c3aed);
-  clip-path: polygon(0% 0%, 80% 0%, 100% 50%, 80% 100%, 0% 100%);
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+
+
 }

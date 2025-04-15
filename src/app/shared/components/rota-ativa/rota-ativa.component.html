@@ -1,18 +1,20 @@
-<!-- <div
-  class="fixed right-12 bottom-12 z-30 hidden lg:flex flex-row justify-center items-center"
+
+<div
+  class="mt-10 w-full bg-transparent hidden lg:flex flex-row justify-center items-center z-30"
 >
-  <div class="arrow bg-neutral-600 dark:bg-neutral-100 flex">
-    <div class="flex flex-row items-center ml-2 gap-2">
+  <div class="arrow  flex flex-row items-center gap-10 justify-center z-30">
+      <span (click)="backPage()" class="material-symbols-outlined">
+        skip_previous
+        </span>
+
       <span
-        class="material-symbols-outlined font-bold text-md text-black dark:text-white tracking-widest"
-      >
-        {{ iconClass }}
-      </span>
-      <span
-        class="font-bold text-md text-black dark:text-white tracking-widest"
+        class="font-ligth font-poppins text-lg text-black dark:text-white tracking-widest z-30"
       >
         {{ actualRoute }}
       </span>
-    </div>
+
+        <span (click)="nextPage()" class="material-symbols-outlined">
+          skip_next
+          </span>
   </div>
-</div> -->
+</div>
