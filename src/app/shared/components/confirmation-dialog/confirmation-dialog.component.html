@@ -1,8 +1,9 @@
 <h2 mat-dialog-title>{{ title }}</h2>
 <mat-dialog-content>
-  <div *ngIf="dataContent" [innerHTML]="dataContent | nl2br">
+  <div *ngIf="dataContent" >
     <!-- <p>{{ dataContent }}</p> -->
-    <ng-content></ng-content>
+    <img *ngIf="dataContent" [src]="dataContent" alt="Imagem" class="max-w-full max-h-[70vh] rounded-lg shadow-lg" />
+    <!-- <ng-content></ng-content> -->
   </div>
   <ng-content></ng-content>
 </mat-dialog-content>

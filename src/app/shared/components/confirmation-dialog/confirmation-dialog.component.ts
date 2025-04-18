@@ -7,13 +7,14 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
   styleUrls: ['./confirmation-dialog.component.css'],
 })
 export class ConfirmationDialogComponent {
-  @Input() title: string = 'Default Title';
+  title: string;
   dataContent: any;
 
   constructor(
     public dialogRef: MatDialogRef<ConfirmationDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any
   ) {
+    this.title = data.title;
     this.dataContent = data.content;
   }
 
