@@ -1,7 +1,6 @@
-
 <app-rota-ativa
-[actualRoute]="rotaAtual"
-[backPage]="voltarPagina.bind(this)"
+  [actualRoute]="rotaAtual"
+  [backPage]="voltarPagina.bind(this)"
   [nextPage]="avancarPagina.bind(this)"
 ></app-rota-ativa>
 
@@ -33,8 +32,8 @@
           instituição.
         </p>
         <p class="text-md lg:text-lg mb-4">
-          Desenvolvedor full-stack com mais de 3 anos de experiência em projetos
-          voltados para o setor público e privado.
+          Desenvolvedor full-stack com experiência em projetos voltados para o
+          setor público e privado.
         </p>
       </div>
     </div>
@@ -57,564 +56,489 @@
   <section
     class="flex flex-col justify-center items-center px-5 md:px-60 mt-20 w-full"
   >
-    <div class="flex flex-row justify-center items-center w-full  gap-4 mb-20">
+    <div class="flex flex-row justify-center items-center w-full gap-4">
+      <div class="p-20 rounded-tr-full flex">
+        <span
+          class="text-3xl sm:text-4xl md:text-6xl lg:text-8xl 2xl:text-9xl font-bold bg-gradient-to-l from-blue-300 via-pink-100 to-purple-400 bg-clip-text text-transparent"
+          >Hard Skills</span
+        >
+      </div>
 
-
-
-      <span
-        class=" text-3xl sm:text-4xl md:text-6xl lg:text-8xl 2xl:text-9xl font-bold bg-gradient-to-l from-blue-300 via-pink-100 to-purple-400 bg-clip-text text-transparent"
-        >Hard Skills</span
-      >
-
-      <div
-        class="h-[1px] w-full max-w-4xl bg-neutral-300 dark:bg-neutral-100"
-      ></div>
+      <div class="flex flex-row justify-center items-center w-full">
+        <div
+          class="h-[1px] w-full max-w-4xl bg-neutral-300 dark:bg-neutral-100"
+        ></div>
+        <div
+          class="w-3 h-3 rounded-full bg-neutral-300 dark:bg-neutral-100"
+        ></div>
+      </div>
     </div>
 
     <div
-      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 w-full"
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-20 w-full justify-items-center"
     >
-      <div class="flex flex-col items-center">
-        <svg class="w-24 h-24 rotate-[-90deg]">
-          <!-- Fundo (trilha cinza) -->
-          <circle
-            class="text-gray-700"
-            stroke-width="6"
-            stroke="currentColor"
-            fill="transparent"
-            r="36"
-            cx="48"
-            cy="48"
-          />
+      <div
+        class="bg-white w-28 h-28 dark:bg-black transition-all duration-700 rounded-full p-2"
+      >
+        <div class="flex flex-col items-center">
+          <svg class="w-24 h-24 rotate-[-90deg]">
+            <!-- Fundo (trilha cinza) -->
+            <circle
+              class="text-gray-700"
+              stroke-width="6"
+              stroke="currentColor"
+              fill="transparent"
+              r="36"
+              cx="48"
+              cy="48"
+            />
 
-          <!-- Progresso -->
-          <circle
-            class="text-blue-400"
-            stroke-width="6"
-            stroke-linecap="round"
-            stroke="currentColor"
-            fill="transparent"
-            r="36"
-            cx="48"
-            cy="48"
-            stroke-dasharray="226.2"
-            stroke-dashoffset="22.62"
-          />
-        </svg>
+            <!-- Progresso -->
+            <circle
+              class="text-blue-400"
+              stroke-width="6"
+              stroke-linecap="round"
+              stroke="currentColor"
+              fill="transparent"
+              r="36"
+              cx="48"
+              cy="48"
+              stroke-dasharray="226.2"
+              stroke-dashoffset="22.62"
+            />
+          </svg>
 
-        <!-- Valor e nome -->
-        <span class="absolute mt-10 font-bold text-sm">90%</span>
-        <p class="mt-2">HTML</p>
+          <!-- Valor e nome -->
+          <span class="absolute mt-10 font-bold text-sm">90%</span>
+          <p class="mt-4 py-2 px-4 bg-white dark:bg-black">HTML5</p>
+        </div>
       </div>
 
-      <div class="flex flex-col items-center">
-        <svg class="w-24 h-24 rotate-[-90deg]">
-          <!-- Fundo (trilha cinza) -->
-          <circle
-            class="text-gray-700"
-            stroke-width="6"
-            stroke="currentColor"
-            fill="transparent"
-            r="36"
-            cx="48"
-            cy="48"
-          />
+      <div
+        class="bg-white w-28 h-28 dark:bg-black transition-all duration-700 rounded-full p-2"
+      >
+        <div class="flex flex-col items-center">
+          <svg class="w-24 h-24 rotate-[-90deg]">
+            <!-- Fundo (trilha cinza) -->
+            <circle
+              class="text-gray-700"
+              stroke-width="6"
+              stroke="currentColor"
+              fill="transparent"
+              r="36"
+              cx="48"
+              cy="48"
+            />
 
-          <!-- Progresso -->
-          <circle
-            class="text-blue-400"
-            stroke-width="6"
-            stroke-linecap="round"
-            stroke="currentColor"
-            fill="transparent"
-            r="36"
-            cx="48"
-            cy="48"
-            stroke-dasharray="226.2"
-            stroke-dashoffset="22.62"
-          />
-        </svg>
+            <!-- Progresso -->
+            <circle
+              class="text-blue-400"
+              stroke-width="6"
+              stroke-linecap="round"
+              stroke="currentColor"
+              fill="transparent"
+              r="36"
+              cx="48"
+              cy="48"
+              stroke-dasharray="226.2"
+              stroke-dashoffset="22.62"
+            />
+          </svg>
 
-        <!-- Valor e nome -->
-        <span class="absolute mt-10 font-bold text-sm">90%</span>
-        <p class="mt-2">CSS</p>
+          <!-- Valor e nome -->
+          <span class="absolute mt-10 font-bold text-sm">90%</span>
+          <p class="mt-4 p-2 bg-white dark:bg-black">CSS3</p>
+        </div>
       </div>
 
-      <div class="flex flex-col items-center">
-        <svg class="w-24 h-24 rotate-[-90deg]">
-          <!-- Trilha de fundo -->
-          <circle
-            class="text-gray-700"
-            stroke-width="6"
-            stroke="currentColor"
-            fill="transparent"
-            r="36"
-            cx="48"
-            cy="48"
-          />
+      <div
+        class="bg-white w-28 h-28 dark:bg-black transition-all duration-700 rounded-full p-2"
+      >
+        <div class="flex flex-col items-center">
+          <svg class="w-24 h-24 rotate-[-90deg]">
+            <!-- Trilha de fundo -->
+            <circle
+              class="text-gray-700"
+              stroke-width="6"
+              stroke="currentColor"
+              fill="transparent"
+              r="36"
+              cx="48"
+              cy="48"
+            />
 
-          <!-- Progresso -->
-          <circle
-            class="text-blue-400"
-            stroke-width="6"
-            stroke-linecap="round"
-            stroke="currentColor"
-            fill="transparent"
-            r="36"
-            cx="48"
-            cy="48"
-            stroke-dasharray="226.2"
-            stroke-dashoffset="45.24"
-          />
-        </svg>
+            <!-- Progresso -->
+            <circle
+              class="text-blue-400"
+              stroke-width="6"
+              stroke-linecap="round"
+              stroke="currentColor"
+              fill="transparent"
+              r="36"
+              cx="48"
+              cy="48"
+              stroke-dasharray="226.2"
+              stroke-dashoffset="45.24"
+            />
+          </svg>
 
-        <!-- Valor e label -->
-        <span class="absolute mt-10 font-bold text-sm">80%</span>
-        <p class="mt-2">JavaScript</p>
+          <!-- Valor e label -->
+          <span class="absolute mt-10 font-bold text-sm">80%</span>
+          <p class="mt-4 p-2 bg-white dark:bg-black">JavaScript</p>
+        </div>
       </div>
 
-      <div class="flex flex-col items-center">
-        <svg class="w-24 h-24 rotate-[-90deg]">
-          <!-- Trilha de fundo -->
-          <circle
-            class="text-gray-700"
-            stroke-width="6"
-            stroke="currentColor"
-            fill="transparent"
-            r="36"
-            cx="48"
-            cy="48"
-          />
+      <div
+        class="bg-white w-28 h-28 dark:bg-black transition-all duration-700 rounded-full p-2"
+      >
+        <div class="flex flex-col items-center">
+          <svg class="w-24 h-24 rotate-[-90deg]">
+            <!-- Trilha de fundo -->
+            <circle
+              class="text-gray-700"
+              stroke-width="6"
+              stroke="currentColor"
+              fill="transparent"
+              r="36"
+              cx="48"
+              cy="48"
+            />
 
-          <!-- Progresso -->
-          <circle
-            class="text-blue-400"
-            stroke-width="6"
-            stroke-linecap="round"
-            stroke="currentColor"
-            fill="transparent"
-            r="36"
-            cx="48"
-            cy="48"
-            stroke-dasharray="226.2"
-            stroke-dashoffset="45.24"
-          />
-        </svg>
+            <!-- Progresso -->
+            <circle
+              class="text-blue-400"
+              stroke-width="6"
+              stroke-linecap="round"
+              stroke="currentColor"
+              fill="transparent"
+              r="36"
+              cx="48"
+              cy="48"
+              stroke-dasharray="226.2"
+              stroke-dashoffset="45.24"
+            />
+          </svg>
 
-        <!-- Valor e label -->
-        <span class="absolute mt-10 font-bold text-sm">80%</span>
-        <p class="mt-2">TypeScript</p>
+          <!-- Valor e label -->
+          <span class="absolute mt-10 font-bold text-sm">80%</span>
+          <p class="mt-4 p-2 bg-white dark:bg-black">TypeScript</p>
+        </div>
       </div>
 
-      <div class="flex flex-col items-center">
-        <svg class="w-24 h-24 rotate-[-90deg]">
-          <!-- Trilha de fundo -->
-          <circle
-            class="text-gray-700"
-            stroke-width="6"
-            stroke="currentColor"
-            fill="transparent"
-            r="36"
-            cx="48"
-            cy="48"
-          />
+      <div
+        class="bg-white w-28 h-28 dark:bg-black transition-all duration-700 rounded-full p-2"
+      >
+        <div class="flex flex-col items-center">
+          <svg class="w-24 h-24 rotate-[-90deg]">
+            <!-- Trilha de fundo -->
+            <circle
+              class="text-gray-700"
+              stroke-width="6"
+              stroke="currentColor"
+              fill="transparent"
+              r="36"
+              cx="48"
+              cy="48"
+            />
 
-          <!-- Progresso -->
-          <circle
-            class="text-blue-400"
-            stroke-width="6"
-            stroke-linecap="round"
-            stroke="currentColor"
-            fill="transparent"
-            r="36"
-            cx="48"
-            cy="48"
-            stroke-dasharray="226.2"
-            stroke-dashoffset="67.86"
-          />
-        </svg>
+            <!-- Progresso -->
+            <circle
+              class="text-blue-400"
+              stroke-width="6"
+              stroke-linecap="round"
+              stroke="currentColor"
+              fill="transparent"
+              r="36"
+              cx="48"
+              cy="48"
+              stroke-dasharray="226.2"
+              stroke-dashoffset="67.86"
+            />
+          </svg>
 
-        <!-- Valor e label -->
-        <span class="absolute mt-10 font-bold text-sm">70%</span>
-        <p class="mt-2">Angular</p>
+          <!-- Valor e label -->
+          <span class="absolute mt-10 font-bold text-sm">70%</span>
+          <p class="mt-4 p-2 bg-white dark:bg-black">Angular</p>
+        </div>
       </div>
+      <div
+        class="bg-white w-28 h-28 dark:bg-black transition-all duration-700 rounded-full p-2"
+      >
+        <div class="flex flex-col items-center">
+          <svg class="w-24 h-24 rotate-[-90deg]">
+            <!-- Trilha de fundo -->
+            <circle
+              class="text-gray-700"
+              stroke-width="6"
+              stroke="currentColor"
+              fill="transparent"
+              r="36"
+              cx="48"
+              cy="48"
+            />
 
-      <div class="flex flex-col items-center">
-        <svg class="w-24 h-24 rotate-[-90deg]">
-          <!-- Trilha de fundo -->
-          <circle
-            class="text-gray-700"
-            stroke-width="6"
-            stroke="currentColor"
-            fill="transparent"
-            r="36"
-            cx="48"
-            cy="48"
-          />
+            <!-- Progresso -->
+            <circle
+              class="text-blue-400"
+              stroke-width="6"
+              stroke-linecap="round"
+              stroke="currentColor"
+              fill="transparent"
+              r="36"
+              cx="48"
+              cy="48"
+              stroke-dasharray="226.2"
+              stroke-dashoffset="90.48"
+            />
+          </svg>
 
-          <!-- Progresso -->
-          <circle
-            class="text-blue-400"
-            stroke-width="6"
-            stroke-linecap="round"
-            stroke="currentColor"
-            fill="transparent"
-            r="36"
-            cx="48"
-            cy="48"
-            stroke-dasharray="226.2"
-            stroke-dashoffset="90.48"
-          />
-        </svg>
-
-        <!-- Valor e label -->
-        <span class="absolute mt-10 font-bold text-sm">60%</span>
-        <p class="mt-2">React</p>
+          <!-- Valor e label -->
+          <span class="absolute mt-10 font-bold text-sm">60%</span>
+          <p class="mt-4 p-2 bg-white dark:bg-black">React</p>
+        </div>
       </div>
+      <div
+        class="bg-white w-28 h-28 dark:bg-black transition-all duration-700 rounded-full p-2"
+      >
+        <div class="flex flex-col items-center">
+          <svg class="w-24 h-24 rotate-[-90deg]">
+            <!-- Fundo (trilha cinza) -->
+            <circle
+              class="text-gray-700"
+              stroke-width="6"
+              stroke="currentColor"
+              fill="transparent"
+              r="36"
+              cx="48"
+              cy="48"
+            />
 
-      <div class="flex flex-col items-center">
-        <svg class="w-24 h-24 rotate-[-90deg]">
-          <!-- Fundo (trilha cinza) -->
-          <circle
-            class="text-gray-700"
-            stroke-width="6"
-            stroke="currentColor"
-            fill="transparent"
-            r="36"
-            cx="48"
-            cy="48"
-          />
+            <!-- Progresso -->
+            <circle
+              class="text-blue-400"
+              stroke-width="6"
+              stroke-linecap="round"
+              stroke="currentColor"
+              fill="transparent"
+              r="36"
+              cx="48"
+              cy="48"
+              stroke-dasharray="226.2"
+              stroke-dashoffset="22.62"
+            />
+          </svg>
 
-          <!-- Progresso -->
-          <circle
-            class="text-blue-400"
-            stroke-width="6"
-            stroke-linecap="round"
-            stroke="currentColor"
-            fill="transparent"
-            r="36"
-            cx="48"
-            cy="48"
-            stroke-dasharray="226.2"
-            stroke-dashoffset="22.62"
-          />
-        </svg>
-
-        <!-- Valor e nome -->
-        <span class="absolute mt-10 font-bold text-sm">90%</span>
-        <p class="mt-2">Tailwindcss</p>
+          <!-- Valor e nome -->
+          <span class="absolute mt-10 font-bold text-sm">90%</span>
+          <p class="mt-4 p-2 bg-white dark:bg-black">Tailwindcss</p>
+        </div>
       </div>
+      <div
+        class="bg-white w-28 h-28 dark:bg-black transition-all duration-700 rounded-full p-2"
+      >
+        <div class="flex flex-col items-center">
+          <svg class="w-24 h-24 rotate-[-90deg]">
+            <!-- Fundo (trilha cinza) -->
+            <circle
+              class="text-gray-700"
+              stroke-width="6"
+              stroke="currentColor"
+              fill="transparent"
+              r="36"
+              cx="48"
+              cy="48"
+            />
 
-      <div class="flex flex-col items-center">
-        <svg class="w-24 h-24 rotate-[-90deg]">
-          <!-- Fundo (trilha cinza) -->
-          <circle
-            class="text-gray-700"
-            stroke-width="6"
-            stroke="currentColor"
-            fill="transparent"
-            r="36"
-            cx="48"
-            cy="48"
-          />
+            <!-- Progresso -->
+            <circle
+              class="text-blue-400"
+              stroke-width="6"
+              stroke-linecap="round"
+              stroke="currentColor"
+              fill="transparent"
+              r="36"
+              cx="48"
+              cy="48"
+              stroke-dasharray="226.2"
+              stroke-dashoffset="22.62"
+            />
+          </svg>
 
-          <!-- Progresso -->
-          <circle
-            class="text-blue-400"
-            stroke-width="6"
-            stroke-linecap="round"
-            stroke="currentColor"
-            fill="transparent"
-            r="36"
-            cx="48"
-            cy="48"
-            stroke-dasharray="226.2"
-            stroke-dashoffset="22.62"
-          />
-        </svg>
-
-        <!-- Valor e nome -->
-        <span class="absolute mt-10 font-bold text-sm">90%</span>
-        <p class="mt-2">Bootstrap</p>
+          <!-- Valor e nome -->
+          <span class="absolute mt-10 font-bold text-sm">90%</span>
+          <p class="mt-4 p-2 bg-white dark:bg-black">Bootstrap</p>
+        </div>
       </div>
+      <div
+        class="bg-white w-28 h-28 dark:bg-black transition-all duration-700 rounded-full p-2"
+      >
+        <div class="flex flex-col items-center">
+          <svg class="w-24 h-24 rotate-[-90deg]">
+            <!-- Trilha de fundo -->
+            <circle
+              class="text-gray-700"
+              stroke-width="6"
+              stroke="currentColor"
+              fill="transparent"
+              r="36"
+              cx="48"
+              cy="48"
+            />
 
-      <div class="flex flex-col items-center">
-        <svg class="w-24 h-24 rotate-[-90deg]">
-          <!-- Trilha de fundo -->
-          <circle
-            class="text-gray-700"
-            stroke-width="6"
-            stroke="currentColor"
-            fill="transparent"
-            r="36"
-            cx="48"
-            cy="48"
-          />
+            <!-- Progresso -->
+            <circle
+              class="text-blue-400"
+              stroke-width="6"
+              stroke-linecap="round"
+              stroke="currentColor"
+              fill="transparent"
+              r="36"
+              cx="48"
+              cy="48"
+              stroke-dasharray="226.2"
+              stroke-dashoffset="45.24"
+            />
+          </svg>
 
-          <!-- Progresso -->
-          <circle
-            class="text-blue-400"
-            stroke-width="6"
-            stroke-linecap="round"
-            stroke="currentColor"
-            fill="transparent"
-            r="36"
-            cx="48"
-            cy="48"
-            stroke-dasharray="226.2"
-            stroke-dashoffset="45.24"
-          />
-        </svg>
-
-        <!-- Valor e label -->
-        <span class="absolute mt-10 font-bold text-sm">80%</span>
-        <p class="mt-2">Figma</p>
+          <!-- Valor e label -->
+          <span class="absolute mt-10 font-bold text-sm">80%</span>
+          <p class="mt-4 p-2 bg-white dark:bg-black">Figma</p>
+        </div>
       </div>
+      <div
+        class="bg-white w-28 h-28 dark:bg-black transition-all duration-700 rounded-full p-2"
+      >
+        <div class="flex flex-col items-center">
+          <svg class="w-24 h-24 rotate-[-90deg]">
+            <!-- Trilha de fundo -->
+            <circle
+              class="text-gray-700"
+              stroke-width="6"
+              stroke="currentColor"
+              fill="transparent"
+              r="36"
+              cx="48"
+              cy="48"
+            />
 
-      <div class="flex flex-col items-center">
-        <svg class="w-24 h-24 rotate-[-90deg]">
-          <!-- Trilha de fundo -->
-          <circle
-            class="text-gray-700"
-            stroke-width="6"
-            stroke="currentColor"
-            fill="transparent"
-            r="36"
-            cx="48"
-            cy="48"
-          />
+            <!-- Progresso -->
+            <circle
+              class="text-blue-400"
+              stroke-width="6"
+              stroke-linecap="round"
+              stroke="currentColor"
+              fill="transparent"
+              r="36"
+              cx="48"
+              cy="48"
+              stroke-dasharray="226.2"
+              stroke-dashoffset="90.48"
+            />
+          </svg>
 
-          <!-- Progresso -->
-          <circle
-            class="text-blue-400"
-            stroke-width="6"
-            stroke-linecap="round"
-            stroke="currentColor"
-            fill="transparent"
-            r="36"
-            cx="48"
-            cy="48"
-            stroke-dasharray="226.2"
-            stroke-dashoffset="90.48"
-          />
-        </svg>
-
-        <!-- Valor e label -->
-        <span class="absolute mt-10 font-bold text-sm">60%</span>
-        <p class="mt-2">jQuery</p>
+          <!-- Valor e label -->
+          <span class="absolute mt-10 font-bold text-sm">60%</span>
+          <p class="mt-4 p-2 bg-white dark:bg-black">jQuery</p>
+        </div>
       </div>
+      <div
+        class="bg-white w-28 h-28 dark:bg-black transition-all duration-700 rounded-full p-2"
+      >
+        <div class="flex flex-col items-center">
+          <svg class="w-24 h-24 rotate-[-90deg]">
+            <!-- Trilha de fundo -->
+            <circle
+              class="text-gray-700"
+              stroke-width="6"
+              stroke="currentColor"
+              fill="transparent"
+              r="36"
+              cx="48"
+              cy="48"
+            />
 
-      <div class="flex flex-col items-center">
-        <svg class="w-24 h-24 rotate-[-90deg]">
-          <!-- Trilha de fundo -->
-          <circle
-            class="text-gray-700"
-            stroke-width="6"
-            stroke="currentColor"
-            fill="transparent"
-            r="36"
-            cx="48"
-            cy="48"
-          />
+            <!-- Progresso -->
+            <circle
+              class="text-blue-400"
+              stroke-width="6"
+              stroke-linecap="round"
+              stroke="currentColor"
+              fill="transparent"
+              r="36"
+              cx="48"
+              cy="48"
+              stroke-dasharray="226.2"
+              stroke-dashoffset="90.48"
+            />
+          </svg>
 
-          <!-- Progresso -->
-          <circle
-            class="text-blue-400"
-            stroke-width="6"
-            stroke-linecap="round"
-            stroke="currentColor"
-            fill="transparent"
-            r="36"
-            cx="48"
-            cy="48"
-            stroke-dasharray="226.2"
-            stroke-dashoffset="90.48"
-          />
-        </svg>
-
-        <!-- Valor e label -->
-        <span class="absolute mt-10 font-bold text-sm">60%</span>
-        <p class="mt-2">Git</p>
+          <!-- Valor e label -->
+          <span class="absolute mt-10 font-bold text-sm">60%</span>
+          <p class="mt-4 p-2 bg-white dark:bg-black">Git</p>
+        </div>
       </div>
+      <div
+        class="bg-white w-28 h-28 dark:bg-black transition-all duration-700 rounded-full p-2"
+      >
+        <div class="flex flex-col items-center">
+          <svg class="w-24 h-24 rotate-[-90deg]">
+            <!-- Fundo (trilha cinza) -->
+            <circle
+              class="text-gray-700"
+              stroke-width="6"
+              stroke="currentColor"
+              fill="transparent"
+              r="36"
+              cx="48"
+              cy="48"
+            />
 
-      <div class="flex flex-col items-center">
-        <svg class="w-24 h-24 rotate-[-90deg]">
-          <!-- Fundo (trilha cinza) -->
-          <circle
-            class="text-gray-700"
-            stroke-width="6"
-            stroke="currentColor"
-            fill="transparent"
-            r="36"
-            cx="48"
-            cy="48"
-          />
+            <!-- Progresso -->
+            <circle
+              class="text-blue-400"
+              stroke-width="6"
+              stroke-linecap="round"
+              stroke="currentColor"
+              fill="transparent"
+              r="36"
+              cx="48"
+              cy="48"
+              stroke-dasharray="226.2"
+              stroke-dashoffset="22.62"
+            />
+          </svg>
 
-          <!-- Progresso -->
-          <circle
-            class="text-blue-400"
-            stroke-width="6"
-            stroke-linecap="round"
-            stroke="currentColor"
-            fill="transparent"
-            r="36"
-            cx="48"
-            cy="48"
-            stroke-dasharray="226.2"
-            stroke-dashoffset="22.62"
-          />
-        </svg>
-
-        <!-- Valor e nome -->
-        <span class="absolute mt-10 font-bold text-sm">90%</span>
-        <p class="mt-2">DevTools</p>
+          <!-- Valor e nome -->
+          <span class="absolute mt-10 font-bold text-sm">90%</span>
+          <p class="mt-4 p-2 bg-white dark:bg-black">DevTools</p>
+        </div>
       </div>
     </div>
   </section>
   <section
     class="flex flex-col justify-start items-center px-5 md:px-30 lg:px-60 mt-40 w-full"
   >
+    <div class="flex flex-row justify-center items-center w-full gap-4 mb-20">
+      <div class="flex flex-row justify-center items-center w-full">
+        <div
+          class="w-3 h-3 rounded-full bg-neutral-300 dark:bg-neutral-100"
+        ></div>
+        <div
+          class="h-[1px] w-full max-w-4xl bg-neutral-300 dark:bg-neutral-100"
+        ></div>
+      </div>
 
+      <span
+        class="text-3xl sm:text-4xl md:text-6xl lg:text-8xl 2xl:text-9xl font-bold bg-gradient-to-l from-blue-300 via-pink-100 to-purple-400 bg-clip-text text-transparent"
+        >Soft Skills</span
+      >
+    </div>
 
-  <div class="flex flex-row justify-center items-center w-full  gap-4 mb-20">
     <div
-    class="h-[1px] w-full max-w-4xl bg-neutral-300 dark:bg-neutral-100"
-  ></div>
-
-    <span
-      class=" text-3xl sm:text-4xl md:text-6xl lg:text-8xl 2xl:text-9xl font-bold bg-gradient-to-l from-blue-300 via-pink-100 to-purple-400 bg-clip-text text-transparent"
-      >Soft Skills</span
-    >
-
-  </div>
-
-
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-20 md:gap-32 lg:gap-48 text-lg">
-
-
-
-      <div
-      class="cursor-pointer group overflow-hidden p-5 duration-1000 hover:duration-1000 relative w-64 h-64 bg-white dark:bg-black rounded-md"
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-20 md:gap-32 lg:gap-48 text-lg"
     >
       <div
-        class="bg-transparent group-hover:scale-150 -top-12 -left-12 absolute shadow-purple-800 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-24 h-24"
-      ></div>
-      <div
-        class="bg-transparent group-hover:scale-150 top-44 left-14 absolute shadow-pink-400 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-24 h-24"
-      ></div>
-      <div
-        class="bg-transparent group-hover:scale-150 top-24 left-56 absolute shadow-sky-500 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-24 h-24"
-      ></div>
-      <div
-        class="bg-transparent group-hover:scale-150 top-12 left-12 absolute shadow-purple-300 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-12 h-12"
-      ></div>
-      <div
-        class="bg-transparent group-hover:scale-150 top-12 left-12 absolute shadow-blue-200 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-44 h-44"
-      ></div>
-      <div
-        class="bg-transparent group-hover:scale-150 -top-24 -left-12 absolute shadow-sky-500 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-64 h-64"
-      ></div>
-      <div
-        class="bg-transparent group-hover:scale-150 top-24 left-12 absolute shadow-purple-400 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-4 h-4"
-      ></div>
-      <div
-        class="w-full h-full shadow-xl shadow-neutral-400 p-3 bg-neutral-200  dark:bg-neutral-600 opacity-50 rounded-xl flex-col gap-2 flex justify-center"
-      >
-        <span class="text-black dark:text-white font-bold text-xl italic"
-          >🗣️ Comunicação clara</span
-        >
-        <p class=" text-black dark:text-white">
-          Habilidade para transmitir ideias de forma objetiva em equipes
-          técnicas e multidisciplinares.
-        </p>
-      </div>
-    </div>
-
-
-
-
-
-
-      <div
-      class="cursor-pointer group overflow-hidden p-5 duration-1000 hover:duration-1000 relative w-64 h-64 bg-white dark:bg-black rounded-xl"
-    >
-      <div
-        class="bg-transparent group-hover:scale-150 -top-12 -left-12 absolute shadow-purple-800 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-24 h-24"
-      ></div>
-      <div
-        class="bg-transparent group-hover:scale-150 top-44 left-14 absolute shadow-pink-400 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-24 h-24"
-      ></div>
-      <div
-        class="bg-transparent group-hover:scale-150 top-24 left-56 absolute shadow-sky-500 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-24 h-24"
-      ></div>
-      <div
-        class="bg-transparent group-hover:scale-150 top-12 left-12 absolute shadow-purple-300 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-12 h-12"
-      ></div>
-      <div
-        class="bg-transparent group-hover:scale-150 top-12 left-12 absolute shadow-blue-200 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-44 h-44"
-      ></div>
-      <div
-        class="bg-transparent group-hover:scale-150 -top-24 -left-12 absolute shadow-sky-500 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-64 h-64"
-      ></div>
-      <div
-        class="bg-transparent group-hover:scale-150 top-24 left-12 absolute shadow-purple-400 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-4 h-4"
-      ></div>
-      <div
-        class="w-full h-full shadow-xl shadow-neutral-400 p-3 bg-neutral-200  dark:bg-neutral-600  opacity-50 rounded-xl flex-col gap-2 flex justify-center"
-      >
-        <span class="text-black dark:text-white  font-bold text-xl italic"
-          >🤝 Trabalho em equipe</span
-        >
-        <p class="text-black dark:text-white ">
-          Facilidade em colaborar, ouvir e contribuir para o sucesso coletivo.
-        </p>
-      </div>
-    </div>
-
-
-
-
-
-
-      <div
-      class="cursor-pointer group overflow-hidden p-5 duration-1000 hover:duration-1000 relative w-64 h-64 bg-white dark:bg-black rounded-xl"
-    >
-      <div
-        class="bg-transparent group-hover:scale-150 -top-12 -left-12 absolute shadow-purple-800 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-24 h-24"
-      ></div>
-      <div
-        class="bg-transparent group-hover:scale-150 top-44 left-14 absolute shadow-pink-400 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-24 h-24"
-      ></div>
-      <div
-        class="bg-transparent group-hover:scale-150 top-24 left-56 absolute shadow-sky-500 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-24 h-24"
-      ></div>
-      <div
-        class="bg-transparent group-hover:scale-150 top-12 left-12 absolute shadow-purple-300 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-12 h-12"
-      ></div>
-      <div
-        class="bg-transparent group-hover:scale-150 top-12 left-12 absolute shadow-blue-200 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-44 h-44"
-      ></div>
-      <div
-        class="bg-transparent group-hover:scale-150 -top-24 -left-12 absolute shadow-sky-500 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-64 h-64"
-      ></div>
-      <div
-        class="bg-transparent group-hover:scale-150 top-24 left-12 absolute shadow-purple-400 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-4 h-4"
-      ></div>
-      <div
-        class="w-full h-full shadow-xl shadow-neutral-400 p-3 bg-neutral-200  dark:bg-neutral-600  opacity-50 rounded-xl flex-col gap-2 flex justify-center"
-      >
-        <span class="text-black dark:text-white  font-bold text-xl italic"
-          >🗂️ Organização e foco</span
-        >
-        <p class="text-black dark:text-white ">
-          Comprometimento com prazos, entregas e planejamento de atividades.
-        </p>
-      </div>
-    </div>
-
-
-      <div
-        class="cursor-pointer group overflow-hidden p-5 duration-1000 hover:duration-1000 relative w-64 h-64 bg-white dark:bg-black rounded-xl"
+        class="cursor-pointer group overflow-hidden p-5 duration-1000 hover:duration-1000 relative w-64 h-64 md:w-80 md:h-80 bg-white dark:bg-black rounded-md"
       >
         <div
           class="bg-transparent group-hover:scale-150 -top-12 -left-12 absolute shadow-purple-800 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-24 h-24"
@@ -638,22 +562,130 @@
           class="bg-transparent group-hover:scale-150 top-24 left-12 absolute shadow-purple-400 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-4 h-4"
         ></div>
         <div
-          class="w-full h-full shadow-xl shadow-neutral-400 p-3 bg-neutral-200  dark:bg-neutral-600  opacity-50 rounded-xl flex-col gap-2 flex justify-center"
+          class="w-full h-full shadow-xl shadow-neutral-400 p-3 bg-neutral-200 dark:bg-neutral-600 opacity-50 rounded-xl flex-col gap-2 flex justify-center"
         >
-          <span class="text-black dark:text-white  font-bold text-xl italic"
+          <span class="text-black dark:text-white font-bold text-xl italic"
+            >🗣️ Comunicação clara</span
+          >
+          <p class="text-black dark:text-white">
+            Habilidade para transmitir ideias de forma objetiva em equipes
+            técnicas e multidisciplinares.
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="cursor-pointer group overflow-hidden p-5 duration-1000 hover:duration-1000 relative w-64 h-64 md:w-80 md:h-80 bg-white dark:bg-black rounded-xl"
+      >
+        <div
+          class="bg-transparent group-hover:scale-150 -top-12 -left-12 absolute shadow-purple-800 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-24 h-24"
+        ></div>
+        <div
+          class="bg-transparent group-hover:scale-150 top-44 left-14 absolute shadow-pink-400 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-24 h-24"
+        ></div>
+        <div
+          class="bg-transparent group-hover:scale-150 top-24 left-56 absolute shadow-sky-500 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-24 h-24"
+        ></div>
+        <div
+          class="bg-transparent group-hover:scale-150 top-12 left-12 absolute shadow-purple-300 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-12 h-12"
+        ></div>
+        <div
+          class="bg-transparent group-hover:scale-150 top-12 left-12 absolute shadow-blue-200 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-44 h-44"
+        ></div>
+        <div
+          class="bg-transparent group-hover:scale-150 -top-24 -left-12 absolute shadow-sky-500 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-64 h-64"
+        ></div>
+        <div
+          class="bg-transparent group-hover:scale-150 top-24 left-12 absolute shadow-purple-400 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-4 h-4"
+        ></div>
+        <div
+          class="w-full h-full shadow-xl shadow-neutral-400 p-3 bg-neutral-200 dark:bg-neutral-600 opacity-50 rounded-xl flex-col gap-2 flex justify-center"
+        >
+          <span class="text-black dark:text-white font-bold text-xl italic"
+            >🤝 Trabalho em equipe</span
+          >
+          <p class="text-black dark:text-white">
+            Facilidade em colaborar, ouvir e contribuir para o sucesso coletivo.
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="cursor-pointer group overflow-hidden p-5 duration-1000 hover:duration-1000 relative w-64 h-64 md:w-80 md:h-80 bg-white dark:bg-black rounded-xl"
+      >
+        <div
+          class="bg-transparent group-hover:scale-150 -top-12 -left-12 absolute shadow-purple-800 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-24 h-24"
+        ></div>
+        <div
+          class="bg-transparent group-hover:scale-150 top-44 left-14 absolute shadow-pink-400 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-24 h-24"
+        ></div>
+        <div
+          class="bg-transparent group-hover:scale-150 top-24 left-56 absolute shadow-sky-500 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-24 h-24"
+        ></div>
+        <div
+          class="bg-transparent group-hover:scale-150 top-12 left-12 absolute shadow-purple-300 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-12 h-12"
+        ></div>
+        <div
+          class="bg-transparent group-hover:scale-150 top-12 left-12 absolute shadow-blue-200 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-44 h-44"
+        ></div>
+        <div
+          class="bg-transparent group-hover:scale-150 -top-24 -left-12 absolute shadow-sky-500 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-64 h-64"
+        ></div>
+        <div
+          class="bg-transparent group-hover:scale-150 top-24 left-12 absolute shadow-purple-400 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-4 h-4"
+        ></div>
+        <div
+          class="w-full h-full shadow-xl shadow-neutral-400 p-3 bg-neutral-200 dark:bg-neutral-600 opacity-50 rounded-xl flex-col gap-2 flex justify-center"
+        >
+          <span class="text-black dark:text-white font-bold text-xl italic"
+            >🗂️ Organização e foco</span
+          >
+          <p class="text-black dark:text-white">
+            Comprometimento com prazos, entregas e planejamento de atividades.
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="cursor-pointer group overflow-hidden p-5 duration-1000 hover:duration-1000 relative w-64 h-64 md:w-80 md:h-80 bg-white dark:bg-black rounded-xl"
+      >
+        <div
+          class="bg-transparent group-hover:scale-150 -top-12 -left-12 absolute shadow-purple-800 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-24 h-24"
+        ></div>
+        <div
+          class="bg-transparent group-hover:scale-150 top-44 left-14 absolute shadow-pink-400 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-24 h-24"
+        ></div>
+        <div
+          class="bg-transparent group-hover:scale-150 top-24 left-56 absolute shadow-sky-500 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-24 h-24"
+        ></div>
+        <div
+          class="bg-transparent group-hover:scale-150 top-12 left-12 absolute shadow-purple-300 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-12 h-12"
+        ></div>
+        <div
+          class="bg-transparent group-hover:scale-150 top-12 left-12 absolute shadow-blue-200 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-44 h-44"
+        ></div>
+        <div
+          class="bg-transparent group-hover:scale-150 -top-24 -left-12 absolute shadow-sky-500 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-64 h-64"
+        ></div>
+        <div
+          class="bg-transparent group-hover:scale-150 top-24 left-12 absolute shadow-purple-400 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-4 h-4"
+        ></div>
+        <div
+          class="w-full h-full shadow-xl shadow-neutral-400 p-3 bg-neutral-200 dark:bg-neutral-600 opacity-50 rounded-xl flex-col gap-2 flex justify-center"
+        >
+          <span class="text-black dark:text-white font-bold text-xl italic"
             >📚 Aprendizado contínuo</span
           >
-          <p class="text-black dark:text-white ">
+          <p class="text-black dark:text-white">
             Disposição para aprender novas tecnologias e se adaptar rapidamente
             a novos contextos.
           </p>
         </div>
       </div>
 
-
       <div
-        class="cursor-pointer group overflow-hidden p-5 duration-1000 hover:duration-1000 relative w-64 h-64 bg-white dark:bg-black rounded-xl"
-       >
+        class="cursor-pointer group overflow-hidden p-5 duration-1000 hover:duration-1000 relative w-64 h-64 md:w-80 md:h-80 bg-white dark:bg-black rounded-xl"
+      >
         <div
           class="bg-transparent group-hover:scale-150 -top-12 -left-12 absolute shadow-purple-800 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-24 h-24"
         ></div>
@@ -676,53 +708,53 @@
           class="bg-transparent group-hover:scale-150 top-24 left-12 absolute shadow-purple-400 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-4 h-4"
         ></div>
         <div
-          class="w-full h-full shadow-xl
-          shadow-neutral-400 p-3 bg-neutral-200  dark:bg-neutral-600  opacity-50 rounded-xl flex-col gap-2 flex justify-center"
+          class="w-full h-full shadow-xl shadow-neutral-400 p-3 bg-neutral-200 dark:bg-neutral-600 opacity-50 rounded-xl flex-col gap-2 flex justify-center"
         >
           <span class="text-black dark:text-white font-bold text-xl italic"
             >🧠 Pensamento crítico</span
           >
-          <p class="text-black dark:text-white ">
+          <p class="text-black dark:text-white">
             Análise de problemas com foco em soluções práticas e eficientes.
           </p>
         </div>
       </div>
 
       <div
-  class="cursor-pointer group overflow-hidden p-5 duration-1000 hover:duration-1000 relative w-64 h-64 bg-white dark:bg-black rounded-xl"
->
-  <div
-    class="bg-transparent group-hover:scale-150 -top-12 -left-12 absolute shadow-purple-800 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-24 h-24"
-  ></div>
-  <div
-    class="bg-transparent group-hover:scale-150 top-44 left-14 absolute shadow-pink-400 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-24 h-24"
-  ></div>
-  <div
-    class="bg-transparent group-hover:scale-150 top-24 left-56 absolute shadow-sky-500 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-24 h-24"
-  ></div>
-  <div
-    class="bg-transparent group-hover:scale-150 top-12 left-12 absolute shadow-purple-300 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-12 h-12"
-  ></div>
-  <div
-    class="bg-transparent group-hover:scale-150 top-12 left-12 absolute shadow-blue-200 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-44 h-44"
-  ></div>
-  <div
-    class="bg-transparent group-hover:scale-150 -top-24 -left-12 absolute shadow-sky-500 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-64 h-64"
-  ></div>
-  <div
-    class="bg-transparent group-hover:scale-150 top-24 left-12 absolute shadow-purple-400 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-4 h-4"
-  ></div>
-  <div
-    class="w-full h-full shadow-xl
-    shadow-neutral-400 p-3 bg-neutral-200  dark:bg-neutral-600  opacity-50 rounded-xl flex-col gap-2 flex justify-center"
-  >
-    <span class="text-black dark:text-white  font-bold text-xl italic">⏱️ Senso de urgência</span>
-    <p class="text-black dark:text-white ">
-      Capacidade de priorizar tarefas e agir rapidamente diante de prazos ou demandas críticas.
-    </p>
-  </div>
-</div>
-
+        class="cursor-pointer group overflow-hidden p-5 duration-1000 hover:duration-1000 relative w-64 h-64 md:w-80 md:h-80 bg-white dark:bg-black rounded-xl"
+      >
+        <div
+          class="bg-transparent group-hover:scale-150 -top-12 -left-12 absolute shadow-purple-800 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-24 h-24"
+        ></div>
+        <div
+          class="bg-transparent group-hover:scale-150 top-44 left-14 absolute shadow-pink-400 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-24 h-24"
+        ></div>
+        <div
+          class="bg-transparent group-hover:scale-150 top-24 left-56 absolute shadow-sky-500 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-24 h-24"
+        ></div>
+        <div
+          class="bg-transparent group-hover:scale-150 top-12 left-12 absolute shadow-purple-300 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-12 h-12"
+        ></div>
+        <div
+          class="bg-transparent group-hover:scale-150 top-12 left-12 absolute shadow-blue-200 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-44 h-44"
+        ></div>
+        <div
+          class="bg-transparent group-hover:scale-150 -top-24 -left-12 absolute shadow-sky-500 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-64 h-64"
+        ></div>
+        <div
+          class="bg-transparent group-hover:scale-150 top-24 left-12 absolute shadow-purple-400 shadow-inner rounded-full transition-all ease-in-out group-hover:duration-1000 duration-1000 w-4 h-4"
+        ></div>
+        <div
+          class="w-full h-full shadow-xl shadow-neutral-400 p-3 bg-neutral-200 dark:bg-neutral-600 opacity-50 rounded-xl flex-col gap-2 flex justify-center"
+        >
+          <span class="text-black dark:text-white font-bold text-xl italic"
+            >⏱️ Senso de urgência</span
+          >
+          <p class="text-black dark:text-white">
+            Capacidade de priorizar tarefas e agir rapidamente diante de prazos
+            ou demandas críticas.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -730,15 +762,18 @@
     class="flex flex-col justify-center items-center px-5 md:px-30 lg:px-60 mt-40"
   >
     <div class="flex w-full flex-row justify-center items-center gap-4 mb-20">
-
-
       <span
-        class="text-3xl sm:text-4xl md:text-6xl lg:text-8xl 2xl:text-9xl  font-bold bg-gradient-to-l from-blue-300 via-pink-100 to-purple-400 bg-clip-text text-transparent"
+        class="text-3xl sm:text-4xl md:text-6xl lg:text-8xl 2xl:text-9xl font-bold bg-gradient-to-l from-blue-300 via-pink-100 to-purple-400 bg-clip-text text-transparent"
         >Experiência Profissional</span
       >
-      <div
-        class="h-[1px] w-full max-w-4xl bg-neutral-300 dark:bg-neutral-100"
-      ></div>
+      <div class="flex flex-row justify-center items-center w-full">
+        <div
+          class="h-[1px] w-full max-w-4xl bg-neutral-300 dark:bg-neutral-100"
+        ></div>
+        <div
+          class="w-3 h-3 rounded-full bg-neutral-300 dark:bg-neutral-100"
+        ></div>
+      </div>
     </div>
 
     <div class="flex flex-col border-2 border-cyan-50 px-5 py-5 rounded-md">
@@ -780,14 +815,132 @@
     class="flex flex-col justify-center items-center px-5 md:px-60 mt-40 w-full"
   >
     <div class="flex w-full flex-row justify-center items-center gap-4 mb-5">
-
-      <div
-        class="h-[1px] w-full max-w-4xl bg-neutral-300 dark:bg-neutral-100"
-      ></div>
+      <div class="flex flex-row justify-center items-center w-full">
+        <div
+          class="w-3 h-3 rounded-full bg-neutral-300 dark:bg-neutral-100"
+        ></div>
+        <div
+          class="h-[1px] w-full max-w-4xl bg-neutral-300 dark:bg-neutral-100"
+        ></div>
+      </div>
       <span
-        class="text-3xl sm:text-4xl md:text-6xl lg:text-8xl 2xl:text-9xl   font-bold bg-gradient-to-l from-blue-300 via-pink-100 to-purple-400 bg-clip-text text-transparent"
+        class="text-3xl sm:text-4xl md:text-6xl lg:text-8xl 2xl:text-9xl font-bold bg-gradient-to-l from-blue-300 via-pink-100 to-purple-400 bg-clip-text text-transparent"
         >Certificações e Cursos</span
       >
+    </div>
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-20 md:gap-32 lg:gap-48 text-lg mt-20 mb-20"
+    >
+      <div class="card">
+        <div class="content">
+          <p class="heading">Curso java COMPLETO</p>
+          <ul class="para h-60 overflow-y-auto list-disc list-inside space-y-1">
+            <li>Lógica de programação e algoritmos</li>
+            <li>Sintaxe da linguagem Java</li>
+            <li>Classes, atributos e métodos</li>
+            <li>Construtores, sobrecarga, encapsulamento</li>
+            <li>Estruturas de dados: arrays e coleções</li>
+            <li>Enumerações, composição</li>
+            <li>Herança, polimorfismo, interfaces</li>
+            <li>Tratamento de exceções</li>
+            <li>Generics</li>
+            <li>Programação funcional e expressões lambda</li>
+            <li>Stream API</li>
+            <li>Manipulação de arquivos</li>
+            <li>JDBC para acesso a dados baseado em SQL</li>
+            <li>JavaFX para interface gráfica</li>
+            <li>Git / Github para versionamento</li>
+            <li>
+              Spring Boot - principal framework Java para desenvolvimento
+              comercial em Java
+            </li>
+            <li>
+              JPA / Hibernate para acesso a dados com mapeamento
+              objeto-relacional (ORM)
+            </li>
+            <li>Maven para gerenciamento de dependências de projeto</li>
+            <li>Spring Data JPA - framework para acesso a dados ORM</li>
+            <li>
+              Spring Data MongoDB - framework para acesso a dados NoSQL ao banco
+              MongoDB
+            </li>
+          </ul>
+          <button class="btn">Ver certificado</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="content">
+          <p class="heading">Curso web moderno com JavaScript</p>
+          <ul class="para h-60 overflow-y-auto list-disc list-inside space-y-1">
+            <li>Node.js</li>
+            <li>ESNext</li>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>Integração HTML5, CSS3 e Javascript</li>
+            <li>Ajax</li>
+            <li>Gulp</li>
+            <li>Webpack</li>
+            <li>jQuery</li>
+            <li>Bootstrap</li>
+            <li>React</li>
+            <li>Next</li>
+            <li>VueJS</li>
+            <li>Angular 9</li>
+            <li>Banco de Dados Relacional</li>
+            <li>Banco de Dados Não Relacional</li>
+            <li>Express</li>
+          </ul>
+          <button class="btn">Ver certificado</button>
+
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="content">
+          <p class="heading">Card Hover Effect</p>
+          <p class="para">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi
+            laboriosam at voluptas minus culpa deserunt delectus sapiente
+            inventore pariatur
+          </p>
+          <button class="btn">Read more</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="content">
+          <p class="heading">Card Hover Effect</p>
+          <p class="para">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi
+            laboriosam at voluptas minus culpa deserunt delectus sapiente
+            inventore pariatur
+          </p>
+          <button class="btn">Read more</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="content">
+          <p class="heading">Card Hover Effect</p>
+          <p class="para">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi
+            laboriosam at voluptas minus culpa deserunt delectus sapiente
+            inventore pariatur
+          </p>
+          <button class="btn">Read more</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="content">
+          <p class="heading">Card Hover Effect</p>
+          <p class="para">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi
+            laboriosam at voluptas minus culpa deserunt delectus sapiente
+            inventore pariatur
+          </p>
+          <button class="btn">Read more</button>
+        </div>
+      </div>
     </div>
   </section>
 </div>
