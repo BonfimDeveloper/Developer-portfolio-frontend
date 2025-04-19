@@ -14,6 +14,10 @@ export class SobreComponent {
   serpro: string = 'assets/images/serpro.png';
   certificadoJava: string = 'assets/images/certificadoJava.png';
   certificadoRedux: string = 'assets/images/certificadoRedux.png';
+  certificadoTestesAngular: string =
+    'assets/images/certificadoTestesAngular.png';
+
+  certificadoJavaScript: string = 'assets/images/certificadoJavaScript.png';
 
   constructor(private router: Router, private dialog: MatDialog) {}
 
