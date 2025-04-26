@@ -1,32 +1,10 @@
-.wave-letter {
-  display: inline-block;
-  animation: wave 1.5s infinite ease-in-out;
-  color: #3b82f6;
-  font-weight: 600;
+
+
+
+
+.bege-animado{
+  background:  linear-gradient(to left, #93c5fd, #c084fc, #7c3aed);
 }
-
-@keyframes wave {
-  0%, 100% {
-    transform: translateY(0);
-    color: #3b82f6; /* azul */
-  }
-  25% {
-    transform: translateY(-8px);
-    color: #c812ce; /* laranja */
-  }
-  50% {
-    transform: translateY(0);
-    color: #5aeeee; /* verde */
-  }
-  75% {
-    transform: translateY(6px);
-    color: #ed74f1; /* rosa */
-  }
-}
-
-
-
-
 
 
 
@@ -116,5 +94,7 @@
 .content .btn:active {
   box-shadow: none;
 }
+
+
 
 

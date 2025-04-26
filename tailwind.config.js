@@ -27,8 +27,8 @@ module.exports = {
         sm: "640px",
         md: "768px",
         lg: "1300px",
-        xl: "1600px",
-        "2xl": "2000px",
+        xl: "1800px",
+        "2xl": "2200px",
       },
       fontSize: {
         'sad-xl': '35rem',
@@ -46,6 +46,9 @@ module.exports = {
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
         bitter: [ "Bitter", "serif" ],
+        archivo: [ "Archivo Black", "sans-serif" ],
+
+
 
       },
     },
