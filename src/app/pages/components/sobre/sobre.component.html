@@ -5,15 +5,14 @@
 ></app-rota-ativa>
 
 <div
-  #scrollContainer
-  class="fixed mx-10 my-10 inset-0 bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-100 transition-all duration-700 font-archivo overflow-x-hidden overflow-y-hidden flex flex-row snap-x snap-mandatory"
+  class="bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-100 transition-all duration-700 font-archivo overflow-x-hidden"
 >
   <section
     class="flex justify-center items-center px-40 w-full min-w-screen h-[100vh] snap-start"
   >
     <!--DESKTOP A PARTIR DE lg-->
     <div
-      class="flex flex-col justify-center items-center w-[100vw] max-w-[1850px] h-full space-y-10"
+      class="flex flex-col justify-center items-center w-[100vw] max-w-[1850px] h-full space-y-10 relative"
     >
       <div class="flex flex-row justify-between items-end w-full">
         <span class="lg:text-[1rem] xl:text-[2rem]"
@@ -99,28 +98,17 @@
 
   <!--####################################### HARDSKILLS #######################################-->
   <section
-    class="flex flex-col justify-center items-center px-40 py-5 bg-white dark:bg-black w-screen min-w-screen h-[100vh] snap-start"
+    class="flex flex-row justify-center items-center px-40 py-20 bg-white dark:bg-black w-[100vw] min-w-screen h-[100vh] snap-start"
   >
-    <div
-      class="flex flex-col justify-center w-[100vw] max-w-[1850px] space-y-10 px-40 border-t-2 border-t-black dark:border-t-white border-b-2  border-b-black dark:border-b-white pt-10 pb-10"
-    >
-      <div class="w-full flex-1 flex flex-col gap-10 items-start ">
-        <span
-          class="sm:text-[3rem] md:text-[4rem] lg:text-[5rem] xl:text-[7rem] font-bold bege-animado"
-          >H A R D
-        </span>
-      </div>
-      <div class="w-full flex flex-row justify-center items-center">
-        <p>lalala</p>
-      </div>
-
-      <div class="w-full flex-1 flex flex-col gap-10 items-end">
-        <span
-          class="sm:text-[3rem] md:text-[4rem] lg:text-[5rem] xl:text-[7rem] font-bold bege-animado"
-          >SKILLS
-        </span>
-      </div>
+    <div class="flex-1 flex flex-col h-full space-y-5">
+      <p class="text-[8rem] bege-animado"
+        >H A R D</p
+      >
+      <p class=" text-[8rem] bege-animado"
+        >S K I L L S</p
+      >
     </div>
+    <div></div>
   </section>
   <section
     class="flex flex-col justify-start items-center px-5 md:px-30 lg:px-60 bg-neutral-100 dark:bg-neutral-800 pt-20 pb-20 w-full min-w-screen h-[100vh] snap-start"
