@@ -193,7 +193,7 @@
   transition: transform 0.3s ease;
 }
 .icon-btn:hover {
-  transform: scale(1.2); /* Aumenta 20% no hover */
+  transform: scale(0.9); /* Aumenta 20% no hover */
 }
 canvas {
   position: fixed;

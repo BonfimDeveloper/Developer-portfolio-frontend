@@ -137,7 +137,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   public downloadCV(): void {
-    const url = 'assets/pdf/diegoCV.pdf'; // Caminho dentro da pasta assets
+    const url = 'assets/pdf/DiegoBonfimCV-2025font12.pdf'; // Caminho dentro da pasta assets
     window.open(url, '_blank'); // Abre o PDF em uma nova aba
   }
 
