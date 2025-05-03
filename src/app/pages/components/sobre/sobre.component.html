@@ -98,7 +98,7 @@
 
   <!--####################################### HARDSKILLS   #######################################-->
   <section
-    class="flex flex-row justify-center items-center px-40 py-14 bg-white dark:bg-black w-[100vw] min-w-screen h-[100vh] snap-start"
+    class="flex flex-row justify-center items-center px-28 py-14 bg-white dark:bg-black w-[100vw] min-w-screen h-[100vh] snap-start"
   >
     <div
       class="w-full h-full justify-center items-center flex flex-col gap-20 pr-10 pl-10 pt-4 pb-10 z-10"
@@ -258,34 +258,72 @@
     </div>
   </section>
 
-  <section
-    class="flex flex-row justify-center items-center px-40 py-14 bg-neutral-100 dark:bg-neutral-800 w-[100vw] min-w-screen h-[100vh] snap-start"
+  <!-- <section
+    class="flex flex-row justify-center items-center px-28  bg-neutral-100 dark:bg-neutral-800 w-[100vw] min-w-screen h-[100vh] snap-start"
   >
     <div
-      class="w-full h-full justify-center items-center flex flex-col gap-20 pr-10 pl-10 pt-4 pb-10 z-10"
-    >
-      <div class="w-full flex justify-between items-center p-14">
-        <p class="text-[8rem] bege-animado z-10">S O F T</p>
-        <div class="flex flex-row gap-4 z-10">
-          <p class="h-3 w-3 bg-white z-10"></p>
-          <p class="h-3 w-3 bg-white rounded-full z-10"></p>
-          <p class="h-3 w-3 bg-white z-10"></p>
-        </div>
+      class="w-full h-full justify-center items-center flex flex-col pr-10 pl-10 pt-4 pb-10 relative"
+     >
+       <div class="w-full flex justify-start items-center ">
+        <p class="text-[7rem] bege-animado z-10">S O F T</p>
+
       </div>
-      <div class="flex flex-col lg:flex-row gap-10 justify-between px-14"></div>
-      <div class="flex flex-col lg:flex-row gap-10 justify-between px-14"></div>
-      <div class="w-full flex justify-between items-center p-14">
-        <div class="flex flex-row gap-4">
-          <p class="h-3 w-3 bg-white z-10"></p>
-          <p class="h-3 w-3 bg-white z-10 rounded-full"></p>
-          <p class="h-3 w-3 bg-white z-10"></p>
+      <div class="flex flex-row   justify-center items-end px-14 w-full absolute">
+        <div class="w-full flex  items-center ">
+          <p class="text-[4rem] bege-animado z-10">S O F T</p>
+
         </div>
-        <p class="text-[8rem] bege-animado z-10">S K I L L S</p>
+        <img
+        class=" w-[30rem]  mask-image-radial   transition-opacity duration-500 ease-in-out "
+        [src]="!isHovered ? idea1 : idea2"
+        alt="Foto de cérebro com lampada"
+        (mouseenter)="isHovered = true"
+        (mouseleave)="isHovered = false"
+      />
+      <div class="w-full flex  items-center ">
+
+        <p class="text-[4rem] bege-animado z-10">S K I L L S</p>
+      </div>
+      </div>
+      <div class="h-[30rem] z-10">
+      </div>
+
+       <div class="w-full flex justify-end items-center ">
+
+        <p class="text-[7rem] bege-animado z-10">S K I L L S</p>
+      </div>
+    </div>
+  </section> -->
+
+  <section
+    class="flex flex-row justify-center items-center px-28 bg-neutral-100 dark:bg-neutral-800 w-full min-w-screen h-[100vh] snap-start border-8 border-black dark:border-white"
+  >
+    <div class="w-full h-full flex flex-col justify-center items-center">
+      <div
+        class="flex flex-row justify-center items-center px-14 w-full h-full relative"
+      >
+        <div
+          class="w-full h-full flex flex-col gap-20 justify-center items-center"
+        >
+          <p class="text-[10rem] bege-animado text-black dark:text-white">
+            S O F T
+          </p>
+          <p class="text-[10rem] bege-animado text-black dark:text-white">
+            S K I L L S
+          </p>
+        </div>
+        <div class="w-[25rem] h-full flex justify-start items-start absolute">
+          <img
+            class="w-full mask-image-radial transition-opacity duration-500 ease-in-out"
+            [src]="!isHovered ? idea1 : idea2"
+            alt="Foto de cérebro com lampada"
+            (mouseenter)="isHovered = true"
+            (mouseleave)="isHovered = false"
+          />
+        </div>
       </div>
     </div>
   </section>
-
-  <!--border-t-4 border-b-4 border-l-4 border-black dark:border-white          border-t-4 border-b-4 border-r-4 border-black dark:border-white  -->
   <section
     class="flex flex-row justify-center items-center px-40 py-14 bg-white dark:bg-black w-[100vw] min-w-screen h-[100vh] snap-start"
   >

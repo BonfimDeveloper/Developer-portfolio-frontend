@@ -22,6 +22,10 @@ export class SobreComponent implements AfterViewInit {
 
   certificadoJavaScript: string = 'assets/images/certificadoJavaScript.png';
 
+  public isHovered: boolean = false;
+  idea1: string = 'assets/images/idea.png';
+  idea2: string = 'assets/images/idea2.png';
+
   constructor(private router: Router, private dialog: MatDialog) {}
 
   ngAfterViewInit(): void {
