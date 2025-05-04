@@ -303,3 +303,42 @@ More comprehensive version at shenanigans.shoghisimon.ca/collection/css-rain-bg/
 .icon-btn:hover {
   transform: scale(0.9); /* Aumenta 20% no hover */
 }
+
+
+.marquee-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  font-family: 'Poppins', sans-serif;
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+.marquee-content {
+  display: inline-flex;
+  align-items: center;
+  gap: 5rem;
+  animation: scroll-loop 25s linear infinite;
+}
+
+.marquee-content p {
+  margin: 0;
+  transition: color 0.3s;
+}
+
+.marquee-content p:hover {
+  color: #a855f7; /* roxo (Tailwind purple-400) */
+}
+
+@keyframes scroll-loop {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

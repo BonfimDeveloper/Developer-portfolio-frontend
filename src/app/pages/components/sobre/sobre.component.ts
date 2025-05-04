@@ -11,7 +11,6 @@ import { gsap } from 'gsap';
 })
 export class SobreComponent implements AfterViewInit {
   @ViewChild('scrollContainer') scrollContainerRef!: ElementRef<HTMLDivElement>;
-
   rotaAtual: string = 'S O B R E';
   me1mobile: string = 'assets/images/meWithoutBg.png';
   serpro: string = 'assets/images/serpro.png';

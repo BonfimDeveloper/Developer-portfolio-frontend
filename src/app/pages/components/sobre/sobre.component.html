@@ -18,9 +18,7 @@
         <span class="lg:text-[1rem] xl:text-[2rem]"
           >D E S E N V O L V E D O R</span
         >
-        <span class="flex flex-col space-y-[-15px]">
-
-        </span>
+        <span class="flex flex-col space-y-[-15px]"> </span>
       </div>
       <div class="relative flex flex-col w-full md:pt-4 lg:pt-5 xl:pt-14">
         <p class="lg:text-[8.5rem] xl:text-[13.5rem] bege-animado">FRONT END</p>
@@ -291,7 +289,7 @@
           </p>
         </div>
         <img
-          class="w-[30rem] mask-image-radial transition-opacity duration-500 top-[-6rem] ease-in-out absolute"
+          class="w-[30rem] mask-image-radial transition-opacity duration-500 top-[-10rem] ease-in-out absolute"
           [src]="!isHovered ? idea1 : idea2"
           alt="Foto de cérebro com lampada"
           (mouseenter)="isHovered = true"
@@ -307,24 +305,42 @@
           class="w-[10rem] h-[6rem] border-b-8 border-r-8 border-black dark:border-white"
         ></div>
       </div>
-      <div
-        class="h-[2rem] w-full flex flex-row justify-between items-center font-poppins text-lg mt-10"
-      >
-        <p class="hover:text-purple-400 transition-all duration-500">
-          Comunicação assertiva
-        </p>
-        <p class="hover:text-purple-400 transition-all duration-500">
-          Pensamento crítico
-        </p>
-        <p class="hover:text-purple-400 transition-all duration-500">
-          Iniciativa
-        </p>
-        <p class="hover:text-purple-400 transition-all duration-500">
-          Adaptação rápida
-        </p>
-        <p class="hover:text-purple-400 transition-all duration-500">
-          Trabalho em equipe
-        </p>
+
+
+      <div class="marquee-container mt-10">
+        <div class="marquee-content text-black dark:text-white italic font-semibold text-xl  " >
+          <p>Comunicação assertiva</p>
+          <div class="h-2 w-2 bg-black dark:bg-white rounded-full"></div>
+
+          <p>Pensamento crítico</p>
+          <div class="h-2 w-2 bg-black dark:bg-white rounded-full"></div>
+
+
+
+          <p>Iniciativa</p>
+          <div class="h-2 w-2 bg-black dark:bg-white rounded-full"></div>
+
+
+
+          <p>Adaptação rápida</p>
+          <div class="h-2 w-2 bg-black dark:bg-white rounded-full"></div>
+
+
+          <p>Trabalho em equipe</p>
+          <div class="h-2 w-2 bg-black dark:bg-white rounded-full"></div>
+
+
+          <p>Criatividade</p>
+          <div class="h-2 w-2 bg-black dark:bg-white rounded-full"></div>
+
+
+          <p>Análise de dados</p>
+          <div class="h-2 w-2 bg-black dark:bg-white rounded-full"></div>
+
+
+          <p>Senso de urgência</p>
+
+        </div>
       </div>
     </div>
   </section>
