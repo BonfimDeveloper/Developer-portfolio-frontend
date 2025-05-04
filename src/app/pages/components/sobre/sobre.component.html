@@ -8,7 +8,7 @@
   class="bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-100 transition-all duration-700 font-archivo overflow-x-hidden"
 >
   <section
-    class="flex justify-center items-center px-40 w-full min-w-screen h-[100vh] snap-start"
+    class="flex justify-center items-center px-40 w-full min-w-screen h-[100vh] snap-start border-[40px] border-black dark:border-white"
   >
     <!--DESKTOP A PARTIR DE lg-->
     <div
@@ -19,60 +19,23 @@
           >D E S E N V O L V E D O R</span
         >
         <span class="flex flex-col space-y-[-15px]">
-          <div class="flex flex-row justify-center items-center w-full gap-4">
-            <span
-              class="md:text-md lg:text-lg font-extralight flex gap-1 justify-center mt-2"
-            >
-              <span class="animate-custom-bounce">S</span>
-              <span class="animate-custom-bounce" style="animation-delay: 0.1s"
-                >C</span
-              >
-              <span class="animate-custom-bounce" style="animation-delay: 0.2s"
-                >R</span
-              >
-              <span class="animate-custom-bounce" style="animation-delay: 0.3s"
-                >O</span
-              >
-              <span class="animate-custom-bounce" style="animation-delay: 0.4s"
-                >L</span
-              >
-              <span class="animate-custom-bounce" style="animation-delay: 0.5s"
-                >L</span
-              >
-            </span>
-            <span>
-              <svg
-                class="w-8 h-6 mt-2 animate-custom-bounce"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                style="animation-delay: 0.6s"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </span>
-          </div>
+
         </span>
       </div>
       <div class="relative flex flex-col w-full md:pt-4 lg:pt-5 xl:pt-14">
         <p class="lg:text-[8.5rem] xl:text-[13.5rem] bege-animado">FRONT END</p>
         <div class="flex flex-row justify-between w-full lg:pt-20 xl:pt-32">
           <p
-            class="lg:w-[300px] xl:w-[400px] font-light font-poppins lg:text-md xl:text-lg"
+            class="lg:w-[300px] xl:w-[400px] font-light font-poppins lg:text-md xl:text-lg text-justify"
           >
             Olá, meu nome é Diego,Tenho 32 anos e sou natural de
             <strong>Salvador, Bahia</strong>, uma das cidades mais bonitas do
             Brasil. <br />
             Meu lugar favorito sempre foi praia, amo natureza e prefiro
-            frequentar ambientes abertos e simples. <br />
-            "Odeio shopping!"
+            frequentar ambientes abertos e simples.
           </p>
           <p
-            class="lg:w-[300px] xl:w-[400px] font-light font-poppins lg:text-md xl:text-lg"
+            class="lg:w-[300px] xl:w-[400px] font-light font-poppins lg:text-md xl:text-lg text-justify"
           >
             Sou graduado em
             <strong>Análise e Desenvolvimento de Sistemas</strong> pela
@@ -91,6 +54,46 @@
             alt="Foto de Diego Bonfim"
             class="rounded-b-full lg:max-w-[400px] lg:max-h-[400px] xl:max-w-[600px] xl:max-h-[600px] object-cover"
           />
+        </div>
+      </div>
+
+      <div class="flex flex-col justify-center items-end w-full gap-0">
+        <div class="flex flex-col items-center">
+          <span
+            class="md:text-md lg:text-lg font-extralight flex gap-1 justify-center mt-2"
+          >
+            <span class="animate-custom-bounce">S</span>
+            <span class="animate-custom-bounce" style="animation-delay: 0.1s"
+              >C</span
+            >
+            <span class="animate-custom-bounce" style="animation-delay: 0.2s"
+              >R</span
+            >
+            <span class="animate-custom-bounce" style="animation-delay: 0.3s"
+              >O</span
+            >
+            <span class="animate-custom-bounce" style="animation-delay: 0.4s"
+              >L</span
+            >
+            <span class="animate-custom-bounce" style="animation-delay: 0.5s"
+              >L</span
+            >
+          </span>
+          <span>
+            <svg
+              class="w-10 h-8 mt-0 animate-custom-bounce"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              style="animation-delay: 0.6s"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M5 9l7 7 7-7"
+              />
+            </svg>
+          </span>
         </div>
       </div>
     </div>
@@ -258,43 +261,6 @@
     </div>
   </section>
 
-  <!-- <section
-    class="flex flex-row justify-center items-center px-28  bg-neutral-100 dark:bg-neutral-800 w-[100vw] min-w-screen h-[100vh] snap-start"
-  >
-    <div
-      class="w-full h-full justify-center items-center flex flex-col pr-10 pl-10 pt-4 pb-10 relative"
-     >
-       <div class="w-full flex justify-start items-center ">
-        <p class="text-[7rem] bege-animado z-10">S O F T</p>
-
-      </div>
-      <div class="flex flex-row   justify-center items-end px-14 w-full absolute">
-        <div class="w-full flex  items-center ">
-          <p class="text-[4rem] bege-animado z-10">S O F T</p>
-
-        </div>
-        <img
-        class=" w-[30rem]  mask-image-radial   transition-opacity duration-500 ease-in-out "
-        [src]="!isHovered ? idea1 : idea2"
-        alt="Foto de cérebro com lampada"
-        (mouseenter)="isHovered = true"
-        (mouseleave)="isHovered = false"
-      />
-      <div class="w-full flex  items-center ">
-
-        <p class="text-[4rem] bege-animado z-10">S K I L L S</p>
-      </div>
-      </div>
-      <div class="h-[30rem] z-10">
-      </div>
-
-       <div class="w-full flex justify-end items-center ">
-
-        <p class="text-[7rem] bege-animado z-10">S K I L L S</p>
-      </div>
-    </div>
-  </section> -->
-
   <section
     class="flex flex-col justify-center items-center px-40 bg-neutral-100 dark:bg-neutral-800 w-full min-w-screen h-[100vh] snap-start border-[40px] border-black dark:border-white"
   >
@@ -306,17 +272,21 @@
           class="w-[10rem] h-[6rem] border-t-8 border-l-8 border-black dark:border-white"
         ></div>
         <div
-          class="w-[10rem] h-[6rem] border-t-8 border-r-8 border-black dark:border-white"
+          class="w-[10rem] h-[6rem] border-t-8 border-r-8 border-black dark:border-white hover:border-t-purple-400 hover:border-r-purple-400 transition-all duration-500"
         ></div>
       </div>
       <div class="flex flex-row justify-center items-center px-14 w-full">
         <div
           class="w-full h-full flex flex-col lg:gap-24 xl:gap-28 justify-center items-center"
         >
-          <p class="lg:text-[10rem] xl:text-[12rem] bege-animado text-black dark:text-white">
+          <p
+            class="lg:text-[10rem] xl:text-[12rem] bege-animado text-black dark:text-white"
+          >
             S O F T
           </p>
-          <p class="lg:text-[9rem] xl:text-[12rem] bege-animado text-black dark:text-white">
+          <p
+            class="lg:text-[9rem] xl:text-[12rem] bege-animado text-black dark:text-white"
+          >
             S K I L L S
           </p>
         </div>
@@ -337,13 +307,25 @@
           class="w-[10rem] h-[6rem] border-b-8 border-r-8 border-black dark:border-white"
         ></div>
       </div>
-      <div class="h-[2rem] w-full flex flex-row justify-between items-center font-poppins text-lg mt-10">
-      <p class="hover:text-purple-400 transition-all duration-500">Comunicação assertiva</p>
-      <p class="hover:text-purple-400 transition-all duration-500">Pensamento crítico</p>
-      <p class="hover:text-purple-400 transition-all duration-500">Iniciativa</p>
-      <p class="hover:text-purple-400 transition-all duration-500">Adaptação rápida</p>
-      <p class="hover:text-purple-400 transition-all duration-500">Trabalho em equipe</p>
-    </div>
+      <div
+        class="h-[2rem] w-full flex flex-row justify-between items-center font-poppins text-lg mt-10"
+      >
+        <p class="hover:text-purple-400 transition-all duration-500">
+          Comunicação assertiva
+        </p>
+        <p class="hover:text-purple-400 transition-all duration-500">
+          Pensamento crítico
+        </p>
+        <p class="hover:text-purple-400 transition-all duration-500">
+          Iniciativa
+        </p>
+        <p class="hover:text-purple-400 transition-all duration-500">
+          Adaptação rápida
+        </p>
+        <p class="hover:text-purple-400 transition-all duration-500">
+          Trabalho em equipe
+        </p>
+      </div>
     </div>
   </section>
   <section
