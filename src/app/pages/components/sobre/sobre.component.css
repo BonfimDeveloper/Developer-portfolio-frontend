@@ -11,99 +11,7 @@
 
 
 
-/* From Uiverse.io by gharsh11032000 */
-.card {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 320px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  padding: 32px;
-  /* overflow: hidden; */
-  border-radius: 10px;
-  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
-}
 
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
-  position: relative;
-  z-index: 1;
-
-  gap: 20px;
-  color: #e8e8e8;
-  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
-  @apply text-neutral-800 dark:text-neutral-200;
-}
-
-.content .heading {
-  font-weight: 700;
-  font-size: 32px;
-}
-
-.content .para {
-  line-height: 1.5;
-}
-
-.content .btn {
-  color: #e8e8e8;
-  text-decoration: none;
-  padding: 10px;
-  font-weight: 600;
-  border: none;
-  cursor: pointer;
-  background: linear-gradient(-45deg, #c81cdf 0%, #2dd4f1 100% );
-  border-radius: 5px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-.card::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 5px;
-  background: linear-gradient(-45deg, #c81cdf 0%, #2dd4f1 100% );
-  z-index: 0;
-  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
-}
-
-.card:hover::before {
-  height: 100%;
-}
-
-.card:hover {
-  box-shadow: none;
-}
-
-.card:hover .btn {
-  color: #212121;
-  background: #e8e8e8;
-}
-
-.content .btn:hover {
-  outline: 2px solid #e8e8e8;
-  background: transparent;
-  color: #e8e8e8;
-}
-
-.content .btn:active {
-  box-shadow: none;
-}
-
-
-/*NEW CODE +++>*/
-
-
-
-/* From Uiverse.io by SelfMadeSystem */
-/*
-More comprehensive version at shenanigans.shoghisimon.ca/collection/css-rain-bg/
- */
 
  .container::after {
   content: "";
@@ -331,7 +239,7 @@ More comprehensive version at shenanigans.shoghisimon.ca/collection/css-rain-bg/
 }
 
 .marquee-content p:hover {
-  color: #a855f7; /* roxo (Tailwind purple-400) */
+  color: #a855f7;
 }
 
 @keyframes scroll-loop {
@@ -342,3 +250,37 @@ More comprehensive version at shenanigans.shoghisimon.ca/collection/css-rain-bg/
     transform: translateX(-50%);
   }
 }
+
+
+
+
+mat-stepper {
+  background-color: transparent; /* cinza claro */
+  padding: 16px;
+  border-radius: 8px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
