@@ -17,6 +17,10 @@ import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatStepperModule } from '@angular/material/stepper';
 import { CertificadosComponent } from './components/certificados/certificados.component';
+import { ExperienciaComponent } from './components/experiencia/experiencia.component';
+import { SoftskillsComponent } from './components/softskills/softskills.component';
+import { HardskillsComponent } from './components/hardskills/hardskills.component';
+import { MainComponent } from './components/main/main.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +31,10 @@ import { CertificadosComponent } from './components/certificados/certificados.co
     ServicosComponent,
     TypingEffectDirective,
     CertificadosComponent,
+    ExperienciaComponent,
+    SoftskillsComponent,
+    HardskillsComponent,
+    MainComponent,
   ],
   imports: [
     CommonModule,

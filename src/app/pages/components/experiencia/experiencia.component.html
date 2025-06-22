@@ -1,0 +1,77 @@
+<section
+    class="flex flex-row justify-center items-center px-40 py-14 bg-white dark:bg-black w-[100vw] min-w-screen h-[100vh] snap-start"
+  >
+    <div
+      class="w-full h-full justify-center items-center flex flex-row gap-0 pr-10 pl-10 pt-4 pb-10 z-10"
+    >
+      <div
+        class="w-full flex flex-col justify-between items-center container py-20"
+      >
+        <p
+          class="h-20 w-20 bg-white z-10"
+          style="clip-path: polygon(50% 0%, 0% 100%, 100% 100%)"
+        ></p>
+
+        <p class="text-[12rem] bege-animado z-10 text-white">XP</p>
+        <p
+          class="h-20 w-20 bg-white z-10"
+          style="clip-path: polygon(0% 0%, 100% 0%, 50% 100%)"
+        ></p>
+      </div>
+      <div class="flex flex-col justify-center px-20 py-2 font-poppins h-full">
+        <div class="flex justify-end">
+          <img
+            [src]="serpro"
+            alt="Foto da logo do serpro"
+            class="shadow-lg max-w-[100px] max-h-[100px] object-cover"
+          />
+        </div>
+        <div class="flex flex-row justify-between items-center mb-2">
+          <p class="text-2xl font-semibold">
+            Estagiário em Desenvolvimento de Software
+          </p>
+          <span class="text-sm">Serpro · Abril 2023 – Abril 2025</span>
+        </div>
+        <p class="text-lg text-justify">
+          O Serpro foi minha primeira experiência formal, onde pude atuar com
+          tecnologias como Angular, Java, Spring, Docker, Node, Oracle, Mongo,
+          Git, Copilot, etc. Os testes unitários no frontend eram desenvolvidos
+          em Jasmine e karma e no backend em JUnit além de análise de qualidade
+          com SonarQube. Participação em projetos de grande escala com
+          metodologias ágeis, daily, plannings, etc.
+        </p>
+
+        <p class="text-lg text-justify">
+          Basicamente, atuei com a manutenção de sistemas legados e criação de
+          novas funcionalidades. Com certeza foi um privilégio ser selecionado
+          para a vaga de estágio, tive contato com profissionais excelentes e
+          aprendi muito.
+        </p>
+        <span class="pt-4 text-sm text-gray-500"> Obrigado Serpro! </span>
+        <div class="w-full h-[1px] bg-black dark:bg-white mt-2"></div>
+        <div class="flex flex-row justify-between text-lg mt-10">
+          <button
+            matTooltip="Baixar relatório de estágio do 1º período"
+            class="icon-btn justify-start px-3 py-3 text-lg font-poppins font-bold rounded-md bg-black dark:bg-white"
+            (click)="downloadRelatorio1()"
+          >
+            <span
+              class="bg-gradient-to-l from-blue-300 via-purple-300 to-purple-500 bg-clip-text text-transparent"
+              >Baixar 1º relatório</span
+            >
+          </button>
+
+          <button
+            matTooltip="Baixar relatório de estágio do 2º período"
+            class="icon-btn justify-start px-3 py-3 text-lg font-poppins font-bold rounded-md bg-black dark:bg-white"
+            (click)="downloadRelatorio2()"
+          >
+            <span
+              class="bg-gradient-to-l from-blue-300 via-purple-300 to-purple-500 bg-clip-text text-transparent"
+              >Baixar 2º relatório</span
+            >
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>

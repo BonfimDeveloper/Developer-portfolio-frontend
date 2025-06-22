@@ -1,0 +1,78 @@
+
+  <section
+    class="flex flex-col justify-center items-center px-40 bg-neutral-100 dark:bg-neutral-800 w-full min-w-screen h-[100vh] snap-start border-[40px] border-black dark:border-white"
+  >
+    <div
+      class="w-full h-full flex flex-col justify-center items-center relative mt-40"
+    >
+      <div class="w-full flex flex-row justify-between items-center">
+        <div
+          class="w-[10rem] h-[6rem] border-t-8 border-l-8 border-black dark:border-white"
+        ></div>
+        <div
+          class="w-[10rem] h-[6rem] border-t-8 border-r-8 border-black dark:border-white hover:border-t-purple-400 hover:border-r-purple-400 transition-all duration-500"
+        ></div>
+      </div>
+      <div class="flex flex-row justify-center items-center px-14 w-full">
+        <div
+          class="w-full h-full flex flex-col lg:gap-24 xl:gap-28 justify-center items-center"
+        >
+          <p
+            class="lg:text-[10rem] xl:text-[12rem] bege-animado text-black dark:text-white"
+          >
+            S O F T
+          </p>
+          <p
+            class="lg:text-[9rem] xl:text-[12rem] bege-animado text-black dark:text-white"
+          >
+            S K I L L S
+          </p>
+        </div>
+        <img
+          class="w-[30rem] mask-image-radial transition-opacity duration-500 top-[-10rem] ease-in-out absolute"
+          [src]="!isHovered ? idea1 : idea2"
+          alt="Foto de cérebro com lampada"
+          (mouseenter)="isHovered = true"
+          (mouseleave)="isHovered = false"
+        />
+      </div>
+
+      <div class="w-full flex flex-row justify-between items-center mt-4">
+        <div
+          class="w-[10rem] h-[6rem] border-b-8 border-l-8 border-black dark:border-white"
+        ></div>
+        <div
+          class="w-[10rem] h-[6rem] border-b-8 border-r-8 border-black dark:border-white"
+        ></div>
+      </div>
+
+      <div class="marquee-container mt-10">
+        <div
+          class="marquee-content text-black dark:text-white italic font-semibold text-xl"
+        >
+          <p>Comunicação assertiva</p>
+          <div class="h-2 w-2 bg-black dark:bg-white rounded-full"></div>
+
+          <p>Pensamento crítico</p>
+          <div class="h-2 w-2 bg-black dark:bg-white rounded-full"></div>
+
+          <p>Iniciativa</p>
+          <div class="h-2 w-2 bg-black dark:bg-white rounded-full"></div>
+
+          <p>Adaptação rápida</p>
+          <div class="h-2 w-2 bg-black dark:bg-white rounded-full"></div>
+
+          <p>Trabalho em equipe</p>
+          <div class="h-2 w-2 bg-black dark:bg-white rounded-full"></div>
+
+          <p>Criatividade</p>
+          <div class="h-2 w-2 bg-black dark:bg-white rounded-full"></div>
+
+          <p>Análise de dados</p>
+          <div class="h-2 w-2 bg-black dark:bg-white rounded-full"></div>
+
+          <p>Senso de urgência</p>
+        </div>
+      </div>
+    </div>
+  </section>
