@@ -16,12 +16,12 @@
     >
       <div class="flex flex-row justify-between items-end w-full">
         <span class="lg:text-[1rem] xl:text-[2rem]"
-          >D E S E N V O L V E D O R</span
+          >W E B</span
         >
         <span class="flex flex-col space-y-[-15px]"> </span>
       </div>
       <div class="relative flex flex-col w-full md:pt-4 lg:pt-5 xl:pt-14">
-        <p class="lg:text-[8.5rem] xl:text-[13.5rem] bege-animado">FRONT END</p>
+        <p class="lg:text-[8.5rem] xl:text-[13.5rem] bege-animado">DEVELOPER</p>
         <div class="flex flex-row justify-between w-full lg:pt-20 xl:pt-32">
           <p
             class="lg:w-[300px] xl:w-[400px] font-light font-poppins lg:text-md xl:text-lg text-justify"
@@ -414,49 +414,7 @@
     </div>
   </section>
 
-  <section
-    class="flex flex-col justify-center  bg-neutral-100 dark:bg-neutral-800 w-full min-w-screen h-[100vh] snap-start border-[40px] border-black dark:border-white"
-  >
-    <div class="w-full flex  flex-row justify-center items-center ">
-      <div class="w-full hfull flex justify-center">
-        <img
-          class="w-[40rem] mask-image-radial"
-          [src]="cert"
-          alt="Foto de certificado"
-        />
-      </div>
-      <div class="w-full h-full ">
-        <mat-stepper class="meu-stepper" [linear]="isLinear" #stepper>
-          <mat-step [stepControl]="firstFormGroup">
-            <ng-template class="mat-step-label" matStepLabel
-              >Java</ng-template
-            >
 
-            <div>
-              <button matStepperNext class="bg-black text-white p-2">
-                Next
-              </button>
-            </div>
-          </mat-step>
-          <mat-step
-            [stepControl]="secondFormGroup"
-            label="Angular"
-          >
-            <div>
-              <button matStepperPrevious>Back</button>
-              <button matStepperNext>Next</button>
-            </div>
-          </mat-step>
-          <mat-step>
-            <ng-template matStepLabel>Done</ng-template>
-            <p>You are now done.</p>
-            <div>
-              <button matStepperPrevious>Back</button>
-              <button (click)="stepper.reset()">Reset</button>
-            </div>
-          </mat-step>
-        </mat-stepper>
-      </div>
-    </div>
-  </section>
+  <app-certificados></app-certificados>
+  <app-contato></app-contato>
 </div>

@@ -1,0 +1,84 @@
+<section
+    class="flex flex-col justify-center bg-neutral-100 dark:bg-neutral-800 w-full min-w-screen h-[100vh] snap-start border-[40px] border-black dark:border-white"
+   >
+    <div class="w-full flex flex-col gap-32 justify-center items-center">
+
+      <div>
+        <p
+          class="sm:text-[3rem] md:text-[3.5rem] lg:text-[6rem] xl:text-[8rem] bege-animado"
+        >
+          C E R T I F I C A D O S
+        </p>
+      </div>
+
+      <div class="flex flex-row w-full justify-around">
+
+        <div
+          class="w-40 h-40 p-2 flex flex-col justify-center border-2 border-black dark:border-white rounded-md"
+        >
+          <p>Curso Java completo + Projetos</p>
+
+          <button
+            matTooltip="Visualizar certificado"
+            class="icon-btn justify-start px-1 py-2 text-lg font-poppins font-bold rounded-md bg-black dark:bg-white"
+            (click)="openImageModal(certificadoJava)"
+          >
+            <span
+              class="bg-gradient-to-l from-blue-300 via-purple-300 to-purple-500 bg-clip-text text-transparent"
+              >Ver</span
+            >
+          </button>
+        </div>
+
+        <div
+          class="w-40 h-40 p-2 flex flex-col justify-center border-2 border-black dark:border-white rounded-md"
+        >
+          <p>Curso Javascript + Projetos</p>
+
+          <button
+            matTooltip="Visualizar certificado"
+            class="icon-btn justify-start px-1 py-2 text-lg font-poppins font-bold rounded-md bg-black dark:bg-white"
+            (click)="openImageModal(certificadoJavaScript)"
+          >
+            <span
+              class="bg-gradient-to-l from-blue-300 via-purple-300 to-purple-500 bg-clip-text text-transparent"
+              >Ver</span
+            >
+          </button>
+        </div>
+        <div
+          class="w-40 h-40 p-2 flex flex-col justify-center border-2 border-black dark:border-white rounded-md"
+        >
+          <p>Curso Redux Angular</p>
+
+          <button
+            matTooltip="Visualizar certificado"
+            class="icon-btn justify-start px-1 py-2 text-lg font-poppins font-bold rounded-md bg-black dark:bg-white"
+            (click)="openImageModal(certificadoRedux)"
+          >
+            <span
+              class="bg-gradient-to-l from-blue-300 via-purple-300 to-purple-500 bg-clip-text text-transparent"
+              >Ver</span
+            >
+          </button>
+        </div>
+
+        <div
+          class="w-40 h-40 p-2 flex flex-col justify-center border-2 border-black dark:border-white rounded-md"
+        >
+          <p>Testes Unitários do Zero com Angular 14 / Jasmine e Karma</p>
+
+          <button
+            matTooltip="Visualizar certificado"
+            class="icon-btn justify-start px-1 py-2 text-lg font-poppins font-bold rounded-md bg-black dark:bg-white"
+            (click)="openImageModal(certificadoTestesAngular)"
+          >
+            <span
+              class="bg-gradient-to-l from-blue-300 via-purple-300 to-purple-500 bg-clip-text text-transparent"
+              >Ver</span
+            >
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>

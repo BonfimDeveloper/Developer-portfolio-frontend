@@ -16,6 +16,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatStepperModule } from '@angular/material/stepper';
+import { CertificadosComponent } from './components/certificados/certificados.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { MatStepperModule } from '@angular/material/stepper';
     ProjetosComponent,
     ServicosComponent,
     TypingEffectDirective,
+    CertificadosComponent,
   ],
   imports: [
     CommonModule,
