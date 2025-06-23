@@ -1,3 +1,11 @@
 .bege-animado{
   background:  linear-gradient(to left, #93c5fd, #c084fc, #7c3aed);
 }
+
+
+.icon-btn {
+  transition: transform 0.3s ease;
+}
+.icon-btn:hover {
+  transform: scale(0.9); /* Aumenta 20% no hover */
+}
