@@ -9,3 +9,12 @@
 .icon-btn:hover {
   transform: scale(0.9); /* Aumenta 20% no hover */
 }
+
+
+.card-animation {
+  transition: transform 0.3s ease;
+}
+
+.card-animation:hover {
+  transform: scale(1.2); /* Aumenta 20% no hover */
+}
