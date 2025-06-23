@@ -53,48 +53,94 @@
         </div>
       </div>
 
-      <div class="flex flex-col justify-center items-end w-full gap-0">
-        <div class="flex flex-col items-center">
+      <div class="flex flex-row justify-between items-end w-full gap-0">
+        <button
+          class="px-4 py-2 text-lg font-poppins font-bold rounded-md bg-black dark:bg-white"
+        >
           <span
-            class="md:text-md lg:text-lg font-extralight flex gap-1 justify-center mt-2"
+            class="bg-gradient-to-l from-blue-300 via-pink-100 to-purple-400 bg-clip-text text-transparent"
+            >Download CV</span
           >
-            <span class="animate-custom-bounce">S</span>
-            <span class="animate-custom-bounce" style="animation-delay: 0.1s"
-              >C</span
-            >
-            <span class="animate-custom-bounce" style="animation-delay: 0.2s"
-              >R</span
-            >
-            <span class="animate-custom-bounce" style="animation-delay: 0.3s"
-              >O</span
-            >
-            <span class="animate-custom-bounce" style="animation-delay: 0.4s"
-              >L</span
-            >
-            <span class="animate-custom-bounce" style="animation-delay: 0.5s"
-              >L</span
-            >
-          </span>
-          <span>
-            <svg
-              class="w-10 h-8 mt-0 animate-custom-bounce"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              style="animation-delay: 0.6s"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M5 9l7 7 7-7"
-              />
-            </svg>
-          </span>
+        </button>
+
+        <div class="flex flex-row justify-between items-center">
+          <div class="flex flex-1 gap-5 justify-end">
+            <div #btnGit>
+              <Button class="text-[#7a7a7a] rounded-md font-semibold icon-btn">
+                <a href="https://github.com/BonfimDeveloper" target="_blank">
+                  <fa-icon
+                    [icon]="faGithub"
+                    class="text-3xl hover:text-black dark:hover:text-white"
+                  ></fa-icon> </a
+              ></Button>
+            </div>
+
+            <div #btnLinkedin>
+              <Button class="text-[#7a7a7a] rounded-md font-semibold icon-btn">
+                <a
+                  href="https://www.linkedin.com/in/diego-bonfim-8b24a421a/"
+                  target="_blank"
+                >
+                  <fa-icon
+                    [icon]="faLinkedin"
+                    class="text-3xl hover:text-black dark:hover:text-white"
+                  ></fa-icon> </a
+              ></Button>
+            </div>
+
+            <div #btnWhatsApp>
+              <Button
+                (click)="openWhatsApp()"
+                class="text-[#7a7a7a] rounded-md font-semibold icon-btn"
+              >
+                <fa-icon
+                  [icon]="faWhatsapp"
+                  class="text-3xl hover:text-black dark:hover:text-white"
+                ></fa-icon>
+              </Button>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="flex flex-col items-center pt-5">
+        <span
+          class="md:text-md lg:text-lg font-extralight flex gap-1 justify-center mt-2"
+        >
+          <span class="animate-custom-bounce">S</span>
+          <span class="animate-custom-bounce" style="animation-delay: 0.1s"
+            >C</span
+          >
+          <span class="animate-custom-bounce" style="animation-delay: 0.2s"
+            >R</span
+          >
+          <span class="animate-custom-bounce" style="animation-delay: 0.3s"
+            >O</span
+          >
+          <span class="animate-custom-bounce" style="animation-delay: 0.4s"
+            >L</span
+          >
+          <span class="animate-custom-bounce" style="animation-delay: 0.5s"
+            >L</span
+          >
+        </span>
+
+
+        <span>
+          <svg
+            class="w-10 h-8 mt-0 animate-custom-bounce"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            style="animation-delay: 0.6s"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M5 9l7 7 7-7"
+            />
+          </svg>
+        </span>
       </div>
     </div>
   </section>
-
-
-
 </div>

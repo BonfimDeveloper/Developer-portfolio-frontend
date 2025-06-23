@@ -5,6 +5,12 @@ import { ConfirmationDialogComponent } from 'src/app/shared/components/confirmat
 import { gsap } from 'gsap';
 import { FormBuilder, Validators } from '@angular/forms';
 
+import {
+  faGithub,
+  faLinkedin,
+  faWhatsapp,
+} from '@fortawesome/free-brands-svg-icons';
+
 @Component({
   selector: 'app-sobre',
   templateUrl: './sobre.component.html',
@@ -21,6 +27,10 @@ export class SobreComponent implements AfterViewInit {
     'assets/images/certificadoTestesAngular.png';
 
   certificadoJavaScript: string = 'assets/images/certificadoJavaScript.png';
+
+  faGithub = faGithub;
+  faLinkedin = faLinkedin;
+  faWhatsapp = faWhatsapp;
 
   public isHovered: boolean = false;
   idea1: string = 'assets/images/idea.png';
@@ -96,5 +106,14 @@ export class SobreComponent implements AfterViewInit {
   public downloadRelatorio2(): void {
     const url = 'assets/pdf/relatorio-estagio-periodo-2.pdf'; // Caminho dentro da pasta assets
     window.open(url, '_blank'); // Abre o PDF em uma nova aba
+  }
+
+  public downloadCV(): void {
+    const url = 'assets/pdf/DiegoBonfimCV-2025font12.pdf'; // Caminho dentro da pasta assets
+    window.open(url, '_blank'); // Abre o PDF em uma nova aba
+  }
+
+  public openWhatsApp(): void {
+    window.open('https://wa.me/71997361553', '_blank');
   }
 }
