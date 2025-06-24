@@ -1,5 +1,5 @@
 <section
-  class="flex flex-col justify-center bg-neutral-100 dark:bg-neutral-800 w-full min-w-screen h-[100vh] snap-start border-[40px] border-black dark:border-white"
+  class="hidden lg:flex flex-col justify-center bg-neutral-100 dark:bg-neutral-800 w-full min-w-screen h-[100vh] snap-start border-[40px] border-black dark:border-white"
 >
   <div class="w-full flex flex-col gap-32 justify-center items-center">
     <div >
@@ -93,4 +93,104 @@
       </div>
     </div>
   </div>
+
+
+
+
+
 </section>
+
+
+
+ <!--############################### MOBILE ###############################-->
+
+  <section class=" flex lg:hidden flex-col w-full h-auto py-20 justify-center items-center gap-4 border-[40px] border-black dark:border-white">
+    <div class="mb-10">
+      <p
+        class="text-lg sm:text-2xl md:text-4xl bege-animado p-5 rounded-md"
+      >
+        C E R T I F I C A Ç Õ E S
+      </p>
+    </div>
+    <div class="flex flex-col w-full justify-center items-center gap-5  ">
+      <div
+        class="w-60 h-50 px-2 py-4 mat-elevation-z11 gap-3 flex flex-col justify-between items-center  hover:text-purple-600 rounded-md card-animation"
+      >
+        <span class="material-symbols-outlined text-4xl"> license </span>
+        <span class="text-center w-full block"
+          >Curso Java completo + Projetos</span
+        >
+
+        <button
+          matTooltip="Visualizar certificado"
+          class="icon-btn justify-start px-1 py-2 text-lg font-poppins font-bold rounded-md bg-black dark:bg-white w-full"
+          (click)="openImageModal(certificadoJava)"
+        >
+          <span
+            class="bg-gradient-to-l from-blue-300 via-purple-300 to-purple-500 bg-clip-text text-transparent"
+            >Ver</span
+          >
+        </button>
+      </div>
+
+      <div
+        class="w-60 h-50 px-2 py-4 mat-elevation-z11  gap-3 flex flex-col justify-between items-center hover:text-purple-600 rounded-md card-animation"
+      >
+        <span class="material-symbols-outlined text-4xl"> license </span>
+
+        <span class="text-center w-full block"
+          >Curso Javascript + Projetos</span
+        >
+
+        <button
+          matTooltip="Visualizar certificado"
+          class="icon-btn justify-start px-1 py-2 text-lg font-poppins font-bold rounded-md bg-black dark:bg-white w-full"
+          (click)="openImageModal(certificadoJavaScript)"
+        >
+          <span
+            class="bg-gradient-to-l from-blue-300 via-purple-300 to-purple-500 bg-clip-text text-transparent"
+            >Ver</span
+          >
+        </button>
+      </div>
+      <div
+        class="w-60 h-50 px-2 py-4 mat-elevation-z11  gap-3 flex flex-col justify-between items-center  hover:text-purple-600 rounded-md card-animation"
+      >
+        <span class="material-symbols-outlined text-4xl"> license </span>
+
+        <span class="text-center w-full block">Curso Redux Angular</span>
+
+        <button
+          matTooltip="Visualizar certificado"
+          class="icon-btn justify-start px-1 py-2 text-lg font-poppins font-bold rounded-md bg-black dark:bg-white w-full"
+          (click)="openImageModal(certificadoRedux)"
+        >
+          <span
+            class="bg-gradient-to-l from-blue-300 via-purple-300 to-purple-500 bg-clip-text text-transparent"
+            >Ver</span
+          >
+        </button>
+      </div>
+
+      <div
+        class="w-60 h-50 px-2 py-4 mat-elevation-z11  gap-3 flex flex-col justify-between items-center  hover:text-purple-600 rounded-md card-animation"
+      >
+        <span class="material-symbols-outlined text-4xl"> license </span>
+
+        <span class="text-center w-full block"
+          >Testes Unitários do Zero com Angular 14 / Jasmine e Karma</span
+        >
+
+        <button
+          matTooltip="Visualizar certificado"
+          class="icon-btn justify-start px-1 py-2 text-lg font-poppins font-bold rounded-md bg-black dark:bg-white w-full"
+          (click)="openImageModal(certificadoTestesAngular)"
+        >
+          <span
+            class="bg-gradient-to-l from-blue-300 via-purple-300 to-purple-500 bg-clip-text text-transparent"
+            >Ver</span
+          >
+        </button>
+      </div>
+    </div>
+  </section>
